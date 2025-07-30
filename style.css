@@ -1,0 +1,41 @@
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #fff0f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #ff69b4;
+  padding: 1em;
+  text-align: center;
+  color: white;
+}
+nav a {
+  margin: 0 10px;
+}
+.boton3d {
+  background: #ff69b4;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  box-shadow: 0 5px #c74385;
+  transition: all 0.2s ease;
+}
+.boton3d:active {
+  box-shadow: 0 2px #c74385;
+  transform: translateY(3px);
+}
+.grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2em;
+}
+.grid img {
+  width: 100%;
+  max-width: 200px;
+}
