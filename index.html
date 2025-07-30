@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Vida, Mi Ritmo</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="imagenes/favicon.png" />
+</head>
+<body>
+  <header>
+    <h1>Bienestar real para mujeres reales</h1>
+    <nav>
+      <a href="index.html" class="boton3d">Inicio</a>
+      <a href="politica-privacidad.html" class="boton3d">Privacidad</a>
+      <a href="mailto:nellytrabj@gmail.com" class="boton3d">Contáctame</a>
+      <a href="#suscribete" class="boton3d">Suscripción</a>
+    </nav>
+  </header>
+  <main>
+    <section class="articulos">
+      <h2>Últimos artículos</h2>
+      <div class="grid">
+        <a href="articulos/receta-ensalada.html" class="boton3d">
+          <img src="imagenes/ensalada.jpg" alt="Receta saludable" />
+          <p>Receta de ensalada saludable</p>
+        </a>
+        <a href="articulos/mascarilla-belleza.html" class="boton3d">
+          <img src="imagenes/mascarilla.jpg" alt="Mascarilla casera" />
+          <p>Mascarilla casera para la piel</p>
+        </a>
+        <a href="articulos/fitness-bienestar.html" class="boton3d">
+          <img src="imagenes/fitness.jpg" alt="Bienestar y fitness" />
+          <p>Bienestar y fitness</p>
+        </a>
+      </div>
+    </section>
+    <section id="suscribete">
+      <h2>Suscríbete</h2>
+      <form onsubmit="guardarCorreo(); return false;">
+        <input type="email" id="correo" placeholder="Tu correo electrónico" required />
+        <button class="boton3d" type="submit">Suscribirme</button>
+      </form>
+    </section>
+  </main>
+  <script src="js/suscripcion.js"></script>
+</body>
+</html>
