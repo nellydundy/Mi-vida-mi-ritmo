@@ -40,7 +40,7 @@ nav a {
   max-width: 200px;
 }
 .articulo-img {
-  max-width: 350px;
+  max-width: 600px;
   width: 100%;
   height: auto;
   display: block;
@@ -50,7 +50,7 @@ nav a {
 }
 
 main {
-  max-width: 350px;
+  max-width: 600px;
   margin: auto;
   padding: 1rem;
   font-size: 1.1rem;
