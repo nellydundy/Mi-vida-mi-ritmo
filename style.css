@@ -40,7 +40,8 @@ nav a {
   max-width: 200px;
 }
 .articulo-img {
-  max-width: 90%;
+  max-width: 300px;
+  width: 100%;
   height: auto;
   display: block;
   margin: 1rem auto;
