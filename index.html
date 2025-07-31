@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html><html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -49,27 +48,23 @@
       padding: 2rem;
       max-width: 900px;
       margin: auto;
+      text-align: center;
     }
-    .articulo {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      margin-bottom: 2rem;
-      padding: 1rem;
-    }
-    .articulo img {
-      width: 100%;
-      border-radius: 12px;
-      margin-bottom: 1rem;
-    }
-    .articulo a {
+    .boton-categoria {
       display: inline-block;
-      margin-top: 0.5rem;
-      background: #ff66b2;
+      margin: 1rem;
+      background: linear-gradient(145deg, #ff85c1, #ff4f9f);
       color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 10px;
+      padding: 1rem 2rem;
+      border-radius: 20px;
+      font-size: 1.2rem;
+      font-weight: bold;
       text-decoration: none;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s;
+    }
+    .boton-categoria:hover {
+      transform: scale(1.05);
     }
     footer {
       text-align: center;
@@ -113,79 +108,23 @@
       <a href="mailto:nellytrabj@gmail.com">Contáctame</a>
     </nav>
   </header>
-
   <main>
-    <!-- Artículos anteriores -->
-    <section class="articulo">
-      <img src="imagenes/ensalada.jpg" alt="Receta de ensalada saludable" />
-      <h2>Receta de Ensalada Saludable</h2>
-      <p>Descubre cómo preparar una deliciosa y nutritiva ensalada perfecta para tu bienestar.</p>
-      <a href="articulos/ensalada-rapida.html">Leer artículo</a>
-    </section>
+    <h2>Explora por categoría</h2>
+    <a class="boton-categoria" href="categorias/cocina.html">Cocina</a>
+    <a class="boton-categoria" href="categorias/belleza.html">Belleza</a>
+    <a class="boton-categoria" href="categorias/bienestar.html">Consejos y Bienestar</a>
+    <a class="boton-categoria" href="categorias/fitness.html">Fitness</a><!-- Formulario de suscripción -->
+<form onsubmit="guardarEmail(event)">
+  <label for="email">Suscríbete a mis novedades:</label>
+  <input type="email" id="email" placeholder="Tu correo electrónico" required />
+  <button type="submit">Suscribirme</button>
+</form>
 
-    <section class="articulo">
-      <img src="imagenes/mascarilla.jpg" alt="Mascarilla casera para la piel" />
-      <h2>Mascarilla Casera para la Piel</h2>
-      <p>Cuida tu rostro con esta mascarilla natural y efectiva. Ideal para una rutina de belleza real.</p>
-      <a href="articulos/mascarilla-casera.html">Leer artículo</a>
-    </section>
-
-    <section class="articulo">
-      <img src="imagenes/fitness.jpg" alt="Bienestar y motivación" />
-      <h2>Bienestar y Motivación</h2>
-      <p>Consejos prácticos para mantenerte activa, motivada y feliz día a día.</p>
-      <a href="articulos/motivacion-fitness.html">Leer artículo</a>
-    </section>
-
-    <!-- Nuevos artículos -->
-    <section class="articulo">
-      <img src="imagenes/Ensalada-fria.jpg" alt="Ensalada fría" />
-      <h2>Ensalada Fría</h2>
-      <p>Una receta sabrosa con coditos, pollo, mayonesa, jamón y piña. ¡Fresca y deliciosa!</p>
-      <a href="articulos/ensalada-fria.html">Leer artículo</a>
-    </section>
-
-    <section class="articulo">
-      <img src="imagenes/flan-calabaza.jpg" alt="Flan de calabaza" />
-      <h2>Flan de Calabaza</h2>
-      <p>Un postre suave, cremoso y lleno de sabor natural. Ideal para disfrutar sin culpas.</p>
-      <a href="articulos/flan-calabaza.html">Leer artículo</a>
-    </section>
-
-    <section class="articulo">
-      <img src="imagenes/Arroz-con-leche.jpg" alt="Arroz con leche" />
-      <h2>Arroz con Leche</h2>
-      <p>Tradicional y reconfortante, este postre casero te hará sonreír desde la primera cucharada.</p>
-      <a href="articulos/arroz-leche.html">Leer artículo</a>
-    </section>
-
-    <section class="articulo">
-      <img src="imagenes/Pollo-pina.jpg" alt="Pollo a la pina" />
-      <h2>Pollo a la Pina</h2>
-      <p>Jugoso, tropical y fácil de preparar. Una explosión de sabor con toques dulces y salados.</p>
-      <a href="articulos/pollo-pina.html">Leer artículo</a>
-    </section>
-
-    <section class="articulo">
-      <img src="imagenes/Chicharrones-de-cerdo.jpg" alt="Chicharrones de cerdo" />
-      <h2>Chicharrones de Cerdo</h2>
-      <p>Crujientes por fuera y suaves por dentro. Aprende cómo lograr el chicharrón perfecto.</p>
-      <a href="articulos/chicharrones-cerdo.html">Leer artículo</a>
-    </section>
-
-    <!-- Formulario de suscripción -->
-    <form onsubmit="guardarEmail(event)">
-      <label for="email">Suscríbete a mis novedades:</label>
-      <input type="email" id="email" placeholder="Tu correo electrónico" required />
-      <button type="submit">Suscribirme</button>
-    </form>
   </main>
-
   <footer>
     <p>&copy; 2025 Mi Ritmo, Mi Vida. Todos los derechos reservados.</p>
     <p class="footer-links"><a href="politica-privacidad.html">Política de privacidad</a></p>
   </footer>
-
   <script>
     function guardarEmail(e) {
       e.preventDefault();
