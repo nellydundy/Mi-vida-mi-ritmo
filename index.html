@@ -1,49 +1,157 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi Vida, Mi Ritmo</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" type="image/png" href="imagenes/favicon.png" />
+  <title>Mi Ritmo, Mi Vida</title>
+  <link rel="icon" href="imagenes/icono-rosa-3d.png" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff0f5;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #ff66b2;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    nav a {
+      text-decoration: none;
+      background: linear-gradient(145deg, #ff85c1, #ff4f9f);
+      color: white;
+      padding: 0.7rem 1.4rem;
+      border-radius: 15px;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: all 0.3s;
+    }
+    nav a:hover {
+      background: linear-gradient(145deg, #ff4f9f, #ff85c1);
+      transform: scale(1.05);
+    }
+    main {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .articulo {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+      padding: 1rem;
+    }
+    .articulo img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+    .articulo a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      background: #ff66b2;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+    form {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    input[type="email"] {
+      padding: 0.5rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      width: 100%;
+      max-width: 300px;
+    }
+    button {
+      background: #ff66b2;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Bienestar real para mujeres reales</h1>
+    <h1>Mi Ritmo, Mi Vida</h1>
     <nav>
-      <a href="index.html" class="boton3d">Inicio</a>
-      <a href="politica-privacidad.html" class="boton3d">Privacidad</a>
-      <a href="mailto:nellytrabj@gmail.com" class="boton3d">Contáctame</a>
-      <a href="#suscribete" class="boton3d">Suscripción</a>
+      <a href="index.html">Inicio</a>
+      <a href="politica-privacidad.html">Privacidad</a>
+      <a href="mailto:nellytrabj@gmail.com">Contáctame</a>
     </nav>
   </header>
+
   <main>
-    <section class="articulos">
-      <h2>Últimos artículos</h2>
-      <div class="grid">
-        <a href="articulos/receta-ensalada.html" class="boton3d">
-          <img src="imagenes/ensalada.jpg" alt="Receta saludable" />
-          <p>Receta de ensalada saludable</p>
-        </a>
-        <a href="articulos/mascarilla-belleza.html" class="boton3d">
-          <img src="imagenes/mascarilla.jpg" alt="Mascarilla casera" />
-          <p>Mascarilla casera para la piel</p>
-        </a>
-        <a href="articulos/fitness-bienestar.html" class="boton3d">
-          <img src="imagenes/fitness.jpg" alt="Bienestar y fitness" />
-          <p>Bienestar y fitness</p>
-        </a>
-      </div>
+    <section class="articulo">
+      <img src="imagenes/ensalada.jpg" alt="Receta de ensalada saludable" />
+      <h2>Receta de Ensalada Saludable</h2>
+      <p>Descubre cómo preparar una deliciosa y nutritiva ensalada perfecta para tu bienestar.</p>
+      <a href="articulos/receta-ensalada.html">Leer artículo</a>
     </section>
-    <section id="suscribete">
-      <h2>Suscríbete</h2>
-      <form onsubmit="guardarCorreo(); return false;">
-        <input type="email" id="correo" placeholder="Tu correo electrónico" required />
-        <button class="boton3d" type="submit">Suscribirme</button>
-      </form>
+
+    <section class="articulo">
+      <img src="imagenes/mascarilla.jpg" alt="Mascarilla casera para la piel" />
+      <h2>Mascarilla Casera para la Piel</h2>
+      <p>Cuida tu rostro con esta mascarilla natural y efectiva. Ideal para una rutina de belleza real.</p>
+      <a href="articulos/mascarilla-belleza.html">Leer artículo</a>
     </section>
+
+    <section class="articulo">
+      <img src="imagenes/fitness.jpg" alt="Bienestar y motivación" />
+      <h2>Bienestar y Motivación</h2>
+      <p>Consejos prácticos para mantenerte activa, motivada y feliz día a día.</p>
+      <a href="articulos/fitness-bienestar.html">Leer artículo</a>
+    </section>
+
+    <form onsubmit="guardarEmail(event)">
+      <label for="email">Suscríbete a mis novedades:</label>
+      <input type="email" id="email" placeholder="Tu correo electrónico" required />
+      <button type="submit">Suscribirme</button>
+    </form>
   </main>
-  <script src="js/suscripcion.js"></script>
+
+  <footer>
+    <p>&copy; 2025 Mi Ritmo, Mi Vida. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    function guardarEmail(e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      localStorage.setItem('suscriptor', email);
+      alert('¡Gracias por suscribirte!');
+    }
+  </script>
 </body>
 </html>
