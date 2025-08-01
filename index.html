@@ -48,22 +48,31 @@
       padding: 2rem;
       max-width: 900px;
       margin: auto;
-      text-align: center;
     }
-    .boton-categoria {
-      display: inline-block;
-      margin: 1rem;
+    .categoria {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 2rem 0;
+    }
+    .categoria img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 1rem;
+    }
+    .categoria a {
       background: linear-gradient(145deg, #ff85c1, #ff4f9f);
       color: white;
-      padding: 1rem 2rem;
-      border-radius: 20px;
-      font-size: 1.2rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: 12px;
       font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
       text-decoration: none;
-      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
       transition: all 0.3s;
     }
-    .boton-categoria:hover {
+    .categoria a:hover {
       transform: scale(1.05);
     }
     footer {
@@ -107,31 +116,39 @@
     <nav>
       <a href="mailto:nellytrabj@gmail.com">Contáctame</a>
     </nav>
-  </header>
-  <main>
-    <h2>Explora por categoría</h2>
-    <a class="boton-categoria" href="categorias/cocina.html">Cocina</a>
-    <a class="boton-categoria" href="categorias/belleza.html">Belleza</a>
-    <a class="boton-categoria" href="categorias/bienestar.html">Consejos y Bienestar</a>
-    <a class="boton-categoria" href="categorias/fitness.html">Fitness</a><!-- Formulario de suscripción -->
+  </header>  <main>
+    <!-- Botones de categorías con imagen -->
+    <div class="categoria">
+      <img src="imagenes/Pollo-pina.jpg" alt="Cocina">
+      <a href="articulos/cocina.html">Cocina</a>
+    </div>
+    <div class="categoria">
+      <img src="imagenes/mascarilla.jpg" alt="Belleza">
+      <a href="articulos/belleza.html">Belleza</a>
+    </div>
+    <div class="categoria">
+      <img src="imagenes/fitness.jpg" alt="Bienestar">
+      <a href="articulos/bienestar.html">Bienestar</a>
+    </div>
+    <div class="categoria">
+      <img src="imagenes/icono-rosa-3d.png" alt="Fitness">
+      <a href="articulos/fitness.html">Fitness</a>
+    </div><!-- Formulario de suscripción -->
 <form onsubmit="guardarEmail(event)">
   <label for="email">Suscríbete a mis novedades:</label>
   <input type="email" id="email" placeholder="Tu correo electrónico" required />
   <button type="submit">Suscribirme</button>
 </form>
 
-  </main>
-  <footer>
+  </main>  <footer>
     <p>&copy; 2025 Mi Ritmo, Mi Vida. Todos los derechos reservados.</p>
     <p class="footer-links"><a href="politica-privacidad.html">Política de privacidad</a></p>
-  </footer>
-  <script>
+  </footer>  <script>
     function guardarEmail(e) {
       e.preventDefault();
       const email = document.getElementById('email').value;
       localStorage.setItem('suscriptor', email);
       alert('¡Gracias por suscribirte!');
     }
-  </script>
-</body>
+  </script></body>
 </html>
