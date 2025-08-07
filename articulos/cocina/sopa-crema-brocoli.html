@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <title>Sopa Crema de Brócoli</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../../styles.css" />
+  <meta charset="UTF-8">
+  <title>Sopa crema de brócoli</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Ruta corregida para que funcione desde la carpeta Cocina -->
+  <link rel="stylesheet" href="../../styles.css">
   <style>
     .articulo-img {
       width: 100%;
@@ -12,29 +13,51 @@
       border-radius: 12px;
       display: block;
       margin: 1rem auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    main {
+      max-width: 600px;
+      margin: auto;
+      padding: 1rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    a.boton-volver {
+      display: inline-block;
+      background: linear-gradient(145deg, #ff85c1, #ff4f9f);
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 12px;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      text-decoration: none;
+      transition: all 0.3s;
+      margin-top: 2rem;
+    }
+    a.boton-volver:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Sopa Crema de Brócoli</h1>
+    <h1>Sopa crema de brócoli</h1>
   </header>
 
   <main>
-    <img class="articulo-img" src="../../imagenes/Cocina/sopa-crema-brocoli.jpg" alt="Sopa crema de brócoli" />
+    <img class="articulo-img" src="../../imagenes/Cocina/sopa-crema-brocoli.jpg" alt="Sopa crema de brócoli">
 
-    <p>Una receta perfecta para días fríos:</p>
+    <p>Una sopa cremosa y nutritiva para disfrutar en cualquier momento:</p>
     <ul>
-      <li>1 taza de brócoli cocido</li>
-      <li>1/2 taza de crema de leche</li>
-      <li>1/2 cebolla picada</li>
-      <li>1 diente de ajo</li>
+      <li>2 tazas de brócoli fresco</li>
+      <li>1 papa mediana</li>
+      <li>1 taza de leche</li>
+      <li>1 taza de caldo de verduras</li>
       <li>Sal y pimienta al gusto</li>
     </ul>
+    <p>Hierve el brócoli y la papa en el caldo de verduras. Licúa todo junto con la leche, vuelve a calentar y sazona. Sirve caliente.</p>
 
-    <p>Licúa todos los ingredientes hasta obtener una crema suave. Calienta y sirve con crutones.</p>
-
-    <a href="index.html" class="boton3d" style="margin-top: 2rem; display: inline-block;">← Volver a Cocina</a>
+    <a class="boton-volver" href="cocina.html">← Volver a Cocina</a>
   </main>
 </body>
 </html>
