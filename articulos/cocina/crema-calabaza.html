@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Crema de Calabaza Casera</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../../styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../styles.css">
   <style>
     .articulo-img {
       width: 100%;
@@ -12,6 +12,29 @@
       border-radius: 12px;
       display: block;
       margin: 1rem auto;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    main {
+      max-width: 700px;
+      margin: auto;
+      padding: 1rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    a.boton-volver {
+      display: inline-block;
+      background: linear-gradient(145deg, #ff85c1, #ff4f9f);
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 12px;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      text-decoration: none;
+      transition: all 0.3s;
+      margin-top: 2rem;
+    }
+    a.boton-volver:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
@@ -21,20 +44,29 @@
   </header>
 
   <main>
-    <img class="articulo-img" src="../../imagenes/Cocina/crema-calabaza.jpg" alt="Crema de calabaza casera" />
+    <img class="articulo-img" src="../../imagenes/Cocina/crema-calabaza.jpg" alt="Crema de calabaza casera">
 
-    <p>Una receta cálida y reconfortante:</p>
+    <p>Una receta fácil, saludable y deliciosa para disfrutar en cualquier época del año.</p>
+
+    <h2>Ingredientes:</h2>
     <ul>
-      <li>2 tazas de calabaza cocida</li>
-      <li>1 taza de caldo de verduras</li>
-      <li>1 diente de ajo</li>
-      <li>1 cucharada de crema ligera</li>
-      <li>Sal y nuez moscada al gusto</li>
+      <li>500 g de calabaza pelada y en cubos</li>
+      <li>1 cebolla</li>
+      <li>1 zanahoria</li>
+      <li>2 cucharadas de aceite de oliva</li>
+      <li>Sal y pimienta al gusto</li>
     </ul>
 
-    <p>Licúa todos los ingredientes hasta obtener una mezcla cremosa. Calienta y sirve caliente.</p>
+    <h2>Preparación:</h2>
+    <ol>
+      <li>Sofríe la cebolla y la zanahoria en aceite de oliva.</li>
+      <li>Añade la calabaza y cubre con agua o caldo.</li>
+      <li>Cocina hasta que la calabaza esté tierna.</li>
+      <li>Tritura todo hasta obtener una crema suave.</li>
+      <li>Sirve caliente con un chorrito de aceite de oliva por encima.</li>
+    </ol>
 
-    <a href="index.html" class="boton3d" style="margin-top: 2rem; display: inline-block;">← Volver a Cocina</a>
+    <a class="boton-volver" href="../cocina.html">← Volver a Cocina</a>
   </main>
 </body>
 </html>
