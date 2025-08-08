@@ -1,45 +1,133 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cocina</title>
-  <link rel="stylesheet" href="../../styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cocina - Mi Ritmo, Mi Vida</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 1rem;
+    }
+    .articulo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2rem;
+      background: #fff0f5;
+      border-radius: 15px;
+      padding: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .articulo img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+    .boton3d {
+      background: linear-gradient(145deg, #ff85c1, #ff4f9f);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+    .boton3d:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>Recetas de Cocina</h1>
   </header>
   <main>
+    <!-- Artículo 1 -->
     <section class="articulo">
-      <img class="articulo-img" src="../../imagenes/Cocina/Pollo-pina.jpg" alt="Ensalada de pollo con piña" />
-      <h2>Ensalada de pollo con piña</h2>
-      <p>Una receta fresca y deliciosa para cualquier ocasión.</p>
-      <a href="ensalada-pollo-pina.html" class="boton3d">Leer artículo</a>
+      <img src="../../imagenes/Cocina/pollo-pina.jpg" alt="Ensalada de pollo con piña">
+      <h2>Ensalada de Pollo con Piña</h2>
+      <p>Refrescante y deliciosa ensalada con pollo, piña y un toque de mayonesa ligera.</p>
+      <a class="boton3d" href="ensalada-pollo-pina.html">Leer artículo</a>
     </section>
 
+    <!-- Artículo 2 -->
     <section class="articulo">
-      <img class="articulo-img" src="../../imagenes/Cocina/chicharrones.jpg" alt="Chicharrones de cerdo" />
-      <h2>Chicharrones de cerdo</h2>
-      <p>Crujientes y sabrosos, ideales para compartir.</p>
-      <a href="chicharrones-cerdo.html" class="boton3d">Leer artículo</a>
+      <img src="../../imagenes/cocina/ensalada-rapida.jpg" alt="Ensalada rápida">
+      <h2>Ensalada Rápida</h2>
+      <p>Ideal para esos días con poco tiempo pero muchas ganas de comer rico.</p>
+      <a class="boton3d" href="ensalada-rapida.html">Leer artículo</a>
     </section>
 
+    <!-- Artículo 3 -->
     <section class="articulo">
-      <img class="articulo-img" src="../../imagenes/Cocina/arroz-leche.jpg" alt="Arroz con leche" />
-      <h2>Arroz con leche</h2>
-      <p>Un postre tradicional que nunca pasa de moda.</p>
-      <a href="arroz-leche.html" class="boton3d">Leer artículo</a>
+      <img src="../../imagenes/cocina/chicharrones.jpg" alt="Chicharrones de cerdo">
+      <h2>Chicharrones de Cerdo Crujientes</h2>
+      <p>Un clásico irresistible para disfrutar con limón y sal.</p>
+      <a class="boton3d" href="chicharrones-cerdo.html">Leer artículo</a>
     </section>
 
+    <!-- Artículo 4 -->
     <section class="articulo">
-      <img class="articulo-img" src="../../imagenes/Cocina/ensalada-rapida.jpg" alt="Ensalada rápida" />
-      <h2>Ensalada rápida</h2>
-      <p>Ligera y perfecta para días con poco tiempo.</p>
-      <a href="ensalada-rapida.html" class="boton3d">Leer artículo</a>
+      <img src="../../imagenes/cocina/arroz-leche.jpg" alt="Arroz con leche">
+      <h2>Arroz con Leche Cremoso</h2>
+      <p>Postre tradicional que nunca falla, con canela y un toque de vainilla.</p>
+      <a class="boton3d" href="arroz-leche.html">Leer artículo</a>
     </section>
 
-    <a href="../../index.html" class="boton3d" style="margin-top: 2rem; display: inline-block;">← Volver al inicio</a>
+    <!-- Artículo 5 -->
+    <section class="articulo">
+      <img src="../../imagenes/cocina/pasta-cremosa.jpg" alt="Pasta cremosa">
+      <h2>Pasta Cremosa con Champiñones</h2>
+      <p>Receta cremosa y reconfortante para cualquier ocasión.</p>
+      <a class="boton3d" href="pasta-cremosa.html">Leer artículo</a>
+    </section>
+
+    <!-- Artículo 6 -->
+    <section class="articulo">
+      <img src="../../imagenes/cocina/sopa-verduras.jpg" alt="Sopa de verduras">
+      <h2>Sopa de Verduras Casera</h2>
+      <p>Llena de sabor y nutrientes para cuidarte cada día.</p>
+      <a class="boton3d" href="sopa-verduras.html">Leer artículo</a>
+    </section>
+
+    <!-- Artículo 7 -->
+    <section class="articulo">
+      <img src="../../imagenes/cocina/tortilla.jpg" alt="Tortilla española">
+      <h2>Tortilla Española</h2>
+      <p>Clásico de la cocina con patatas y cebolla.</p>
+      <a class="boton3d" href="tortilla-espanola.html">Leer artículo</a>
+    </section>
+
+    <!-- Artículo 8 -->
+    <section class="articulo">
+      <img src="../../imagenes/cocina/empanadas.jpg" alt="Empanadas">
+      <h2>Empanadas Caseras</h2>
+      <p>Rellenas de carne o pollo, perfectas para compartir.</p>
+      <a class="boton3d" href="empanadas.html">Leer artículo</a>
+    </section>
+
+    <!-- Artículo 9 -->
+    <section class="articulo">
+      <img src="../../imagenes/cocina/pescado-horno.jpg" alt="Pescado al horno">
+      <h2>Pescado al Horno con Hierbas</h2>
+      <p>Ligero y sabroso, con un toque de limón y ajo.</p>
+      <a class="boton3d" href="pescado-horno.html">Leer artículo</a>
+    </section>
+
+    <!-- Artículo 10 -->
+    <section class="articulo">
+      <img src="../../imagenes/cocina/postre-frutas.jpg" alt="Postre de frutas">
+      <h2>Postre de Frutas Frescas</h2>
+      <p>Colorido, nutritivo y fácil de preparar.</p>
+      <a class="boton3d" href="postre-frutas.html">Leer artículo</a>
+    </section>
+
+    <a class="boton3d" href="../../index.html" style="margin-top: 2rem;">← Volver al inicio</a>
   </main>
 </body>
 </html>
