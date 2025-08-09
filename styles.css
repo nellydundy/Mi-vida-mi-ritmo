@@ -243,3 +243,18 @@ input[type="email"] { width: 100%; box-sizing: border-box; }
   margin: 1rem auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+.boton3d {
+  background: linear-gradient(145deg, #ff85c1, #ff4f9f);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  text-decoration: none;
+  transition: all 0.3s;
+  display: inline-block;
+}
+
+.boton3d:hover {
+  transform: scale(1.05);
+}
