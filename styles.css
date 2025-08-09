@@ -232,3 +232,14 @@ input[type="email"] { width: 100%; box-sizing: border-box; }
   .boton3d { width: 100%; justify-self: center; }
   .articulo-img { max-width: 100%; }
    }
+/* estilos anteriores ... */
+
+/* Estilo para imágenes de artículos */
+.articulo-img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+  display: block;
+  margin: 1rem auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
