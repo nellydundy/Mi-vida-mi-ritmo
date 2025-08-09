@@ -130,3 +130,105 @@ footer { text-align:center; color:#666; padding:1.5rem; }
   .articulo-img { max-width: 100%; }
   main { padding: 0 1rem; }
 }
+/* =========================
+   Responsive tweaks seguros
+   ========================= */
+
+/* Limita ancho de contenido principal para artículos pero mantiene centrado */
+main {
+  max-width: 900px;   /* ancho máximo cómodo en desktop */
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Texto legible en pantallas pequeñas sin tocar otros artículos */
+body, main, .articulo, .categoria {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px; /* base: cambia si quieres texto más grande en todo el sitio */
+}
+
+/* Imágenes de artículos: responsivas y que no quemen la pantalla */
+.articulo-img {
+  width: 100%;
+  max-width: 620px;   /* no quedar demasiado grande en desktop */
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  object-fit: cover;  /* mantiene proporciones */
+}
+
+/* Si por alguna razón hay imágenes en html con width/height inline, forzamos */
+.articulo img, .articulo-img, .categoria img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Contenedor de artículo: ancho flexible para que texto e imagen convivan */
+.articulo {
+  padding: 1rem;
+  background: #fff;
+  border-radius: 12px;
+}
+
+/* Botones 3D responsivos */
+.boton3d {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: 0.55rem 1rem;
+  min-width: 120px;
+  border-radius: 12px;
+  box-shadow: 0 6px #c74385;
+  transition: transform .14s ease, box-shadow .14s ease;
+  text-decoration: none;
+}
+.boton3d:active { transform: translateY(4px); box-shadow: 0 2px #c74385; }
+
+/* Ajustes para las tarjetas/categorías */
+.categoria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.2rem;
+  align-items: center;
+  width: 100%;
+}
+
+/* Imagen dentro del botón/categoría */
+.categoria img {
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Formularios / inputs responsivos */
+form {
+  width: 100%;
+  max-width: 480px;
+}
+input[type="email"] { width: 100%; box-sizing: border-box; }
+
+/* =========================
+   Media queries: móviles
+   ========================= */
+@media (max-width: 800px) {
+  h1 { font-size: 1.8rem; }
+  .boton3d { min-width: 110px; padding: .5rem .9rem; }
+  .articulo { padding: .9rem; }
+  main { padding: 1rem; }
+  .categoria img { max-width: 200px; }
+}
+
+/* Mobile narrow */
+@media (max-width: 420px) {
+  body, main { font-size: 15px; }
+  h1 { font-size: 1.6rem; padding: .6rem 0; }
+  .categoria { grid-template-columns: 1fr; gap: 1rem; }
+  .boton3d { width: 100%; justify-self: center; }
+  .articulo-img { max-width: 100%; }
+   }
