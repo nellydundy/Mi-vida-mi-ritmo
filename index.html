@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">  
+<!DOCTYPE html>  <html lang="es">  
 <head>  
   <meta charset="UTF-8" />  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
@@ -117,47 +116,39 @@
     <nav>  
       <a href="mailto:nellytrabj@gmail.com">Contáctame</a>  
     </nav>  
-  </header>  
-
-  <main>  
+  </header>    <main>  
     <!-- Botones de categorías con imagen -->  
     <div class="categoria">  
-      <img src="imagenes/Cocina/Pollo-pina.jpg" alt="Cocina">  
-      <a href="articulos/Cocina/cocina.html">Cocina</a>  
+      <img src="imagenes/cocina/tacos-vegetales.jpg" alt="Cocina">  
+      <a href="articulos/cocina/index.html">Cocina</a>  
     </div>  
     <div class="categoria">  
-      <img src="imagenes/Belleza/mascarilla.jpg" alt="Belleza">  
-      <a href="articulos/Belleza/belleza.html">Belleza</a>  
+      <img src="imagenes/belleza/mascarilla.jpg" alt="Belleza">  
+      <a href="articulos/belleza/index.html">Belleza</a>  
     </div>  
     <div class="categoria">  
-      <img src="imagenes/Bienestar/fitness.jpg" alt="Bienestar">  
-      <a href="articulos/Bienestar/bienestar.html">Bienestar</a>  
+      <img src="imagenes/bienestar/fitness.jpg" alt="Bienestar">  
+      <a href="articulos/bienestar/index.html">Bienestar</a>  
     </div>  
     <div class="categoria">  
-      <img src="imagenes/icono-rosa-3d.png" alt="Fitness">  
-      <a href="articulos/Fitness/fitness-index.html">Fitness</a>  
-    </div>  
+      <img src="imagenes/fitness/fitness.jpg" alt="Fitness">  
+      <a href="articulos/fitness/index.html">Fitness</a>  
+    </div>  <!-- Formulario de suscripción -->  
+<form onsubmit="guardarEmail(event)">  
+  <label for="email">Suscríbete a mis novedades:</label>  
+  <input type="email" id="email" placeholder="Tu correo electrónico" required />  
+  <button type="submit">Suscribirme</button>  
+</form>
 
-    <!-- Formulario de suscripción -->  
-    <form onsubmit="guardarEmail(event)">  
-      <label for="email">Suscríbete a mis novedades:</label>  
-      <input type="email" id="email" placeholder="Tu correo electrónico" required />  
-      <button type="submit">Suscribirme</button>  
-    </form>  
-  </main>  
-
-  <footer>  
+  </main>    <footer>  
     <p>&copy; 2025 Mi Ritmo, Mi Vida. Todos los derechos reservados.</p>  
     <p class="footer-links"><a href="politica-privacidad.html">Política de privacidad</a></p>  
-  </footer>  
-
-  <script>  
+  </footer>    <script>  
     function guardarEmail(e) {  
       e.preventDefault();  
       const email = document.getElementById('email').value;  
       localStorage.setItem('suscriptor', email);  
       alert('¡Gracias por suscribirte!');  
     }  
-  </script>  
-</body>  
+  </script>  </body>  
 </html>
