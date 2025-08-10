@@ -149,6 +149,10 @@
       const email = document.getElementById('email').value;  
       localStorage.setItem('suscriptor', email);  
       alert('¡Gracias por suscribirte!');  
+    <div id="cookie-banner" style="position:fixed;bottom:0;width:100%;background:#222;color:#fff;padding:10px;text-align:center;">
+  Usamos cookies para mejorar tu experiencia. <a href="politica-privacidad.html" style="color:#ffd700;">Más información</a>
+  <button onclick="document.getElementById('cookie-banner').style.display='none'" style="margin-left:10px;">Aceptar</button>
+</div>
     }  
   </script>  </body>  
 </html>
