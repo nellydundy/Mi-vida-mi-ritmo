@@ -1,158 +1,194 @@
-<!DOCTYPE html>  <html lang="es">  
-<head>  
-  <meta charset="UTF-8" />  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
-  <title>Mi Ritmo, Mi Vida</title>  
-  <link rel="icon" href="imagenes/icono-rosa-3d.png" />  
-  <style>  
-    body {  
-      font-family: 'Segoe UI', sans-serif;  
-      background-color: #fff0f5;  
-      margin: 0;  
-      padding: 0;  
-      color: #333;  
-    }  
-    header {  
-      background-color: #ff66b2;  
-      color: white;  
-      text-align: center;  
-      padding: 2rem;  
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);  
-    }  
-    h1 {  
-      margin: 0;  
-      font-size: 2.5rem;  
-    }  
-    nav {  
-      display: flex;  
-      justify-content: center;  
-      flex-wrap: wrap;  
-      gap: 1rem;  
-      margin-top: 1rem;  
-    }  
-    nav a {  
-      text-decoration: none;  
-      background: linear-gradient(145deg, #ff85c1, #ff4f9f);  
-      color: white;  
-      padding: 0.7rem 1.4rem;  
-      border-radius: 15px;  
-      font-weight: bold;  
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);  
-      transition: all 0.3s;  
-    }  
-    nav a:hover {  
-      background: linear-gradient(145deg, #ff4f9f, #ff85c1);  
-      transform: scale(1.05);  
-    }  
-    main {  
-      padding: 2rem;  
-      max-width: 900px;  
-      margin: auto;  
-    }  
-    .categoria {  
-      display: flex;  
-      flex-direction: column;  
-      align-items: center;  
-      margin: 2rem 0;  
-    }  
-    .categoria img {  
-      width: 100%;  
-      max-width: 250px;  
-      border-radius: 15px;  
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);  
-      margin-bottom: 1rem;  
-    }  
-    .categoria a {  
-      background: linear-gradient(145deg, #ff85c1, #ff4f9f);  
-      color: white;  
-      padding: 0.6rem 1.2rem;  
-      border-radius: 12px;  
-      font-weight: bold;  
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);  
-      text-decoration: none;  
-      transition: all 0.3s;  
-    }  
-    .categoria a:hover {  
-      transform: scale(1.05);  
-    }  
-    footer {  
-      text-align: center;  
-      padding: 1rem;  
-      font-size: 0.9rem;  
-      color: #777;  
-    }  
-    form {  
-      margin-top: 2rem;  
-      display: flex;  
-      flex-direction: column;  
-      gap: 0.5rem;  
-      align-items: center;  
-    }  
-    input[type="email"] {  
-      padding: 0.5rem;  
-      border-radius: 8px;  
-      border: 1px solid #ccc;  
-      width: 100%;  
-      max-width: 300px;  
-    }  
-    button {  
-      background: #ff66b2;  
-      color: white;  
-      padding: 0.5rem 1rem;  
-      border: none;  
-      border-radius: 10px;  
-      cursor: pointer;  
-      box-shadow: 0 3px 6px rgba(0,0,0,0.2);  
-    }  
-    .footer-links a {  
-      color: #777;  
-      text-decoration: none;  
-    }  
-  </style>  
-</head>  
-<body>  
-  <header>  
-    <h1>Mi vida, Mi ritmo</h1>  
-    <nav>  
-      <a href="mailto:nellytrabj@gmail.com">Contáctame</a>  
-    </nav>  
-  </header>    <main>  
-    <!-- Botones de categorías con imagen -->  
-    <div class="categoria">  
-      <img src="imagenes/cocina/tacos-vegetales.jpg" alt="Cocina">  
-      <a href="articulos/cocina/index.html">Cocina</a>  
-    </div>  
-    <div class="categoria">  
-      <img src="imagenes/belleza/mascarilla.jpg" alt="Belleza">  
-      <a href="articulos/belleza/index.html">Belleza</a>  
-    </div>  
-    <div class="categoria">  
-      <img src="imagenes/bienestar/fitness.jpg" alt="Bienestar">  
-      <a href="articulos/bienestar/index.html">Bienestar</a>  
-    </div>  
-    <div class="categoria">  
-      <img src="imagenes/fitness/fitness.jpg" alt="Fitness">  
-      <a href="articulos/fitness/index.html">Fitness</a>  
-    </div>  <!-- Formulario de suscripción -->  
-<form onsubmit="guardarEmail(event)">  
-  <label for="email">Suscríbete a mis novedades:</label>  
-  <input type="email" id="email" placeholder="Tu correo electrónico" required />  
-  <button type="submit">Suscribirme</button>  
-</form>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Ritmo, Mi Vida</title>
+  <link rel="icon" href="imagenes/icono-rosa-3d.png" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff0f5;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #ff66b2;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    nav a {
+      text-decoration: none;
+      background: linear-gradient(145deg, #ff85c1, #ff4f9f);
+      color: white;
+      padding: 0.7rem 1.4rem;
+      border-radius: 15px;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: all 0.3s;
+    }
+    nav a:hover {
+      background: linear-gradient(145deg, #ff4f9f, #ff85c1);
+      transform: scale(1.05);
+    }
+    main {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .categoria {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 2rem 0;
+    }
+    .categoria img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 1rem;
+    }
+    .categoria a {
+      background: linear-gradient(145deg, #ff85c1, #ff4f9f);
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 12px;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .categoria a:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+    form {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    input[type="email"] {
+      padding: 0.5rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      width: 100%;
+      max-width: 300px;
+    }
+    button {
+      background: #ff66b2;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    }
+    .footer-links a {
+      color: #777;
+      text-decoration: none;
+    }
+    /* Estilo del banner de cookies */
+    #cookie-banner {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #222;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      font-size: 14px;
+      z-index: 1000;
+    }
+    #cookie-banner a {
+      color: #ffd700;
+    }
+    #cookie-banner button {
+      margin-left: 10px;
+      padding: 5px 10px;
+      border: none;
+      background: #ff66b2;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mi vida, Mi ritmo</h1>
+    <nav>
+      <a href="mailto:nellytrabj@gmail.com">Contáctame</a>
+    </nav>
+  </header>
 
-  </main>    <footer>  
-    <p>&copy; 2025 Mi Ritmo, Mi Vida. Todos los derechos reservados.</p>  
-    <p class="footer-links"><a href="politica-privacidad.html">Política de privacidad</a></p>  
-  </footer>    <script>  
-    function guardarEmail(e) {  
-      e.preventDefault();  
-      const email = document.getElementById('email').value;  
-      localStorage.setItem('suscriptor', email);  
-      alert('¡Gracias por suscribirte!');  
-    <div id="cookie-banner" style="position:fixed;bottom:0;width:100%;background:#222;color:#fff;padding:10px;text-align:center;">
-  Usamos cookies para mejorar tu experiencia. <a href="politica-privacidad.html" style="color:#ffd700;">Más información</a>
-  <button onclick="document.getElementById('cookie-banner').style.display='none'" style="margin-left:10px;">Aceptar</button>
-</div>
-    }  
-  </script>  </body>  
+  <main>
+    <!-- Botones de categorías con imagen -->
+    <div class="categoria">
+      <img src="imagenes/cocina/tacos-vegetales.jpg" alt="Cocina">
+      <a href="articulos/cocina/index.html">Cocina</a>
+    </div>
+    <div class="categoria">
+      <img src="imagenes/belleza/mascarilla.jpg" alt="Belleza">
+      <a href="articulos/belleza/index.html">Belleza</a>
+    </div>
+    <div class="categoria">
+      <img src="imagenes/bienestar/fitness.jpg" alt="Bienestar">
+      <a href="articulos/bienestar/index.html">Bienestar</a>
+    </div>
+    <div class="categoria">
+      <img src="imagenes/fitness/fitness.jpg" alt="Fitness">
+      <a href="articulos/fitness/index.html">Fitness</a>
+    </div>
+
+    <!-- Formulario de suscripción -->
+    <form onsubmit="guardarEmail(event)">
+      <label for="email">Suscríbete a mis novedades:</label>
+      <input type="email" id="email" placeholder="Tu correo electrónico" required />
+      <button type="submit">Suscribirme</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mi Ritmo, Mi Vida. Todos los derechos reservados.</p>
+    <p class="footer-links"><a href="politica-privacidad.html">Política de privacidad</a></p>
+  </footer>
+
+  <!-- Banner de cookies -->
+  <div id="cookie-banner">
+    Usamos cookies para mejorar tu experiencia. 
+    <a href="politica-privacidad.html">Más información</a>
+    <button onclick="document.getElementById('cookie-banner').style.display='none'">Aceptar</button>
+  </div>
+
+  <script>
+    function guardarEmail(e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      localStorage.setItem('suscriptor', email);
+      alert('¡Gracias por suscribirte!');
+    }
+  </script>
+</body>
 </html>
