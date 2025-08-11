@@ -19,31 +19,53 @@
       <p>Pequeños cambios hacen grandes diferencias: despierta temprano, hidrátate, estírate, escribe una intención positiva y camina unos minutos al aire libre.</p>
       <a href="motivacion-fitness.html" class="boton3d">Leer artículo</a>
     </section>
-<!-- Artículo 2 -->
+
+    <!-- Artículo 2 -->
     <section class="articulo">
       <img src="../../imagenes/bienestar/bienestar1.jpg" alt="Habitos que te hacen sentir mejor">
       <h2>Habitos que te hacen sentir mejor</h2>
       <p>Ideal para comenzar el dia con mucha paz y energía.</p>
-      <a href="bienestar1.html"class="boton3d">Leer artículo</a>
+      <a href="bienestar1.html" class="boton3d">Leer artículo</a>
     </section>
-<!-- Artículo 3 -->
+
+    <!-- Artículo 3 -->
     <section class="articulo">
       <img src="../../imagenes/bienestar/bienestar2.jpg" alt="Un dia libre de estrés">
       <h2>Un día libre de estrés</h2>
       <p>Ideal para liberar estrés y comenzar un día hermoso.</p>
-      <a href="bienestar2.html"class="boton3d">Leer artículo</a>
+      <a href="bienestar2.html" class="boton3d">Leer artículo</a>
     </section>
     
     <a href="../../index.html" style="
-  display: inline-block;
-  background: linear-gradient(145deg, #ff85c1, #ff4f9f);
-  color: white;
-  padding: 0.6rem 1.2rem;
-  border-radius: 12px;
-  font-weight: bold;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-  text-decoration: none;
-  transition: all 0.3s;
-" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-← Volver al inicio
+      display: inline-block;
+      background: linear-gradient(145deg, #ff85c1, #ff4f9f);
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 12px;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      text-decoration: none;
+      transition: all 0.3s;
+    " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+      ← Volver al inicio
     </a>
+  </main>
+
+  <!-- Aviso de Cookies -->
+  <div id="cookie-consent" style="position:fixed;bottom:10px;left:10px;right:10px;background:#333;color:white;padding:15px;border-radius:10px;display:flex;justify-content:space-between;align-items:center;z-index:1000;">
+    <span>Usamos cookies para mejorar tu experiencia en el sitio. <a href="#" style="color:#ff85c1;">Saber más</a></span>
+    <button id="accept-cookies" style="background:#ff4f9f;color:white;border:none;padding:8px 12px;border-radius:5px;cursor:pointer;">Aceptar</button>
+  </div>
+
+  <script>
+    document.getElementById("accept-cookies").addEventListener("click", function() {
+      document.getElementById("cookie-consent").style.display = "none";
+      localStorage.setItem("cookies-accepted", "true");
+    });
+
+    if (localStorage.getItem("cookies-accepted") === "true") {
+      document.getElementById("cookie-consent").style.display = "none";
+    }
+  </script>
+</body>
+</html>
