@@ -8,10 +8,10 @@
 </head>
 <body>
   <!-- Aviso de Cookies -->
-  <div id="cookie-banner" style="position:fixed;bottom:0;width:100%;background:#222;color:#fff;padding:10px;text-align:center;z-index:9999;">
+  <div id="cookie-banner" style="position:fixed;bottom:0;width:100%;background:#222;color:#fff;padding:10px;text-align:center;z-index:9999;display:none;">
     Usamos cookies para mejorar tu experiencia. 
     <a href="../../politica-privacidad.html" style="color:#ffd700;">Más información</a>
-    <button onclick="document.getElementById('cookie-banner').style.display='none'" style="margin-left:10px;">Aceptar</button>
+    <button id="accept-cookies" style="margin-left:10px;">Aceptar</button>
   </div>
 
   <header>
@@ -57,5 +57,18 @@
       ← Volver al inicio
     </a>
   </main>
+
+  <script>
+    // Mostrar el aviso si no se ha aceptado antes
+    if (!localStorage.getItem('cookiesAccepted')) {
+      document.getElementById('cookie-banner').style.display = 'block';
+    }
+
+    // Al aceptar, guardar en localStorage y ocultar
+    document.getElementById('accept-cookies').addEventListener('click', function() {
+      localStorage.setItem('cookiesAccepted', 'true');
+      document.getElementById('cookie-banner').style.display = 'none';
+    });
+  </script>
 </body>
 </html>
