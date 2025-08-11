@@ -40,9 +40,47 @@
     .boton3d:hover {
       transform: scale(1.05);
     }
+    /* Estilos para el aviso de cookies */
+    #cookie-banner {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+      background: rgba(0,0,0,0.85);
+      color: white;
+      padding: 1rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      display: none;
+      z-index: 9999;
+    }
+    #cookie-banner button {
+      background: #ff4f9f;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      margin-left: 1rem;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
+  <!-- Aviso de cookies -->
+  <div id="cookie-banner">
+    Usamos cookies para mejorar tu experiencia. Al continuar, aceptas nuestra política de cookies.
+    <button onclick="aceptarCookies()">Aceptar</button>
+  </div>
+  <script>
+    function aceptarCookies() {
+      localStorage.setItem("cookies-aceptadas", "true");
+      document.getElementById("cookie-banner").style.display = "none";
+    }
+    if (!localStorage.getItem("cookies-aceptadas")) {
+      document.getElementById("cookie-banner").style.display = "block";
+    }
+  </script>
+
   <header>
     <h1>Recetas de Cocina</h1>
   </header>
