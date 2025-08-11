@@ -175,12 +175,29 @@
     <p class="footer-links"><a href="politica-privacidad.html">Política de privacidad</a></p>
   </footer>
 
-  <!-- Banner de cookies -->
-  <div id="cookie-banner">
-    Usamos cookies para mejorar tu experiencia. 
-    <a href="politica-privacidad.html">Más información</a>
-    <button onclick="document.getElementById('cookie-banner').style.display='none'">Aceptar</button>
-  </div>
+<!-- Aviso de Cookies -->
+<div id="cookie-banner" style="position:fixed;bottom:0;width:100%;background:#222;color:#fff;padding:10px;text-align:center;z-index:9999;display:none;">
+  Usamos cookies para mejorar tu experiencia. 
+  <a href="politica-privacidad.html" style="color:#ffd700;">Más información</a>
+  <button id="accept-cookies" style="margin-left:10px;padding:8px 15px;background:linear-gradient(45deg,#ff9800,#ff5722);color:#fff;border:none;border-radius:10px;box-shadow:0 4px #b34700;cursor:pointer;font-weight:bold;">
+    Aceptar
+  </button>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Verificar si ya se aceptaron las cookies
+    if (!localStorage.getItem("cookiesAccepted")) {
+      document.getElementById("cookie-banner").style.display = "block";
+    }
+
+    // Cuando el usuario acepte
+    document.getElementById("accept-cookies").addEventListener("click", function() {
+      localStorage.setItem("cookiesAccepted", "true");
+      document.getElementById("cookie-banner").style.display = "none";
+    });
+  });
+</script>
 
   <script>
     function guardarEmail(e) {
