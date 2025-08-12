@@ -172,32 +172,37 @@
 
   <footer>
     <p>&copy; 2025 Mi Ritmo, Mi Vida. Todos los derechos reservados.</p>
-    <p class="footer-links"><a href="politica-privacidad.html">Política de privacidad</a></p>
+    <p class="footer-links">
+      <a href="politica-privacidad.html">Política de privacidad</a> |
+      <a href="sobre-mi.html">Sobre mí</a> |
+      <a href="aviso-legal.html">Aviso legal</a> |
+      <a href="terminos-condiciones.html">Términos y condiciones</a>
+    </p>
   </footer>
 
-<!-- Aviso de Cookies -->
-<div id="cookie-banner" style="position:fixed;bottom:0;width:100%;background:#222;color:#fff;padding:10px;text-align:center;z-index:9999;display:none;">
-  Usamos cookies para mejorar tu experiencia. 
-  <a href="politica-privacidad.html" style="color:#ffd700;">Más información</a>
-  <button id="accept-cookies" style="margin-left:10px;padding:8px 15px;background:linear-gradient(45deg,#ff9800,#ff5722);color:#fff;border:none;border-radius:10px;box-shadow:0 4px #b34700;cursor:pointer;font-weight:bold;">
-    Aceptar
-  </button>
-</div>
+  <!-- Aviso de Cookies -->
+  <div id="cookie-banner" style="position:fixed;bottom:0;width:100%;background:#222;color:#fff;padding:10px;text-align:center;z-index:9999;display:none;">
+    Usamos cookies para mejorar tu experiencia. 
+    <a href="politica-privacidad.html" style="color:#ffd700;">Más información</a>
+    <button id="accept-cookies" style="margin-left:10px;padding:8px 15px;background:linear-gradient(45deg,#ff9800,#ff5722);color:#fff;border:none;border-radius:10px;box-shadow:0 4px #b34700;cursor:pointer;font-weight:bold;">
+      Aceptar
+    </button>
+  </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    // Verificar si ya se aceptaron las cookies
-    if (!localStorage.getItem("cookiesAccepted")) {
-      document.getElementById("cookie-banner").style.display = "block";
-    }
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Verificar si ya se aceptaron las cookies
+      if (!localStorage.getItem("cookiesAccepted")) {
+        document.getElementById("cookie-banner").style.display = "block";
+      }
 
-    // Cuando el usuario acepte
-    document.getElementById("accept-cookies").addEventListener("click", function() {
-      localStorage.setItem("cookiesAccepted", "true");
-      document.getElementById("cookie-banner").style.display = "none";
+      // Cuando el usuario acepte
+      document.getElementById("accept-cookies").addEventListener("click", function() {
+        localStorage.setItem("cookiesAccepted", "true");
+        document.getElementById("cookie-banner").style.display = "none";
+      });
     });
-  });
-</script>
+  </script>
 
   <script>
     function guardarEmail(e) {
