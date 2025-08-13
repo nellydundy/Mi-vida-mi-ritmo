@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Mantiene tu mismo estilo -->
+</head>
+<body>
+
+<header>
+  <h1>Contacto</h1>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="sobre-mi.html">Sobre mí</a>
+  </nav>
+</header>
+
+<main>
+  <section>
+    <h2>Envíame un mensaje</h2>
+    <p>Si tienes dudas, sugerencias o propuestas, rellena el formulario y te responderé lo antes posible.</p>
+
+    <form action="https://formspree.io/f/TU_ID_AQUI" method="POST">
+      <label>Nombre:</label>
+      <input type="text" name="nombre" required>
+
+      <label>Email:</label>
+      <input type="email" name="email" required>
+
+      <label>Mensaje:</label>
+      <textarea name="mensaje" rows="5" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 Mi Vida, Mi Ritmo - Todos los derechos reservados</p>
+</footer>
+
+</body>
+</html>
