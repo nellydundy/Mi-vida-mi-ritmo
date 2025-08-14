@@ -5,40 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #ff7f50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    form {
+      background: white;
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #ff7f50;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background: #e56b3f;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>Contáctame</h1>
+    <p>Envíame un mensaje y te responderé lo antes posible</p>
+  </header>
 
-<header>
-  <h1>Contacto</h1>
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="sobre-mi.html">Sobre mí</a>
-  </nav>
-</header>
+  <form action="https://formspree.io/f/mvgqyogj" method="POST">
+    <label for="name">Tu nombre:</label>
+    <input type="text" id="name" name="name" required>
 
-<main>
-  <section>
-    <h2>Envíame un mensaje</h2>
-    <p>Si tienes dudas, sugerencias o propuestas, rellena el formulario y te responderé lo antes posible.</p>
+    <label for="email">Tu correo electrónico:</label>
+    <input type="email" id="email" name="email" required>
 
-    <form action="https://formspree.io/f/mzzdprgz" method="POST">
-      <label>Nombre:</label>
-      <input type="text" name="nombre" required>
+    <label for="message">Tu mensaje:</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
 
-      <label>Email:</label>
-      <input type="email" name="email" required>
-
-      <label>Mensaje:</label>
-      <textarea name="mensaje" rows="5" required></textarea>
-
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
-</main>
-
-<footer>
-  <p>© 2025 Mi Vida, Mi Ritmo - Todos los derechos reservados</p>
-</footer>
-
+    <button type="submit">Enviar mensaje</button>
+  </form>
 </body>
 </html>
