@@ -109,7 +109,6 @@
       color: #777;
       text-decoration: none;
     }
-    /* Estilo del banner de cookies */
     #cookie-banner {
       position: fixed;
       bottom: 0;
@@ -139,9 +138,11 @@
   <header>
     <h1>Mi vida, Mi ritmo</h1>
     <nav>
-      
+      <!-- Botón Contáctame eliminado -->
+    </nav>
+  </header>
+
   <main>
-    <!-- Botones de categorías con imagen -->
     <div class="categoria">
       <img src="imagenes/cocina/tacos-vegetales.jpg" alt="Cocina">
       <a href="articulos/cocina/index.html">Cocina</a>
@@ -159,7 +160,6 @@
       <a href="articulos/fitness/index.html">Fitness</a>
     </div>
 
-    <!-- Formulario de contacto con Formspree -->
     <h2>Envíame un mensaje</h2>
     <p>Si tienes dudas, sugerencias o propuestas, rellena el formulario y te responderé lo antes posible.</p>
     <form action="https://formspree.io/f/mvgqyogj" method="POST">
@@ -169,7 +169,6 @@
       <button type="submit">Enviar</button>
     </form>
 
-    <!-- Formulario de suscripción -->
     <form onsubmit="guardarEmail(event)">
       <label for="email">Suscríbete a mis novedades:</label>
       <input type="email" id="email" placeholder="Tu correo electrónico" required />
@@ -187,7 +186,6 @@
     </p>
   </footer>
 
-  <!-- Aviso de Cookies -->
   <div id="cookie-banner" style="position:fixed;bottom:0;width:100%;background:#222;color:#fff;padding:10px;text-align:center;z-index:9999;display:none;">
     Usamos cookies para mejorar tu experiencia. 
     <a href="politica-privacidad.html" style="color:#ffd700;">Más información</a>
@@ -198,12 +196,9 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      // Verificar si ya se aceptaron las cookies
       if (!localStorage.getItem("cookiesAccepted")) {
         document.getElementById("cookie-banner").style.display = "block";
       }
-
-      // Cuando el usuario acepte
       document.getElementById("accept-cookies").addEventListener("click", function() {
         localStorage.setItem("cookiesAccepted", "true");
         document.getElementById("cookie-banner").style.display = "none";
