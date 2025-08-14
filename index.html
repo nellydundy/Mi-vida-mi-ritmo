@@ -89,7 +89,7 @@
       gap: 0.5rem;
       align-items: center;
     }
-    input[type="email"] {
+    input, textarea {
       padding: 0.5rem;
       border-radius: 8px;
       border: 1px solid #ccc;
@@ -162,6 +162,16 @@
       <a href="articulos/fitness/index.html">Fitness</a>
     </div>
 
+    <!-- Formulario de contacto con Formspree -->
+    <h2>Envíame un mensaje</h2>
+    <p>Si tienes dudas, sugerencias o propuestas, rellena el formulario y te responderé lo antes posible.</p>
+    <form action="https://formspree.io/f/mvgqyogj" method="POST">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu correo electrónico" required>
+      <textarea name="mensaje" placeholder="Escribe tu mensaje aquí" rows="5" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+
     <!-- Formulario de suscripción -->
     <form onsubmit="guardarEmail(event)">
       <label for="email">Suscríbete a mis novedades:</label>
@@ -202,9 +212,7 @@
         document.getElementById("cookie-banner").style.display = "none";
       });
     });
-  </script>
 
-  <script>
     function guardarEmail(e) {
       e.preventDefault();
       const email = document.getElementById('email').value;
