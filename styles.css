@@ -313,3 +313,8 @@ input[type="email"] { width: 100%; box-sizing: border-box; }
 .boton3d:hover {  
   transform: scale(1.05);  
 }
+h2 {
+  background-color: pink; /* o el color que uses */
+  padding: 10px;
+  border-radius: 8px;
+   }
