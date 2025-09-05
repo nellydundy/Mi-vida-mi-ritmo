@@ -1,303 +1,239 @@
-/* -------------------------
-   Estilos globales (root)
-   ------------------------- */
-:root{
-  --rosa-1: #ff85c1;
-  --rosa-2: #ff4f9f;
-  --rosa-3: #ff66b2;
-  --fondo: #fff0f5;
-  --texto: #333;
-}
-
-* { box-sizing: border-box; }
-
-body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: var(--fondo);
-  color: var(--texto);
-  margin: 0;
-  padding: 0;
-}
-
-/* Header */
-header {
-  background: var(--rosa-3);
-  color: #fff;
-  text-align: center;
-  padding: 2rem 1rem;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-}
-
-/* Layout principal */
-main {
-  max-width: 920px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
-/* -------------------------
-   BOTONES 3D (usar clase .boton3d)
-   ------------------------- */
-.boton3d {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  width: 170px;                 /* ancho fijo para que sean consistentes */
-  padding: 0.8rem 1rem;
-  border-radius: 14px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 700;
-  background: linear-gradient(145deg, var(--rosa-1), var(--rosa-2));
-  box-shadow:
-    0 8px 0 rgba(0,0,0,0.12),   /* sombra "base" que crea el efecto 3D */
-    0 12px 30px rgba(255,80,150,0.08);
-  transform: translateY(0);
-  transition: transform .15s ease, box-shadow .15s ease;
-  text-align: center;
-}
-
-/* comportamiento al presionar */
-.boton3d:active,
-.boton3d--pressed {
-  transform: translateY(6px);   /* se "baja" */
-  box-shadow:
-    0 3px 0 rgba(0,0,0,0.10),
-    0 6px 18px rgba(0,0,0,0.08);
-}
-
-/* hover ligero */
-.boton3d:hover { transform: translateY(-3px); }
-
-/* si tiene imagen dentro (en index de categorías) */
-.boton3d img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  display: block;
-}
-
-/* -------------------------
-   Tarjetas de artículo
-   ------------------------- */
-.articulo {
-  background: #fff;
-  border-radius: 12px;
-  padding: 1rem;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-  margin-bottom: 1.5rem;
-}
-
-/* Imágenes dentro de artículos: controladas, responsivas */
-.articulo-img {
-  width: 100%;
-  max-width: 600px;   /* límite máximo para que no "coma" el texto */
-  height: auto;
-  display: block;
-  margin: 0.8rem auto;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-}
-
-/* Texto y botones dentro artículo */
-.articulo h1, .articulo h2 { margin: .4rem 0 .8rem; }
-.articulo p, .articulo ul, .articulo ol {
-  line-height: 1.6;
-  font-size: 1.05rem;
-  margin: .6rem 0;
-}
-
-/* Botón volver 3D estilo pequeño */
-.boton3d-small {
-  display: inline-block;
-  padding: 0.45rem .9rem;
-  border-radius: 10px;
-  background: linear-gradient(145deg, var(--rosa-1), var(--rosa-2));
-  color: white;
-  font-weight: 700;
-  box-shadow: 0 6px 0 rgba(0,0,0,0.12);
-  text-decoration: none;
-}
-
-/* Footer */
-footer { text-align:center; color:#666; padding:1.5rem; }
-
-/* Responsive */
-@media (max-width: 600px) {
-  .boton3d { width: 140px; }
-  .articulo-img { max-width: 100%; }
-  main { padding: 0 1rem; }
-}
-/* =========================
-   Responsive tweaks seguros
-   ========================= */
-
-/* Limita ancho de contenido principal para artículos pero mantiene centrado */
-main {
-  max-width: 900px;   /* ancho máximo cómodo en desktop */
-  margin: 0 auto;
-  padding: 1rem;
-  box-sizing: border-box;
-}
-
-/* Texto legible en pantallas pequeñas sin tocar otros artículos */
-body, main, .articulo, .categoria {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 16px; /* base: cambia si quieres texto más grande en todo el sitio */
-}
-
-/* Imágenes de artículos: responsivas y que no quemen la pantalla */
-.articulo-img {
-  width: 100%;
-  max-width: 620px;   /* no quedar demasiado grande en desktop */
-  height: auto;
-  display: block;
-  margin: 1rem auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
-  object-fit: cover;  /* mantiene proporciones */
-}
-
-/* Si por alguna razón hay imágenes en html con width/height inline, forzamos */
-.articulo img, .articulo-img, .categoria img {
-  max-width: 100% !important;
-  height: auto !important;
-}
-
-/* Contenedor de artículo: ancho flexible para que texto e imagen convivan */
-.articulo {
-  padding: 1rem;
-  background: #fff;
-  border-radius: 12px;
-}
-
-/* Botones 3D responsivos */
-.boton3d {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: .5rem;
-  padding: 0.55rem 1rem;
-  min-width: 120px;
-  border-radius: 12px;
-  box-shadow: 0 6px #c74385;
-  transition: transform .14s ease, box-shadow .14s ease;
-  text-decoration: none;
-}
-.boton3d:active { transform: translateY(4px); box-shadow: 0 2px #c74385; }
-
-/* Ajustes para las tarjetas/categorías */
-.categoria {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1.2rem;
-  align-items: center;
-  width: 100%;
-}
-
-/* Imagen dentro del botón/categoría */
-.categoria img {
-  width: 100%;
-  max-width: 240px;
-  height: auto;
-  border-radius: 12px;
-}
-
-/* Formularios / inputs responsivos */
-form {
-  width: 100%;
-  max-width: 480px;
-}
-input[type="email"] { width: 100%; box-sizing: border-box; }
-
-/* =========================
-   Media queries: móviles
-   ========================= */
-@media (max-width: 800px) {
-  h1 { font-size: 1.8rem; }
-  .boton3d { min-width: 110px; padding: .5rem .9rem; }
-  .articulo { padding: .9rem; }
-  main { padding: 1rem; }
-  .categoria img { max-width: 200px; }
-}
-
-/* Mobile narrow */
-@media (max-width: 420px) {
-  body, main { font-size: 15px; }
-  h1 { font-size: 1.6rem; padding: .6rem 0; }
-  .categoria { grid-template-columns: 1fr; gap: 1rem; }
-  .boton3d { width: 100%; justify-self: center; }
-  .articulo-img { max-width: 100%; }
-   }
-/* estilos anteriores ... */
-.boton3d {
-  display: inline-block;
-  background: linear-gradient(145deg, #ff85c1, #ff4f9f);
-  color: white;
-  padding: 0.6rem 1.2rem;
-  border-radius: 12px;
-  font-weight: bold;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-  text-decoration: none;
-  transition: all 0.3s;
-}
-
-.boton3d:hover {
-  background: linear-gradient(145deg, #ff4f9f, #ff85c1);
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 6px 10px rgba(0,0,0,0.25);
-}
-/* Estilo para imágenes de artículos */
-.articulo-img {
-  width: 100%;
-  max-width: 350px;
-  border-radius: 12px;
-  display: block;
-  margin: 1rem auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.boton3d {
-  background: linear-gradient(145deg, #ff85c1, #ff4f9f);
-  color: white;
-  padding: 0.6rem 1.2rem;
-  border-radius: 12px;
-  font-weight: bold;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-  text-decoration: none;
-  transition: all 0.3s;
-  display: inline-block;
-}
-
-.boton3d:hover {
-  transform: scale(1.05);
-}
+/* -------------------------  
+   Estilos globales (root)  
+   ------------------------- */  
+:root{  
+  --rosa-1: #ff85c1;  
+  --rosa-2: #ff4f9f;  
+  --rosa-3: #ff66b2;  
+  --fondo: #fff0f5;  
+  --texto: #333;  
+}  
+  
+* { box-sizing: border-box; }  
+  
+body {  
+  font-family: 'Segoe UI', Arial, sans-serif;  
+  background: var(--fondo);  
+  color: var(--texto);  
+  margin: 0;  
+  padding: 0;  
+}  
+  
+/* Header */  
+header {  
+  background: var(--rosa-3);  
+  color: #fff;  
+  text-align: center;  
+  padding: 2rem 1rem;  
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);  
+}  
+  
+/* Layout principal */  
+main {  
+  max-width: 920px;  
+  margin: 2rem auto;  
+  padding: 0 1rem;  
+}  
+  
+/* -------------------------  
+   BOTONES 3D (usar clase .boton3d)  
+   ------------------------- */  
 .boton3d {  
-  display: inline-block;  
-  background: linear-gradient(145deg, #ff85c1, #ff4f9f);  
-  color: white;  
-  padding: 0.6rem 1.2rem;  
-  border-radius: 12px;  
-  font-weight: bold;  
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);  
+  display: inline-flex;  
+  flex-direction: column;  
+  align-items: center;  
+  justify-content: center;  
+  gap: 0.5rem;  
+  width: 170px;                 /* ancho fijo para que sean consistentes */  
+  padding: 0.8rem 1rem;  
+  border-radius: 14px;  
+  color: #fff;  
   text-decoration: none;  
-  transition: all 0.3s;  
+  font-weight: 700;  
+  background: linear-gradient(145deg, var(--rosa-1), var(--rosa-2));  
+  box-shadow:  
+    0 8px 0 rgba(0,0,0,0.12),   /* sombra "base" que crea el efecto 3D */  
+    0 12px 30px rgba(255,80,150,0.08);  
+  transform: translateY(0);  
+  transition: transform .15s ease, box-shadow .15s ease;  
+  text-align: center;  
+}  
+  
+/* comportamiento al presionar */  
+.boton3d:active,  
+.boton3d--pressed {  
+  transform: translateY(6px);   /* se "baja" */  
+  box-shadow:  
+    0 3px 0 rgba(0,0,0,0.10),  
+    0 6px 18px rgba(0,0,0,0.08);  
+}  
+  
+/* hover ligero */  
+.boton3d:hover { transform: translateY(-3px); }  
+  
+/* si tiene imagen dentro (en index de categorías) */  
+.boton3d img {  
+  width: 100%;  
+  height: auto;  
+  border-radius: 8px;  
+  display: block;  
+}  
+  
+/* -------------------------  
+   Tarjetas de artículo - quitar cuadro  
+   ------------------------- */  
+.articulo {  
+  background: transparent !important; /* quita el fondo blanco */  
+  border-radius: 0 !important;       /* quita bordes redondeados */  
+  box-shadow: none !important;       /* quita sombra */  
+  padding: 1rem;                     /* mantiene el padding original */  
+  margin-bottom: 1.5rem;             /* mantiene margen inferior */  
+}  
+  
+/* Imágenes dentro de artículos: controladas, responsivas */  
+.articulo-img {  
+  width: 100%;  
+  max-width: 600px;   /* límite máximo para que no "coma" el texto */  
+  height: auto;  
+  display: block;  
+  margin: 0.8rem auto;  
+  border-radius: 12px;  
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);  
+}  
+  
+/* Texto y botones dentro artículo */  
+.articulo h1, .articulo h2 { margin: .4rem 0 .8rem; }  
+.articulo p, .articulo ul, .articulo ol {  
+  line-height: 1.6;  
+  font-size: 1.05rem;  
+  margin: .6rem 0;  
+}  
+  
+/* Botón volver 3D estilo pequeño */  
+.boton3d-small {  
+  display: inline-block;  
+  padding: 0.45rem .9rem;  
+  border-radius: 10px;  
+  background: linear-gradient(145deg, var(--rosa-1), var(--rosa-2));  
+  color: white;  
+  font-weight: 700;  
+  box-shadow: 0 6px 0 rgba(0,0,0,0.12);  
+  text-decoration: none;  
+}  
+  
+/* Footer */  
+footer { text-align:center; color:#666; padding:1.5rem; }  
+  
+/* Responsive */  
+@media (max-width: 600px) {  
+  .boton3d { width: 140px; }  
+  .articulo-img { max-width: 100%; }  
+  main { padding: 0 1rem; }  
+}  
+/* =========================  
+   Responsive tweaks seguros  
+   ========================= */  
+  
+/* Limita ancho de contenido principal para artículos pero mantiene centrado */  
+main {  
+  max-width: 900px;   /* ancho máximo cómodo en desktop */  
+  margin: 0 auto;  
+  padding: 1rem;  
+  box-sizing: border-box;  
+}  
+  
+/* Texto legible en pantallas pequeñas sin tocar otros artículos */  
+body, main, .articulo, .categoria {  
+  -webkit-font-smoothing: antialiased;  
+  -moz-osx-font-smoothing: grayscale;  
+  font-size: 16px; /* base: cambia si quieres texto más grande en todo el sitio */  
+}  
+  
+/* Imágenes de artículos: responsivas y que no quemen la pantalla */  
+.articulo-img {  
+  width: 100%;  
+  max-width: 620px;   /* no quedar demasiado grande en desktop */  
+  height: auto;  
+  display: block;  
+  margin: 1rem auto;  
+  border-radius: 12px;  
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);  
+  object-fit: cover;  /* mantiene proporciones */  
+}  
+  
+/* Si por alguna razón hay imágenes en html con width/height inline, forzamos */  
+.articulo img, .articulo-img, .categoria img {  
+  max-width: 100% !important;  
+  height: auto !important;  
+}  
+  
+/* Contenedor de artículo: ancho flexible para que texto e imagen convivan */  
+.articulo {  
+  padding: 1rem;  
+  background: transparent !important;  
+  border-radius: 0 !important;  
+}  
+  
+/* Botones 3D responsivos */  
+.boton3d {  
+  display: inline-flex;  
+  align-items: center;  
+  justify-content: center;  
+  gap: .5rem;  
+  padding: 0.55rem 1rem;  
+  min-width: 120px;  
+  border-radius: 12px;  
+  box-shadow: 0 6px #c74385;  
+  transition: transform .14s ease, box-shadow .14s ease;  
+  text-decoration: none;  
+}  
+.boton3d:active { transform: translateY(4px); box-shadow: 0 2px #c74385; }  
+  
+/* Ajustes para las tarjetas/categorías */  
+.categoria {  
+  display: grid;  
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));  
+  gap: 1.2rem;  
+  align-items: center;  
+  width: 100%;  
+}  
+  
+/* Imagen dentro del botón/categoría */  
+.categoria img {  
+  width: 100%;  
+  max-width: 240px;  
+  height: auto;  
+  border-radius: 12px;  
+}  
+  
+/* Formularios / inputs responsivos */  
+form {  
+  width: 100%;  
+  max-width: 480px;  
+}  
+input[type="email"] { width: 100%; box-sizing: border-box; }  
+  
+/* =========================  
+   Media queries: móviles  
+   ========================= */  
+@media (max-width: 800px) {  
+  h1 { font-size: 1.8rem; }  
+  .boton3d { min-width: 110px; padding: .5rem .9rem; }  
+  .articulo { padding: .9rem; }  
+  main { padding: 1rem; }  
+  .categoria img { max-width: 200px; }  
+}  
+  
+/* Mobile narrow */  
+@media (max-width: 420px) {  
+  body, main { font-size: 15px; }  
+  h1 { font-size: 1.6rem; padding: .6rem 0; }  
+  .categoria { grid-template-columns: 1fr; gap: 1rem; }  
+  .boton3d { width: 100%; justify-self: center; }  
+  .articulo-img { max-width: 100%; }  
 }  
 
-.boton3d {  
-  display: inline-block;  
-  background: linear-gradient(145deg, #ff85c1, #ff4f9f);  
-  color: white;  
-  padding: 0.6rem 1.2rem;  
-  border-radius: 12px;  
-  font-weight: bold;  
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);  
-  text-decoration: none;  
-  transition: all 0.3s;  
-}  
-
+/* estilos anteriores ... */  
 .boton3d {  
   display: inline-block;  
   background: linear-gradient(145deg, #ff85c1, #ff4f9f);  
@@ -311,10 +247,39 @@ input[type="email"] { width: 100%; box-sizing: border-box; }
 }  
 
 .boton3d:hover {  
+  background: linear-gradient(145deg, #ff4f9f, #ff85c1);  
+  transform: translateY(-3px) scale(1.05);  
+  box-shadow: 0 6px 10px rgba(0,0,0,0.25);  
+}  
+
+/* Estilo para imágenes de artículos */  
+.articulo-img {  
+  width: 100%;  
+  max-width: 350px;  
+  border-radius: 12px;  
+  display: block;  
+  margin: 1rem auto;  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+}  
+
+.boton3d {  
+  background: linear-gradient(145deg, #ff85c1, #ff4f9f);  
+  color: white;  
+  padding: 0.6rem 1.2rem;  
+  border-radius: 12px;  
+  font-weight: bold;  
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);  
+  text-decoration: none;  
+  transition: all 0.3s;  
+  display: inline-block;  
+}  
+
+.boton3d:hover {  
   transform: scale(1.05);  
+}  
+
+h2 {  
+  background-color: pink; /* o el color que uses */  
+  padding: 10px;  
+  border-radius: 8px;  
 }
-h2 {
-  background-color: pink; /* o el color que uses */
-  padding: 10px;
-  border-radius: 8px;
-   }
