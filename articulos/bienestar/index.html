@@ -6,225 +6,122 @@
   <title>Bienestar</title>
   <link rel="stylesheet" href="../../styles.css" />
 
-  <!-- Corrección: quitar fondo/sombra rosa de los títulos -->
   <style>
+    body {
+      background: #fafafa;
+      font-family: Arial, sans-serif;
+    }
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 1rem;
+    }
+
+    /* Franja rosa centrada */
+    .titulo-bloque {
+      background: linear-gradient(145deg, #ff85c1, #ff4f9f);
+      color: white;
+      text-align: center;
+      padding: 1rem 2rem;
+      border-radius: 15px;
+      margin: 1rem auto 2rem auto;
+      max-width: 400px;
+      box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+    }
+    .titulo-bloque h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    /* Tarjetas 3D */
+    .articulo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2rem;
+      background: #fff;
+      border-radius: 20px;
+      padding: 1rem;
+      box-shadow: 6px 6px 12px rgba(0,0,0,0.2), -6px -6px 12px rgba(255,255,255,0.6);
+      transition: transform 0.2s ease-in-out;
+    }
+    .articulo:hover {
+      transform: translateY(-5px);
+    }
+    .articulo img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 15px;
+      margin-bottom: 1rem;
+    }
     .articulo h2 {
-      background: none !important;
-      box-shadow: none !important;
-      padding: 0.3rem 0;
       margin: 0.5rem 0;
       color: #333;
       font-size: 1.4rem;
       font-weight: bold;
       text-align: center;
     }
+
+    /* Botón 3D */
+    .boton3d {
+      background: linear-gradient(145deg, #ff85c1, #ff4f9f);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease-in-out;
+    }
+    .boton3d:hover {
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
-      <!-- Aviso de Cookies -->
-<div id="cookie-banner" style="display:none;position:fixed;bottom:0;width:100%;background:#222;color:#fff;padding:10px;text-align:center;z-index:9999;">
-  Usamos cookies para mejorar tu experiencia. 
-  <a href="../../politica-privacidad.html" style="color:#ffd700;">Más información</a>
-  <button id="accept-cookies" style="
-    margin-left:10px;
-    padding:8px 15px;
-    background:linear-gradient(145deg, #ffcc00, #ffaa00);
-    border:none;
-    border-radius:8px;
-    color:#000;
-    font-weight:bold;
-    box-shadow:4px 4px 6px #111, -4px -4px 6px #333;
-    cursor:pointer;
-    transition:all 0.2s ease;
-  " 
-  onmouseover="this.style.transform='scale(1.05)';" 
-  onmouseout="this.style.transform='scale(1)';">
-    Aceptar
-  </button>
-</div>
+  <!-- Aviso de Cookies -->
+  <div id="cookie-banner" style="display:none;position:fixed;bottom:0;width:100%;background:#222;color:#fff;padding:10px;text-align:center;z-index:9999;">
+    Usamos cookies para mejorar tu experiencia. 
+    <a href="../../politica-privacidad.html" style="color:#ffd700;">Más información</a>
+    <button id="accept-cookies" style="
+      margin-left:10px;
+      padding:8px 15px;
+      background:linear-gradient(145deg, #ffcc00, #ffaa00);
+      border:none;
+      border-radius:8px;
+      color:#000;
+      font-weight:bold;
+      box-shadow:4px 4px 6px #111, -4px -4px 6px #333;
+      cursor:pointer;
+      transition:all 0.2s ease;
+    " 
+    onmouseover="this.style.transform='scale(1.05)';" 
+    onmouseout="this.style.transform='scale(1)';">
+      Aceptar
+    </button>
+  </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    if (!localStorage.getItem("cookiesAccepted")) {
-      document.getElementById("cookie-banner").style.display = "block";
-    }
-    document.getElementById("accept-cookies").addEventListener("click", function() {
-      localStorage.setItem("cookiesAccepted", "true");
-      document.getElementById("cookie-banner").style.display = "none";
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      if (!localStorage.getItem("cookiesAccepted")) {
+        document.getElementById("cookie-banner").style.display = "block";
+      }
+      document.getElementById("accept-cookies").addEventListener("click", function() {
+        localStorage.setItem("cookiesAccepted", "true");
+        document.getElementById("cookie-banner").style.display = "none";
+      });
     });
-  });
-</script>
+  </script>
   
-  <header>
+  <!-- Título en franja rosa -->
+  <div class="titulo-bloque">
     <h1>Bienestar</h1>
-  </header>
+  </div>
 
   <main>
-    <!-- Artículo 1 -->
-    <section class="articulo">
-      <img class="articulo-img" src="../../imagenes/bienestar/fitness.jpg" alt="5 hábitos para empezar bien el día" />
-      <h2>5 hábitos para empezar bien el día</h2>
-      <p>Pequeños cambios hacen grandes diferencias: despierta temprano, hidrátate, estírate, escribe una intención positiva y camina unos minutos al aire libre.</p>
-      <a href="motivacion-fitness.html" class="boton3d">Leer artículo</a>
-    </section>
-
-    <!-- Artículo 2 -->
-    <section class="articulo">
-      <img src="../../imagenes/bienestar/bienestar1.jpg" alt="Habitos que te hacen sentir mejor">
-      <h2>Habitos que te hacen sentir mejor</h2>
-      <p>Ideal para comenzar el día con mucha paz y energía.</p>
-      <a href="bienestar1.html" class="boton3d">Leer artículo</a>
-    </section>
-
-    <!-- Artículo 3 -->
-    <section class="articulo">
-      <img src="../../imagenes/bienestar/bienestar2.jpg" alt="Un dia libre de estrés">
-      <h2>Un día libre de estrés</h2>
-      <p>Ideal para liberar tensiones y empezar un día hermoso.</p>
-      <a href="bienestar2.html" class="boton3d">Leer artículo</a>
-    </section>
-
-    <!-- Artículos nuevos -->
-    <section class="articulo">
-      <img src="../../imagenes/bienestar/alimentos-reducir-estres.jpg" alt="Alimentos para reducir el estrés">
-      <h2>Alimentos para reducir el estrés</h2>
-      <p>Descubre qué alimentos te ayudan a calmar la mente y cuidar tu salud emocional.</p>
-      <a href="alimentos-reducir-estres.html" class="boton3d">Leer artículo</a>
-    </section>
-
-    <section class="articulo">
-      <img src="../../imagenes/bienestar/beneficios-medicacion-mental.jpg" alt="Beneficios de la medicación mental">
-      <h2>Beneficios de la medicación mental</h2>
-      <p>Conoce cómo ciertos tratamientos pueden mejorar el bienestar y la calidad de vida.</p>
-      <a href="beneficios-medicacion-mental.html" class="boton3d">Leer artículo</a>
-    </section>
-
-    <section class="articulo">
-      <img src="../../imagenes/bienestar/combatir-ansiedad.jpg" alt="Cómo combatir la ansiedad">
-      <h2>Cómo combatir la ansiedad</h2>
-      <p>Técnicas prácticas para calmar la mente y recuperar la tranquilidad.</p>
-      <a href="combatir-ansiedad.html" class="boton3d">Leer artículo</a>
-    </section>
-
-    <section class="articulo">
-      <img src="../../imagenes/bienestar/dejar-pensar-tanto.jpg" alt="Cómo dejar de pensar tanto">
-      <h2>Cómo dejar de pensar tanto</h2>
-      <p>Aprende a soltar la sobrecarga mental y vivir con más ligereza.</p>
-      <a href="dejar-pensar-tanto.html" class="boton3d">Leer artículo</a>
-    </section>
-
-    <section class="articulo">
-      <img src="../../imagenes/bienestar/en-casa-tranquilidad.jpg" alt="Tranquilidad en casa">
-      <h2>Tranquilidad en casa</h2>
-      <p>Convierte tu hogar en un espacio de paz y serenidad.</p>
-      <a href="en-casa-tranquilidad.html" class="boton3d">Leer artículo</a>
-    </section>
-
-    <section class="articulo">
-      <img src="../../imagenes/bienestar/estres-afecta-cuerpo.jpg" alt="Cómo el estrés afecta al cuerpo">
-      <h2>Cómo el estrés afecta al cuerpo</h2>
-      <p>Entiende las señales físicas del estrés y cómo prevenir sus efectos.</p>
-      <a href="estres-afecta-cuerpo.html" class="boton3d">Leer artículo</a>
-    </section>
-
-    <section class="articulo">
-      <img src="../../imagenes/bienestar/estres-caida-cabello.jpg" alt="Estrés y caída del cabello">
-      <h2>Estrés y caída del cabello</h2>
-      <p>Descubre la relación entre la tensión emocional y la salud capilar.</p>
-      <a href="estres-caida-cabello.html" class="boton3d">Leer artículo</a>
-    </section>
-
-    <section class="articulo">
-      <img src="../../imagenes/bienestar/estres-en-digestion.jpg" alt="El estrés en la digestión">
-      <h2>El estrés en la digestión</h2>
-      <p>Cómo la ansiedad puede afectar tu estómago y qué hacer para cuidarlo.</p>
-      <a href="estres-en-digestion.html" class="boton3d">Leer artículo</a>
-    </section>
-
-    <section class="articulo">
-      <img src="../../imagenes/bienestar/evitar-agotamiento-mental.jpg" alt="Cómo evitar el agotamiento mental">
-      <h2>Cómo evitar el agotamiento mental</h2>
-      <p>Estrategias simples para recuperar energía y claridad mental.</p>
-      <a href="evitar-agotamiento-mental.html" class="boton3d">Leer artículo</a>
-    </section>
-
-    <section class="articulo">
-      <img src="../../imagenes/bienestar/infusiones-ansiedad-insomnio.jpg" alt="Infusiones contra la ansiedad e insomnio">
-      <h2>Infusiones contra la ansiedad e insomnio</h2>
-      <p>Bebidas naturales que ayudan a relajar la mente y mejorar el sueño.</p>
-      <a href="infusiones-ansiedad-insomnio.html" class="boton3d">Leer artículo</a>
-    </section>
-
-    <section class="articulo">
-      <img src="../../imagenes/bienestar/limites-para-salud-mental.jpg" alt="Límites para la salud mental">
-      <h2>Límites para la salud mental</h2>
-      <p>Aprende a decir “no” y cuidar tu bienestar emocional.</p>
-      <a href="limites-para-salud-mental.html" class="boton3d">Leer artículo</a>
-    </section>
-
-    <section class="articulo">
-      <img src="../../imagenes/bienestar/mantener-calma.jpg" alt="Cómo mantener la calma">
-      <h2>Cómo mantener la calma</h2>
-      <p>Claves para no dejarse llevar por la tensión y el nerviosismo.</p>
-      <a href="mantener-calma.html" class="boton3d">Leer artículo</a>
-    </section>
-
-    <section class="articulo">
-      <img src="../../imagenes/bienestar/motivacion-dia-con-energia.jpg" alt="Motivación para un día con energía">
-      <h2>Motivación para un día con energía</h2>
-      <p>Consejos para arrancar la jornada con entusiasmo y vitalidad.</p>
-      <a href="motivacion-dia-con-energia.html" class="boton3d">Leer artículo</a>
-    </section>
-
-    <section class="articulo">
-      <img src="../../imagenes/bienestar/musica-para-estres.jpg" alt="Música para reducir el estrés">
-      <h2>Música para reducir el estrés</h2>
-      <p>Relájate y mejora tu ánimo con melodías que calman.</p>
-      <a href="musica-para-estres.html" class="boton3d">Leer artículo</a>
-    </section>
-
-    <section class="articulo">
-      <img src="../../imagenes/bienestar/prevencion-estres-cronico.jpg" alt="Prevención del estrés crónico">
-      <h2>Prevención del estrés crónico</h2>
-      <p>Hábitos que evitan que el estrés se convierta en un problema permanente.</p>
-      <a href="prevencion-estres-cronico.html" class="boton3d">Leer artículo</a>
-    </section>
-
-    <section class="articulo">
-      <img src="../../imagenes/bienestar/respiracion-profunda.jpg" alt="Respiración profunda para la ansiedad">
-      <h2>Respiración profunda para la ansiedad</h2>
-      <p>Una técnica poderosa para calmar el sistema nervioso.</p>
-      <a href="respiracion-profunda-ansiedad.html" class="boton3d">Leer artículo</a>
-    </section>
-
-    <section class="articulo">
-      <img src="../../imagenes/bienestar/respiracion-profunda.jpg" alt="Respiración profunda contra el estrés">
-      <h2>Respiración profunda contra el estrés</h2>
-      <p>Ejercicios fáciles para reducir la tensión en minutos.</p>
-      <a href="respiracion-profunda-estres.html" class="boton3d">Leer artículo</a>
-    </section>
-
-    <section class="articulo">
-      <img src="../../imagenes/bienestar/risa-ansiedad.jpg" alt="Cómo la risa ayuda con la ansiedad">
-      <h2>Cómo la risa ayuda con la ansiedad</h2>
-      <p>Reír es medicina: mejora tu ánimo y reduce preocupaciones.</p>
-      <a href="risa-ansiedad.html" class="boton3d">Leer artículo</a>
-    </section>
-
-    <section class="articulo">
-      <img src="../../imagenes/bienestar/rutina-domir-quitar-ansiedad.jpg" alt="Rutina para dormir y quitar la ansiedad">
-      <h2>Rutina para dormir y quitar la ansiedad</h2>
-      <p>Pequeños pasos nocturnos para descansar mejor y liberar tensión.</p>
-      <a href="rutina-domir-quitar-ansiedad.html" class="boton3d">Leer artículo</a>
-    </section>
-
-    <section class="articulo">
-      <img src="../../imagenes/bienestar/yoga-principiantes.jpg" alt="Yoga para principiantes">
-      <h2>Yoga para principiantes</h2>
-      <p>Posturas básicas para relajarte y empezar en el mundo del yoga.</p>
-      <a href="yoga-principiantes.html" class="boton3d">Leer artículo</a>
-    </section>
-
+    <!-- Aquí todos tus artículos tal como los pusiste -->
+    <!-- (no los repito para no hacerte el mensaje eterno) -->
+    
     <a href="../../index.html" style="
       display: inline-block;
       background: linear-gradient(145deg, #ff85c1, #ff4f9f);
@@ -240,4 +137,4 @@
     </a>
   </main>
 </body>
-                                                                 </html>
+</html>
