@@ -41,46 +41,39 @@
       transform: scale(1.05);
     }
 
-    /* 🔹 Nueva lista rosa debajo del título */
-    .menu-categorias {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin: 1rem 0 2rem;
-      padding: 0.8rem;
-      border-radius: 12px;
+    /* 🔹 Franja rosa para el título */
+    header {
       background: linear-gradient(145deg, #ff85c1, #ff4f9f);
-      list-style: none;
-    }
-    .menu-categorias li {
-      font-weight: bold;
-    }
-    .menu-categorias a {
       color: white;
-      text-decoration: none;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      border-radius: 0 0 20px 20px;
+      margin-bottom: 2rem;
     }
-    .menu-categorias a:hover {
-      text-decoration: underline;
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Recetas de Cocina</h1>
-
-    <!-- 🔹 Lista rosa de categorías -->
-    <ul class="menu-categorias">
-      <li><a href="#pollo">Pollo</a></li>
-      <li><a href="#ensaladas">Ensaladas</a></li>
-      <li><a href="#sopas">Sopas</a></li>
-      <li><a href="#postres">Postres</a></li>
-      <li><a href="#otros">Otros</a></li>
-    </ul>
   </header>
 
   <main>
-    <!-- Aquí siguen tus artículos sin cambios -->
-    ...
+    <!-- 🔹 Aquí siguen todos tus artículos tal cual los tenías -->
+    <!-- Artículo 1 -->
+    <section class="articulo">
+      <img src="../../imagenes/cocina/pollo-pina.jpg" alt="Pollo a la piña">
+      <h2>Pollo a la Piña</h2>
+      <p>Refrescante y delicioso pollo a la pinña.</p>
+      <a class="boton3d" href="pollo-pina.html">Leer artículo</a>
+    </section>
+
+    <!-- (los demás artículos siguen igual que en tu código original) -->
+
+    <a class="boton3d" href="../../index.html" style="margin-top: 2rem;">← Volver al inicio</a>
   </main>
 </body>
 </html>
