@@ -6,84 +6,85 @@
   <title>Mi vida, mi ritmo - Inicio</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
-    /* Ajustes globales */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #fafafa;
     }
-    header {
-      background: #ff4f9f; /* Franja rosa */
+    /* Franja rosa */
+    .franja {
+      background: #ff4f9f;
       color: white;
-      padding: 1rem 0;
-      margin-bottom: 0.6rem;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      font-size: 2rem;
+      font-weight: bold;
       box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     }
-    header .site-title {
+    header {
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    nav {
       max-width: 1000px;
       margin: auto;
-      padding: 0 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
+      padding: 0.8rem 1rem;
     }
-    header h1 {
-      margin: 0;
-      font-size: 1.6rem;
-    }
-    header nav ul {
+    nav ul {
       list-style: none;
       padding: 0;
       margin: 0;
       display: flex;
-      gap: 0.8rem;
       flex-wrap: wrap;
+      gap: 0.8rem;
     }
-    header nav a {
+    nav a {
       text-decoration: none;
-      color: white;
+      color: #333;
       padding: 0.4rem 0.6rem;
       border-radius: 8px;
       transition: background 0.3s;
     }
-    header nav a:hover,
-    header nav a.active {
-      background: rgba(255, 255, 255, 0.2);
+    nav a:hover,
+    nav a.active {
+      background: #ffebf4;
+      color: #ff4f9f;
     }
     main {
       max-width: 1000px;
-      margin: auto;
+      margin: 2rem auto;
       padding: 1rem;
     }
-    main h2 {
-      margin-top: 0;
-      margin-bottom: 1rem;
-      color: #333;
+    .categorias {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
     }
-    .articulo {
-      margin-bottom: 1.6rem;
-      padding: 1rem;
+    .tarjeta {
       background: white;
       border-radius: 12px;
       box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-      display: block;
-      overflow: hidden;
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.2s;
     }
-    .articulo-img {
+    .tarjeta:hover {
+      transform: translateY(-5px);
+    }
+    .tarjeta img {
       width: 100%;
-      max-height: 280px;
+      max-height: 180px;
       object-fit: cover;
       border-radius: 8px;
-      display: block;
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.8rem;
     }
-    .articulo h3 {
+    .tarjeta h3 {
       margin: 0.4rem 0;
       color: #444;
     }
-    .articulo p {
+    .tarjeta p {
       color: #666;
+      margin-bottom: 1rem;
     }
     .boton3d {
       display: inline-block;
@@ -113,39 +114,50 @@
   </style>
 </head>
 <body>
+  <div class="franja">Mi vida, mi ritmo</div>
+
   <header>
-    <div class="site-title">
-      <h1>Mi vida, mi ritmo</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html" class="active">Inicio</a></li>
-          <li><a href="articulos/belleza/index.html">Belleza</a></li>
-          <li><a href="articulos/bienestar/index.html">Bienestar</a></li>
-          <li><a href="articulos/cocina/index.html">Cocina</a></li>
-          <li><a href="articulos/fitness/index.html">Fitness</a></li>
-          <li><a href="sobre-mi.html">Sobre mí</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="articulos/belleza/index.html">Belleza</a></li>
+        <li><a href="articulos/bienestar/index.html">Bienestar</a></li>
+        <li><a href="articulos/cocina/index.html">Cocina</a></li>
+        <li><a href="articulos/fitness/index.html">Fitness</a></li>
+        <li><a href="sobre-mi.html">Sobre mí</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-    <h2>Últimos artículos</h2>
-
-    <!-- 🔽 Aquí están todos los artículos listados con imagen, título, extracto y botón -->
-    <!-- (Generados desde las carpetas de Belleza, Bienestar, Cocina y Fitness) -->
-    
-    <!-- Ejemplo de artículo -->
-    <section class="articulo">
-      <img class="articulo-img" src="imagenes/belleza/mascarilla.jpg" alt="Mascarilla Casera para la Piel" />
-      <h3>Mascarilla Casera para la Piel</h3>
-      <p>Cuida tu rostro con esta mascarilla natural y efectiva. Ideal para una rutina de belleza real.</p>
-      <a href="articulos/belleza/mascarilla-casera.html" class="boton3d">Leer artículo</a>
-    </section>
-
-    <!-- 🔽 Aquí seguirían TODOS los demás artículos que ya extraje (Belleza, Bienestar, Cocina, Fitness) -->
-    <!-- Para no quedarme a la mitad como antes, te los paso completos en el próximo bloque -->
+    <h2>Categorías</h2>
+    <div class="categorias">
+      <div class="tarjeta">
+        <img src="imagenes/belleza.jpg" alt="Belleza">
+        <h3>Belleza</h3>
+        <p>Consejos y trucos de cuidado personal, maquillaje y más.</p>
+        <a href="articulos/belleza/index.html" class="boton3d">Ver artículos</a>
+      </div>
+      <div class="tarjeta">
+        <img src="imagenes/bienestar.jpg" alt="Bienestar">
+        <h3>Bienestar</h3>
+        <p>Encuentra paz interior y equilibrio con nuestras guías.</p>
+        <a href="articulos/bienestar/index.html" class="boton3d">Ver artículos</a>
+      </div>
+      <div class="tarjeta">
+        <img src="imagenes/cocina.jpg" alt="Cocina">
+        <h3>Cocina</h3>
+        <p>Recetas fáciles y deliciosas para cada ocasión.</p>
+        <a href="articulos/cocina/index.html" class="boton3d">Ver artículos</a>
+      </div>
+      <div class="tarjeta">
+        <img src="imagenes/fitness.jpg" alt="Fitness">
+        <h3>Fitness</h3>
+        <p>Rutinas y consejos para mantenerte en forma.</p>
+        <a href="articulos/fitness/index.html" class="boton3d">Ver artículos</a>
+      </div>
+    </div>
   </main>
 
   <footer>
