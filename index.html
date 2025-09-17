@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi vida, mi ritmo - Inicio</title>
+  <title>Contáctame</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
     body {
@@ -51,120 +51,65 @@
       color: #ff4f9f;
     }
     main {
-      max-width: 1000px;
+      max-width: 800px;
       margin: 2rem auto;
       padding: 1rem;
     }
-    .categorias {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.5rem;
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
-    .tarjeta {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-      padding: 1rem;
-      text-align: center;
-      transition: transform 0.2s;
-    }
-    .tarjeta:hover {
-      transform: translateY(-5px);
-    }
-    .tarjeta img {
-      width: 100%;
-      max-height: 180px;
-      object-fit: cover;
+    input, textarea {
+      padding: 0.8rem;
+      border: 1px solid #ddd;
       border-radius: 8px;
-      margin-bottom: 0.8rem;
+      font-size: 1rem;
+      width: 100%;
     }
-    .tarjeta h3 {
-      margin: 0.4rem 0;
-      color: #444;
-    }
-    .tarjeta p {
-      color: #666;
-      margin-bottom: 1rem;
-    }
-    .boton3d {
-      display: inline-block;
-      padding: 0.5rem 0.9rem;
-      background: linear-gradient(145deg, #ff85c1, #ff4f9f);
+    /* Botón 3D */
+    button {
+      background: #ff4f9f;
       color: white;
-      text-decoration: none;
+      border: none;
+      padding: 0.9rem;
+      font-size: 1.1rem;
+      font-weight: bold;
       border-radius: 10px;
-      box-shadow: 0 6px 14px rgba(0,0,0,0.12);
-      transition: transform 0.2s;
+      cursor: pointer;
+      box-shadow: 0 5px #cc3f7f; /* sombra para efecto 3D */
+      transition: all 0.2s ease;
     }
-    .boton3d:hover {
-      transform: scale(1.05);
-    }
-    footer {
-      max-width: 1000px;
-      margin: auto;
-      padding: 1rem;
-      text-align: center;
-      color: #555;
-    }
-    footer a {
-      color: #ff4f9f;
-      text-decoration: none;
-      margin: 0 0.3rem;
+    button:active {
+      box-shadow: 0 2px #cc3f7f;
+      transform: translateY(3px);
     }
   </style>
 </head>
 <body>
-  <div class="franja">Mi vida, mi ritmo</div>
+  <div class="franja">Contáctame</div>
 
   <header>
     <nav>
       <ul>
-        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="index.html">Inicio</a></li>
         <li><a href="articulos/belleza/index.html">Belleza</a></li>
         <li><a href="articulos/bienestar/index.html">Bienestar</a></li>
         <li><a href="articulos/cocina/index.html">Cocina</a></li>
         <li><a href="articulos/fitness/index.html">Fitness</a></li>
         <li><a href="sobre-mi.html">Sobre mí</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h2>Categorías</h2>
-    <div class="categorias">
-      <div class="tarjeta">
-        <img src="imagenes/belleza.jpg" alt="Belleza">
-        <h3>Belleza</h3>
-        <p>Consejos y trucos de cuidado personal, maquillaje y más.</p>
-        <a href="articulos/belleza/index.html" class="boton3d">Ver artículos</a>
-      </div>
-      <div class="tarjeta">
-        <img src="imagenes/bienestar.jpg" alt="Bienestar">
-        <h3>Bienestar</h3>
-        <p>Encuentra paz interior y equilibrio con nuestras guías.</p>
-        <a href="articulos/bienestar/index.html" class="boton3d">Ver artículos</a>
-      </div>
-      <div class="tarjeta">
-        <img src="imagenes/cocina.jpg" alt="Cocina">
-        <h3>Cocina</h3>
-        <p>Recetas fáciles y deliciosas para cada ocasión.</p>
-        <a href="articulos/cocina/index.html" class="boton3d">Ver artículos</a>
-      </div>
-      <div class="tarjeta">
-        <img src="imagenes/fitness.jpg" alt="Fitness">
-        <h3>Fitness</h3>
-        <p>Rutinas y consejos para mantenerte en forma.</p>
-        <a href="articulos/fitness/index.html" class="boton3d">Ver artículos</a>
-      </div>
-    </div>
+    <h2>Envíame un mensaje</h2>
+    <form>
+      <input type="text" placeholder="Tu nombre" required />
+      <input type="email" placeholder="Tu correo" required />
+      <textarea placeholder="Tu mensaje" rows="5" required></textarea>
+      <button type="submit">Enviar mensaje</button>
+    </form>
   </main>
-
-  <footer>
-    <p>&copy; 2025 Mi vida, mi ritmo. Todos los derechos reservados.</p>
-    <a href="politica-privacidad.html">Política de privacidad</a> |
-    <a href="aviso-legal.html">Aviso legal</a> |
-    <a href="Terminos-condiciones.html">Términos y condiciones</a>
-  </footer>
 </body>
 </html>
