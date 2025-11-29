@@ -12,26 +12,6 @@
             padding: 0;
         }
 
-        /* Barra superior */
-        nav {
-            background-color: #ff7bbb;
-            padding: 15px;
-            text-align: center;
-            border-radius: 0 0 20px 20px;
-        }
-
-        nav a {
-            margin: 0 15px;
-            padding: 10px 20px;
-            background: #ff4fa3;
-            color: white;
-            text-decoration: none;
-            border-radius: 12px;
-            font-weight: bold;
-            display: inline-block;
-            box-shadow: 3px 3px 0px #d33b82;
-        }
-
         /* Franja rosada principal */
         .header {
             background-color: #ff7bbb;
@@ -39,10 +19,29 @@
             text-align: center;
             color: white;
             margin: 20px;
-            border-radius: 20px;
+            border-radius: 25px;
             font-size: 28px;
             font-weight: bold;
             box-shadow: 4px 4px 0 #d33b82;
+        }
+
+        /* Barra de botones pequeños */
+        nav {
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 8px;
+            padding: 10px 20px;
+            background: #ff4fa3;
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: bold;
+            display: inline-block;
+            font-size: 14px;
+            box-shadow: 3px 3px 0px #d33b82;
         }
 
         /* Contenedor de tarjetas */
@@ -90,7 +89,6 @@
             box-shadow: 3px 3px 0 #d33b82;
         }
 
-        /* Footer */
         footer {
             margin-top: 40px;
             padding: 20px;
@@ -112,9 +110,15 @@
 
     </style>
 </head>
+
 <body>
 
-    <!-- Menú superior con botones 3D -->
+    <!-- 1. FRANJA ROSADA ARRIBA -->
+    <div class="header">
+        Mi Vida, Mi Ritmo
+    </div>
+
+    <!-- 2. BOTONES PEQUEÑITOS DEBAJO -->
     <nav>
         <a href="#">Inicio</a>
         <a href="#">Sobre mí</a>
@@ -122,36 +126,27 @@
         <a href="#">Contáctame</a>
     </nav>
 
-    <!-- Franja rosada principal con bordes redondos -->
-    <div class="header">
-        Mi Vida, Mi Ritmo
-    </div>
-
-    <!-- Secciones con tarjetas -->
+    <!-- 3. TARJETAS -->
     <div class="contenedor">
 
-        <!-- Belleza -->
         <div class="tarjeta">
             <img src="img/belleza.jpg" alt="Belleza">
             <div class="titulo-3d">Belleza</div>
             <a href="#" class="boton-3d">Leer más</a>
         </div>
 
-        <!-- Bienestar -->
         <div class="tarjeta">
             <img src="img/bienestar.jpg" alt="Bienestar">
             <div class="titulo-3d">Bienestar</div>
             <a href="#" class="boton-3d">Leer más</a>
         </div>
 
-        <!-- Cocina -->
         <div class="tarjeta">
             <img src="img/cocina.jpg" alt="Cocina">
             <div class="titulo-3d">Cocina</div>
             <a href="#" class="boton-3d">Leer más</a>
         </div>
 
-        <!-- Fitness -->
         <div class="tarjeta">
             <img src="img/fitness.jpg" alt="Fitness">
             <div class="titulo-3d">Fitness</div>
@@ -160,11 +155,11 @@
 
     </div>
 
-    <!-- Footer existente + lo que pediste -->
+    <!-- 4. FOOTER COMPLETO -->
     <footer>
-        © 2025 Mi Vida, Mi Ritmo |  
-        <a href="#">Términos y Condiciones</a> |  
-        <a href="#">Política de Privacidad</a> |  
+        © 2025 Mi Vida, Mi Ritmo |
+        <a href="#">Términos y Condiciones</a> |
+        <a href="#">Política de Privacidad</a> |
         <a href="#">Aviso Legal</a>
     </footer>
 
