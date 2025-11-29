@@ -1,103 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Mi Vida, Mi Ritmo 🌸</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    /* Estilos internos adicionales */
-    header {
-      background-color: #f8bbd0;
-      padding: 20px;
-      text-align: center;
-    }
-    nav ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-    nav ul li {
-      display: inline;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: #880e4f;
-      font-weight: bold;
-    }
-    main {
-      padding: 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    .articulo {
-      background: #fce4ec;
-      padding: 15px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
-    .articulo h2 {
-      margin-top: 0;
-      color: #ad1457;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #f8bbd0;
-      margin-top: 30px;
-    }
-  </style>
+
+  <!-- Nota: NO incluir <link rel="manifest" href="/manifest.json"> si quieres evitar PWA -->
+  <!-- <link rel="manifest" href="/manifest.json"> -->
+
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="theme-color" content="#f8bbd0" />
+
+  <!-- Meta adicionales opcionales -->
 </head>
 <body>
-  <header>
-    <h1>Mi Vida, Mi Ritmo 🌸</h1>
-    <p>Bienestar, belleza y amor propio para mujeres fuertes</p>
+  <header class="site-header">
+    <div class="header-inner">
+      <h1 class="brand">Mi Vida, Mi Ritmo 🌸</h1>
+      <p class="tagline">Bienestar, belleza y amor propio para mujeres fuertes</p>
+    </div>
   </header>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="sobre-mi.html">Sobre mí</a></li>
-      <li><a href="articulos/belleza/index.html">Belleza</a></li>
-      <li><a href="articulos/bienestar/index.html">Bienestar</a></li>
-      <li><a href="articulos/fitness/index.html">Fitness</a></li>
-      <li><a href="nuevo-articulo.html">Nuevo Artículo</a></li>
+  <nav class="main-nav" role="navigation" aria-label="Menú principal">
+    <ul class="nav-list">
+      <li><a class="nav-link" href="index.html">Inicio</a></li>
+      <li><a class="nav-link" href="sobre-mi.html">Sobre mí</a></li>
+      <li><a class="nav-link" href="articulos/belleza/index.html">Belleza</a></li>
+      <li><a class="nav-link" href="articulos/bienestar/index.html">Bienestar</a></li>
+      <li><a class="nav-link" href="articulos/fitness/index.html">Fitness</a></li>
+      <li><a class="nav-link" href="nuevo-articulo.html">Nuevo Artículo</a></li>
     </ul>
   </nav>
 
-  <main>
+  <main class="container">
     <h2>Artículos Recientes</h2>
-    <div id="lista-articulos"></div>
+
+    <!-- Ejemplo de tarjeta de categoría (Fitness) -->
+    <section class="grid">
+      <article class="card category-card">
+        <img src="imagenes/fitness/fitness.jpg" alt="Fitness" class="card-img" />
+        <div class="card-body">
+          <h3 class="card-title">Fitness</h3>
+          <p class="card-excerpt">Entrenamientos y tips para mantener tu ritmo.</p>
+          <a class="btn btn-3d" href="articulos/fitness/index.html">Leer más</a>
+        </div>
+      </article>
+
+      <!-- Repite otras tarjetas según listado.json o contenido -->
+    </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Mi Vida, Mi Ritmo 🌸 | <a href="politica-privacidad.html">Política de Privacidad</a> | <a href="Terminos-condiciones.html">Términos</a></p>
+  <footer class="site-footer">
+    <p>© 2025 Mi Vida, Mi Ritmo 🌸 | <a href="politica-privacidad.html">Política de Privacidad</a> | <a href="Terminos-condiciones.html">Términos</a></p>
   </footer>
 
   <script src="script.js"></script>
-  <script>
-    // Cargar artículos desde JSON
-    fetch("listado.json")
-      .then(response => response.json())
-      .then(data => {
-        let contenedor = document.getElementById("lista-articulos");
-        data.forEach(art => {
-          let div = document.createElement("div");
-          div.classList.add("articulo");
-          div.innerHTML = `
-            <h2>${art.titulo}</h2>
-            <p>${art.descripcion}</p>
-            <a href="${art.url}">Leer más</a>
-          `;
-          contenedor.appendChild(div);
-        });
-      });
 
-    // Suscripción falsa (ejemplo simple)
-    function suscribir() {
-      alert('¡Gracias por suscribirte!');
+  <!--  --> 
+  <!-- Snippet para DESREGISTRAR service worker en clientes que lo tengan -->
+  <script>
+    // Esto intentará desregistrar cualquier service worker activo (forzar que deje de comportarse como app)
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations()
+        .then(function(registrations) {
+          registrations.forEach(function(reg) {
+            reg.unregister().then(function(success) {
+              // opcional: limpiar caches asociados
+              if (success && 'caches' in window) {
+                caches.keys().then(keys => {
+                  keys.forEach(k => caches.delete(k));
+                });
+              }
+            });
+          });
+        })
+        .catch(function(err){
+          // no fatal, solo registro fallido
+          console.warn('Error al intentar desregistrar SW:', err);
+        });
     }
   </script>
 </body>
