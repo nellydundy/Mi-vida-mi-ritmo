@@ -2,83 +2,207 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mi Vida, Mi Ritmo 🌸</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Vida, Mi Ritmo</title>
 
-  <!-- Nota: NO incluir <link rel="manifest" href="/manifest.json"> si quieres evitar PWA -->
-  <!-- <link rel="manifest" href="/manifest.json"> -->
+  <style>
+    /* ------------------------- GENERALES ------------------------- */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff6fb;
+    }
 
-  <link rel="stylesheet" href="styles.css" />
-  <meta name="theme-color" content="#f8bbd0" />
+    a {
+      text-decoration: none;
+    }
 
-  <!-- Meta adicionales opcionales -->
+    /* ------------------------- HEADER ------------------------- */
+    header {
+      background: #f8bbd0;
+      padding: 25px;
+      text-align: center;
+      border-bottom-left-radius: 22px;
+      border-bottom-right-radius: 22px;
+      box-shadow: 0px 4px 20px rgba(0,0,0,0.12);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      color: #880e4f;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin-top: 5px;
+      color: #4a0030;
+      font-size: 1rem;
+    }
+
+    /* ------------------------- NAV ------------------------- */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      padding: 15px 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn-3d {
+      padding: 10px 16px;
+      background: linear-gradient(180deg, #ffb6d9, #ff8fc4);
+      border-radius: 12px;
+      color: #3a0022;
+      font-weight: bold;
+      box-shadow: 0 6px 0 #c86b90, 0 10px 18px rgba(0,0,0,0.10);
+      transition: transform .12s ease, box-shadow .12s ease;
+    }
+
+    .btn-3d:active {
+      transform: translateY(4px);
+      box-shadow: 0 3px 0 #c86b90, 0 6px 10px rgba(0,0,0,0.08);
+    }
+
+    /* ------------------------- CONTENEDOR PRINCIPAL ------------------------- */
+    main {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+
+    h2 {
+      color: #ad1457;
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 1.9rem;
+      font-weight: 900;
+    }
+
+    /* ------------------------- TARJETAS ------------------------- */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.10);
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-bottom-left-radius: 14px;
+      border-bottom-right-radius: 14px;
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: 900;
+      margin: 15px 0 5px;
+      color: #880e4f;
+      text-shadow: 0 3px 0 #f4a2c1;
+    }
+
+    .card .btn-leer {
+      display: inline-block;
+      margin: 12px auto 18px;
+      padding: 10px 18px;
+      background: linear-gradient(180deg, #ffb6d9, #ff8fc4);
+      border-radius: 12px;
+      color: #3a0022;
+      font-weight: 900;
+      box-shadow: 0 6px 0 #c86b90, 0 8px 16px rgba(0,0,0,0.10);
+      transition: transform .12s ease, box-shadow .12s ease;
+    }
+
+    .card .btn-leer:active {
+      transform: translateY(4px);
+      box-shadow: 0 3px 0 #c86b90, 0 5px 10px rgba(0,0,0,0.06);
+    }
+
+    /* ------------------------- FOOTER ------------------------- */
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #f8bbd0;
+      margin-top: 40px;
+      border-top-left-radius: 22px;
+      border-top-right-radius: 22px;
+    }
+
+    footer p {
+      margin: 0;
+      color: #4a0030;
+      font-weight: bold;
+    }
+  </style>
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="header-inner">
-      <h1 class="brand">Mi Vida, Mi Ritmo 🌸</h1>
-      <p class="tagline">Bienestar, belleza y amor propio para mujeres fuertes</p>
-    </div>
+
+  <!-- ------------------------- HEADER ------------------------- -->
+  <header>
+    <h1>Mi Vida, Mi Ritmo 🌸</h1>
+    <p>Bienestar, belleza y amor propio para mujeres fuertes</p>
   </header>
 
-  <nav class="main-nav" role="navigation" aria-label="Menú principal">
-    <ul class="nav-list">
-      <li><a class="nav-link" href="index.html">Inicio</a></li>
-      <li><a class="nav-link" href="sobre-mi.html">Sobre mí</a></li>
-      <li><a class="nav-link" href="articulos/belleza/index.html">Belleza</a></li>
-      <li><a class="nav-link" href="articulos/bienestar/index.html">Bienestar</a></li>
-      <li><a class="nav-link" href="articulos/fitness/index.html">Fitness</a></li>
-      <li><a class="nav-link" href="nuevo-articulo.html">Nuevo Artículo</a></li>
-    </ul>
+  <!-- ------------------------- MENÚ ------------------------- -->
+  <nav>
+    <a href="index.html" class="btn-3d">Inicio</a>
+    <a href="sobre-mi.html" class="btn-3d">Sobre mí</a>
+    <a href="contacto.html" class="btn-3d">Contáctame</a>
+    <a href="nuevo-articulo.html" class="btn-3d">Nuevo Artículo</a>
   </nav>
 
-  <main class="container">
-    <h2>Artículos Recientes</h2>
+  <!-- ------------------------- CONTENIDO PRINCIPAL ------------------------- -->
+  <main>
+    <h2>Categorías</h2>
 
-    <!-- Ejemplo de tarjeta de categoría (Fitness) -->
-    <section class="grid">
-      <article class="card category-card">
-        <img src="imagenes/fitness/fitness.jpg" alt="Fitness" class="card-img" />
-        <div class="card-body">
-          <h3 class="card-title">Fitness</h3>
-          <p class="card-excerpt">Entrenamientos y tips para mantener tu ritmo.</p>
-          <a class="btn btn-3d" href="articulos/fitness/index.html">Leer más</a>
-        </div>
-      </article>
+    <div class="grid">
 
-      <!-- Repite otras tarjetas según listado.json o contenido -->
-    </section>
+      <!-- BELLEZA -->
+      <div class="card">
+        <img src="imagenes/belleza.jpg" alt="Belleza" />
+        <h3 class="card-title">Belleza</h3>
+        <a href="articulos/belleza/index.html" class="btn-leer">Leer más</a>
+      </div>
+
+      <!-- BIENESTAR -->
+      <div class="card">
+        <img src="imagenes/bienestar.jpg" alt="Bienestar" />
+        <h3 class="card-title">Bienestar</h3>
+        <a href="articulos/bienestar/index.html" class="btn-leer">Leer más</a>
+      </div>
+
+      <!-- COCINA -->
+      <div class="card">
+        <img src="imagenes/cocina.jpg" alt="Cocina" />
+        <h3 class="card-title">Cocina</h3>
+        <a href="articulos/cocina/index.html" class="btn-leer">Leer más</a>
+      </div>
+
+      <!-- FITNESS -->
+      <div class="card">
+        <img src="imagenes/fitness.jpg" alt="Fitness" />
+        <h3 class="card-title">Fitness</h3>
+        <a href="articulos/fitness/index.html" class="btn-leer">Leer más</a>
+      </div>
+
+    </div>
   </main>
 
-  <footer class="site-footer">
-    <p>© 2025 Mi Vida, Mi Ritmo 🌸 | <a href="politica-privacidad.html">Política de Privacidad</a> | <a href="Terminos-condiciones.html">Términos</a></p>
+  <!-- ------------------------- FOOTER ------------------------- -->
+  <footer>
+    <p>© 2025 Mi Vida, Mi Ritmo</p>
   </footer>
 
-  <script src="script.js"></script>
-
-  <!--  --> 
-  <!-- Snippet para DESREGISTRAR service worker en clientes que lo tengan -->
-  <script>
-    // Esto intentará desregistrar cualquier service worker activo (forzar que deje de comportarse como app)
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.getRegistrations()
-        .then(function(registrations) {
-          registrations.forEach(function(reg) {
-            reg.unregister().then(function(success) {
-              // opcional: limpiar caches asociados
-              if (success && 'caches' in window) {
-                caches.keys().then(keys => {
-                  keys.forEach(k => caches.delete(k));
-                });
-              }
-            });
-          });
-        })
-        .catch(function(err){
-          // no fatal, solo registro fallido
-          console.warn('Error al intentar desregistrar SW:', err);
-        });
-    }
-  </script>
 </body>
 </html>
