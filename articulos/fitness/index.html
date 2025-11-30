@@ -33,110 +33,113 @@
       font-size: 1.8rem;
     }
 
-    /* Tarjetas 3D */
-    .articulo {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 2rem;
+    /* Tarjeta 3D */
+    .tarjeta {
       background: #fff;
       border-radius: 20px;
-      padding: 1rem;
-      box-shadow: 6px 6px 12px rgba(0,0,0,0.2), -6px -6px 12px rgba(255,255,255,0.6);
-      transition: transform 0.2s ease-in-out;
-    }
-    .articulo:hover {
-      transform: translateY(-5px);
-    }
-
-    .articulo img {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 15px;
-      margin-bottom: 1rem;
-    }
-
-    .articulo h2 {
-      margin: 0.5rem 0;
-      color: #333;
-      font-size: 1.4rem;
-      font-weight: bold;
+      box-shadow: 6px 6px 12px rgba(0,0,0,0.20), -6px -6px 12px rgba(255,255,255,0.60);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
       text-align: center;
     }
 
+    .tarjeta img {
+      width: 100%;
+      border-radius: 18px;
+      margin-bottom: 1rem;
+    }
+
+    .titulo-articulo {
+      background: #ffc5dd;
+      color: #d60074;
+      padding: 0.8rem;
+      border-radius: 12px;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    p {
+      color: #555;
+      font-size: 1rem;
+      margin-bottom: 1.3rem;
+    }
+
     /* Botón rosa sin sombra */
-    .boton3d {
+    .boton-rosa {
       background: #ff4f9f;
       color: white;
-      padding: 0.6rem 1.2rem;
+      padding: 0.8rem 1rem;
       border-radius: 12px;
       text-decoration: none;
       font-weight: bold;
       margin-top: 0.7rem;
-      display: inline-block;
+      display: block;
+      width: 100%;
     }
 
   </style>
 </head>
 <body>
 
-  <!-- Título en franja rosa -->
+  <!-- Título -->
   <div class="titulo-bloque">
     <h1>Fitness</h1>
   </div>
 
   <main>
 
-    <!-- Artículo 1 -->
-    <section class="articulo">
+    <!-- ARTÍCULO 1 -->
+    <div class="tarjeta">
       <img src="../../imagenes/fitness/pierna.jpg" alt="Rutina de pierna" />
-      <h2>Rutina de Pierna, para principiantes</h2>
+      <div class="titulo-articulo">Rutina de Pierna, para principiantes</div>
       <p>Descubre una rutina sencilla pero efectiva para fortalecer y tonificar tus piernas en casa.</p>
 
-      <a href="pierna.html" class="boton3d">Leer artículo</a>
-      <a href="../../index.html" class="boton3d">Volver a inicio</a>
-    </section>
+      <a href="pierna.html" class="boton-rosa">Leer artículo</a>
+      <a href="../../index.html" class="boton-rosa">Volver a inicio</a>
+    </div>
 
-    <!-- Artículo 2 -->
-    <section class="articulo">
+    <!-- ARTÍCULO 2 -->
+    <div class="tarjeta">
       <img src="../../imagenes/fitness/brazo.jpg" alt="Entrenamiento de brazos">
-      <h2>Entrenamiento de brazos, para principiantes</h2>
+      <div class="titulo-articulo">Entrenamiento de brazos, para principiantes</div>
       <p>Ideal para tonificar los brazos.</p>
 
-      <a href="entrenar-brazos.html" class="boton3d">Leer artículo</a>
-      <a href="../../index.html" class="boton3d">Volver a inicio</a>
-    </section>
+      <a href="entrenar-brazos.html" class="boton-rosa">Leer artículo</a>
+      <a href="../../index.html" class="boton-rosa">Volver a inicio</a>
+    </div>
 
-    <!-- Artículo 3 -->
-    <section class="articulo">
+    <!-- ARTÍCULO 3 -->
+    <div class="tarjeta">
       <img src="../../imagenes/fitness/espalda.jpg" alt="Entrenamiento de espalda">
-      <h2>Entrenamiento de espalda, para principiantes</h2>
+      <div class="titulo-articulo">Entrenamiento de espalda, para principiantes</div>
       <p>Ideal para una espalda más tonificada.</p>
 
-      <a href="entrenar-espalda.html" class="boton3d">Leer artículo</a>
-      <a href="../../index.html" class="boton3d">Volver a inicio</a>
-    </section>
+      <a href="entrenar-espalda.html" class="boton-rosa">Leer artículo</a>
+      <a href="../../index.html" class="boton-rosa">Volver a inicio</a>
+    </div>
 
-    <!-- Artículo 4 -->
-    <section class="articulo">
+    <!-- ARTÍCULO 4 -->
+    <div class="tarjeta">
       <img src="../../imagenes/fitness/abdomen.jpg" alt="Entrenamiento de abdomen">
-      <h2>Entrenamiento de abdomen, para principiantes</h2>
+      <div class="titulo-articulo">Entrenamiento de abdomen, para principiantes</div>
       <p>Ideal para tonificar el abdomen.</p>
 
-      <a href="entrenar-abdomen.html" class="boton3d">Leer artículo</a>
-      <a href="../../index.html" class="boton3d">Volver a inicio</a>
-    </section>
+      <a href="entrenar-abdomen.html" class="boton-rosa">Leer artículo</a>
+      <a href="../../index.html" class="boton-rosa">Volver a inicio</a>
+    </div>
 
-    <!-- Artículo 5 -->
-    <section class="articulo">
+    <!-- ARTÍCULO 5 -->
+    <div class="tarjeta">
       <img src="../../imagenes/fitness/dieta-proteina.jpg" alt="Una dieta rica en proteína">
-      <h2>Una dieta rica en proteína</h2>
+      <div class="titulo-articulo">Una dieta rica en proteína</div>
       <p>Ideal para aumentar masa muscular.</p>
 
-      <a href="dieta-proteina.html" class="boton3d">Leer artículo</a>
-      <a href="../../index.html" class="boton3d">Volver a inicio</a>
-    </section>
+      <a href="dieta-proteina.html" class="boton-rosa">Leer artículo</a>
+      <a href="../../index.html" class="boton-rosa">Volver a inicio</a>
+    </div>
 
   </main>
+
 </body>
 </html>
