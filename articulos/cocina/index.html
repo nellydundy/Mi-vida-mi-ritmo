@@ -1,379 +1,216 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cocina</title>
-  <link rel="stylesheet" href="../../styles.css" />
-
-  <style>
-    body {
-      background: #fafafa;
-      font-family: Arial, sans-serif;
-    }
-    main {
-      max-width: 1000px;
-      margin: auto;
-      padding: 1rem;
-    }
-
-    /* Franja rosa centrada */
-    .titulo-bloque {
-      background: linear-gradient(145deg, #ff85c1, #ff4f9f);
-      color: white;
-      text-align: center;
-      padding: 1rem 2rem;
-      border-radius: 15px;
-      margin: 1rem auto 2rem auto;
-      max-width: 400px;
-      box-shadow: 0 6px 10px rgba(0,0,0,0.2);
-    }
-    .titulo-bloque h1 {
-      margin: 0;
-      font-size: 1.8rem;
-    }
-     
-        }
-
-        /* Barra de botones pequeños */
-        nav {
-            padding: 10px;
-            text-align: center;
-    }
-
-    
-     <!-- 2. BOTONES PEQUEÑITOS DEBAJO -->
-    <nav>
-        <a href="index.html">Volver a inicio</a>
-     </nav>
-    
-    
-    /* Tarjetas 3D */
-    .articulo {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 2rem;
-      background: #fff;
-      border-radius: 20px;
-      padding: 1rem;
-      box-shadow: 6px 6px 12px rgba(0,0,0,0.2), -6px -6px 12px rgba(255,255,255,0.6);
-      transition: transform 0.2s ease-in-out;
-    }
-    .articulo:hover {
-      transform: translateY(-5px);
-    }
-    .articulo img {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 15px;
-      margin-bottom: 1rem;
-    }
-    .articulo h2 {
-      margin: 0.5rem 0;
-      color: #333;
-      font-size: 1.4rem;
-      font-weight: bold;
-      text-align: center;
-    }
-
-    /* Botón 3D */
-    .boton3d {
-      background: linear-gradient(145deg, #ff85c1, #ff4f9f);
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-      transition: transform 0.2s ease-in-out;
-    }
-    .boton3d:hover {
-      transform: scale(1.05);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Vida Mi Ritmo - Cocina</title>
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-      <!-- Aviso de Cookies -->
-<div id="cookie-banner" style="display:none;position:fixed;bottom:0;width:100%;background:#222;color:#fff;padding:10px;text-align:center;z-index:9999;">
-  Usamos cookies para mejorar tu experiencia. 
-  <a href="../../politica-privacidad.html" style="color:#ffd700;">Más información</a>
-  <button id="accept-cookies" style="
-    margin-left:10px;
-    padding:8px 15px;
-    background:linear-gradient(145deg, #ffcc00, #ffaa00);
-    border:none;
-    border-radius:8px;
-    color:#000;
-    font-weight:bold;
-    box-shadow:4px 4px 6px #111, -4px -4px 6px #333;
-    cursor:pointer;
-    transition:all 0.2s ease;
-  " 
-  onmouseover="this.style.transform='scale(1.05)';" 
-  onmouseout="this.style.transform='scale(1)';">
-    Aceptar
-  </button>
-</div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    if (!localStorage.getItem("cookiesAccepted")) {
-      document.getElementById("cookie-banner").style.display = "block";
-    }
-    document.getElementById("accept-cookies").addEventListener("click", function() {
-      localStorage.setItem("cookiesAccepted", "true");
-      document.getElementById("cookie-banner").style.display = "none";
-    });
-  });
-</script>
+<header>
+    <h1>Cocina</h1>
+</header>
 
-  <header>
-    <h1>Recetas de Cocina</h1>
-  </header>
-  <main>
-   
-    <!-- Artículo 1 -->
-    <section class="articulo">
-      <img src="../../imagenes/cocina/pollo-pina.jpg" alt="Pollo a la piña">
-      <h2>Pollo a la Piña</h2>
-      <p>Refrescante y delicioso pollo a la pinña.</p>
-      <a class="boton3d" href="pollo-pina.html">Leer artículo</a>
-    </section>
+<main class="article-grid">
 
-    <!-- Artículo 2 -->
-    <section class="articulo">
-      <img src="../../imagenes/cocina/ensalada.jpg" alt="Ensalada rápida">
-      <h2>Ensalada Rápida</h2>
-      <p>Ideal para esos días con poco tiempo pero muchas ganas de comer rico.</p>
-      <a class="boton3d" href="ensalada-rapida.html">Leer artículo</a>
-    </section>
+    <!-- 1 -->
+    <a href="cocina/alimentacion-saludable.html" class="article-card">
+        <img src="../img/cocina/alimentacion-saludable.jpg" alt="Alimentación saludable">
+        <h2>Alimentación Saludable</h2>
+    </a>
 
-    <!-- Artículo 3 -->
-‎    <section class="articulo">
-‎      <img src="../../imagenes/cocina/chicharrones-de-cerdo.jpg" alt="Chicharrones de cerdo">
-‎      <h2>Chicharrones de cerdo</h2>
-‎      <p>Un clásico irresistible para disfrutar con limón y sal.</p>
-‎      <a class="boton3d" href="chicharrones-cerdo.html">Leer artículo</a>
-‎    </section>
-‎
-‎    <!-- Artículo 4 -->
-‎    <section class="articulo">
-‎      <img src="../../imagenes/cocina/arroz-con-leche.jpg" alt="Arroz con leche">
-‎      <h2>Arroz con Leche Cremoso</h2>
-‎      <p>Postre tradicional que nunca falla, con canela y un toque de vainilla.</p>
-‎      <a class="boton3d" href="arroz-leche.html">Leer artículo</a>
-‎    </section>
-‎
-‎    <!-- Artículo 5 -->
-‎    <section class="articulo">
-‎      <img src="../../imagenes/cocina/crema-brocoli.jpg" alt="Pasta cremosa">
-‎      <h2>Crema de brócoli </h2>
-‎      <p>Receta cremosa y reconfortante para cualquier ocasión.</p>
-‎      <a class="boton3d" href="sopa-crema-brocoli.html">Leer artículo</a>
-‎    </section>
-‎
-‎    <!-- Artículo 6 -->
-‎    <section class="articulo">
-‎      <img src="../../imagenes/cocina/ensalada-aguacate-quinoa.jpg" alt="Ensalada de aguacate con quinoa">
-‎      <h2>Ensalada de aguacate con quinoa</h2>
-‎      <p>Llena de sabor y nutrientes para cuidarte cada día.</p>
-‎      <a class="boton3d" href="ensalada-aguacate-quinoa.html">Leer artículo</a>
-‎    </section>
-‎
-‎    <!-- Artículo 7 -->
-‎    <section class="articulo">
-‎      <img src="../../imagenes/cocina/ensalada-fria.jpg" alt="Ensalada fria">
-‎      <h2>Ensalada fria</h2>
-‎      <p>Clásico de la cocina con coditos, mayonesa.</p>
-‎      <a class="boton3d" href="ensalada-fria.html">Leer artículo</a>
-‎    </section>
-‎
-‎    <!-- Artículo 8 -->
-‎    <section class="articulo">
-‎      <img src="../../imagenes/cocina/empanadas.jpg" alt="Empanadas">
-‎      <h2>Empanadas Caseras</h2>
-‎      <p>Rellenas de carne o pollo, perfectas para compartir.</p>
-‎      <a class="boton3d" href="empanadas.html">Leer artículo</a>
-‎    </section>
-‎
-‎    <!-- Artículo 9 -->
-‎    <section class="articulo">
-‎      <img src="../../imagenes/cocina/tacos-vegetales.jpg" alt="Tacos de vegetales">
-‎      <h2>Ricos tacos de vegetales </h2>
-‎      <p>Ligero y sabroso, tacos de vegetales </p>
-‎      <a class="boton3d" href="tacos-vegetales.html">Leer artículo</a>
-‎    </section>
-‎
-‎    <!-- Artículo 10 -->
-‎    <section class="articulo">
-‎      <img src="../../imagenes/cocina/crema-calabaza.jpg" alt="Crema de calabaza">
-‎      <h2>Crema de calabaza</h2>
-‎      <p>Fácil de preparar.</p>
-‎      <a class="boton3d" href="crema-calabaza.html">Leer artículo</a>
-‎    </section>
-‎
-‎    <!-- Artículo 11 -->
-‎    <section class="articulo">
-‎      <img src="../../imagenes/cocina/arepas-rellenas.jpg" alt="Arepas rellenas">
-‎      <h2>Arepas Rellenas</h2>
-‎      <p>Deliciosas arepas rellenas con variedad de ingredientes tradicionales.</p>
-‎      <a class="boton3d" href="arepas-rellenas.html">Leer artículo</a>
-‎    </section>
-‎
-‎    <!-- Artículo 12 -->
-‎    <section class="articulo">
-‎      <img src="../../imagenes/cocina/batido-espinaca-pina.jpg" alt="Batido de espinaca y piña">
-‎      <h2>Batido de Espinaca y Piña</h2>
-‎      <p>Refrescante y nutritivo, ideal para empezar el día.</p>
-‎      <a class="boton3d" href="batido-espinaca-pina.html">Leer artículo</a>
-‎    </section>
-‎
-‎    <!-- Artículo 13 -->
-‎    <section class="articulo">
-‎      <img src="../../imagenes/cocina/brownie-de-chocolate.jpg" alt="Brownie de chocolate">
-‎      <h2>Brownie de Chocolate</h2>
-‎      <p>Esponjoso y lleno de sabor, un clásico irresistible.</p>
-‎      <a class="boton3d" href="brownie-de-chocolate.html">Leer artículo</a>
-‎    </section>
-‎
-‎    <!-- Artículo 14 -->
-‎    <section class="articulo">
-‎      <img src="../../imagenes/cocina/cazuela-marisco-latino.jpg" alt="Cazuela de marisco">
-‎      <h2>Cazuela de Marisco Latino</h2>
-‎      <p>Un guiso de mariscos lleno de sabor latinoamericano.</p>
-‎      <a class="boton3d" href="cazuela-marisco-latino.html">Leer artículo</a>
-‎    </section>
-‎
-‎    <!-- Artículo 15 -->
-‎    <section class="articulo">
-‎      <img src="../../imagenes/cocina/ceviche-fresco-pescado.jpg" alt="Ceviche fresco de pescado">
-‎      <h2>Ceviche Fresco de Pescado</h2>
-‎      <p>Platillo refrescante con limón, cilantro y sabor marino.</p>
-‎      <a class="boton3d" href="ceviche-fresco-pescado.html">Leer artículo</a>
-‎    </section>
-‎
-‎    <!-- Artículo 16 -->
-‎    <section class="articulo">
-‎      <img src="../../imagenes/cocina/croquetas-de-queso-papa.jpg" alt="Croquetas de queso y papa">
-‎      <h2>Croquetas de Queso y Papa</h2>
-‎      <p>Crujientes por fuera, suaves y sabrosas por dentro.</p>
-‎      <a class="boton3d" href="croquetas-de-queso-papa.html">Leer artículo</a>
-‎    </section>
-‎
-‎    <!-- Artículo 17 -->
-‎    <section class="articulo">
-‎      <img src="../../imagenes/cocina/elado-de-frutas.jpg" alt="Helado de frutas">
-‎      <h2>Helado de Frutas</h2>
-‎      <p>Postre refrescante y natural para cualquier ocasión.</p>
-‎      <a class="boton3d" href="helado-de-frutas.html">Leer artículo</a>
-‎    </section>
-‎
-‎    <!-- Artículo 18 -->
-‎    <section class="articulo">
-‎      <img src="../../imagenes/cocina/galletas-avena-platano.jpg" alt="Galletas de avena y plátano">
-‎      <h2>Galletas de Avena y Plátano</h2>
-‎      <p>Fáciles, saludables y deliciosas para toda la familia.</p>
-‎      <a class="boton3d" href="galletas-avena-platano.html">Leer artículo</a>
-‎    </section>
-‎
-‎    <!-- Artículo 19 -->
-‎    <section class="articulo">
-‎      <img src="../../imagenes/cocina/hamburguesas-garbanzos.jpg" alt="Hamburguesas de garbanzos">
-‎      <h2>Hamburguesas de Garbanzos</h2>
-‎      <p>Una opción vegetariana llena de proteína y sabor.</p>
-‎      <a class="boton3d" href="hamburguesas-garbanzos.html">Leer artículo</a>
-‎    </section>
-‎
-‎    <!-- Artículo 20 -->
-‎    <section class="articulo">
-‎      <img src="../../imagenes/cocina/lasana-carne-verduras.jpg" alt="Lasaña de carne y verduras">
-‎      <h2>Lasaña de Carne y Verduras</h2>
-‎      <p>Una receta casera que combina lo mejor de la cocina italiana.</p>
-‎      <a class="boton3d" href="lasaña-carne-verduras.html">Leer artículo</a>
-‎    </section>
-‎
-‎    <!-- Artículo 21 -->
-‎    <section class="articulo">
-‎      <img src="../../imagenes/cocina/nuggets-pollo.jpg" alt="Nuggets de pollo">
-‎      <h2>Nuggets de Pollo</h2>
-‎      <p>Tiernos por dentro y crujientes por fuera, ideales para niños y adultos.</p>
-‎      <a class="boton3d" href="nuggets-pollo.html">Leer artículo</a>
-‎    </section>
-‎
-‎    <!-- Artículo 22 -->
-‎    <section class="articulo">
-‎      <img src="../../imagenes/cocina/pan-esponjoso-sin-maquina.jpg" alt="Pan esponjoso sin máquina">
-‎      <h2>Pan Esponjoso sin Máquina</h2>
-‎      <p>Receta fácil para preparar pan casero sin complicaciones.</p>
-‎      <a class="boton3d" href="pan-esponjoso-sin-maquina.html">Leer artículo</a>
-‎    </section>
-‎
-‎    <!-- Artículo 23 -->
-‎    <section class="articulo">
-‎      <img src="../../imagenes/cocina/panqueques-avena.jpg" alt="Panqueques de avena">
-‎      <h2>Panqueques de Avena</h2>
-‎      <p>Ricos, saludables y perfectos para el desayuno.</p>
-‎      <a class="boton3d" href="panqueques-avena.html">Leer artículo</a>
-‎    </section>
-‎
-‎    <!-- Artículo 24 -->
-‎    <section class="articulo">
-‎      <img src="../../imagenes/cocina/pasta-alfredo.jpg" alt="Pasta con champiñones y espinacas">
-‎      <h2>Pasta Alfredo cremosa</h2>
-‎      <p>Una receta cremosa y llena de sabor.</p>
-‎      <a class="boton3d" href="pasta-alfredo.html">Leer artículo</a>
-‎    </section>
-‎
-‎    <!-- Artículo 25 -->
-‎    <section class="articulo">
-‎      <img src="../../imagenes/cocina/pizza-queso.jpg" alt="Pizza casera con masa integral">
-‎      <h2>Pizza Casera con Masa Integral</h2>
-‎      <p>Una versión más saludable de la clásica pizza casera.</p>
-‎      <a class="boton3d" href="pizza-casera-masa-integral.html">Leer artículo</a>
-‎    </section>
-‎
-‎    <!-- Artículo 26 -->
-‎    <section class="articulo">
-‎      <img src="../../imagenes/cocina/pollo-horno-hierva-limon.jpg" alt="Pollo al horno con hierbas y limón">
-‎      <h2>Pollo al Horno con Hierbas y Limón</h2>
-‎      <p>Jugoso y aromático, una receta sencilla y deliciosa.</p>
-‎      <a class="boton3d" href="pollo-horno-hierva-limon.html">Leer artículo</a>
-‎    </section>
-‎
-‎    <!-- Artículo 27 -->
-‎    <section class="articulo">
-‎      <img src="../../imagenes/cocina/salsa-tomate.jpg" alt="Salsa de tomate casera">
-‎      <h2>Salsa de Tomate Casera</h2>
-‎      <p>Básica en la cocina, perfecta para acompañar pastas y más.</p>
-‎      <a class="boton3d" href="salsa-tomate.html">Leer artículo</a>
-‎    </section>
-‎
-‎    <!-- Artículo 28 -->
-‎    <section class="articulo">
-‎      <img src="../../imagenes/cocina/sopa-de-lentejas.jpg" alt="Sopa de lentejas">
-‎      <h2>Sopa de Lentejas</h2>
-‎      <p>Nutriente y deliciosa, ideal para días frescos.</p>
-‎      <a class="boton3d" href="sopa-de-lentejas.html">Leer artículo</a>
-‎    </section>
-‎
-‎    <!-- Artículo 29 -->
-‎    <section class="articulo">
-‎      <img src="../../imagenes/cocina/sopa-verduras.jpg" alt="Sopa de pollo con verduras">
-‎      <h2>Sopa de Verduras</h2>
-‎      <p>Reconfortante y tradicional, perfecta para toda la familia.</p>
-‎      <a class="boton3d" href="sopa-verduras.html">Leer artículo</a>
-‎    </section>
+    <!-- 2 -->
+    <a href="cocina/recetas-faciles.html" class="article-card">
+        <img src="../img/cocina/recetas-faciles.jpg" alt="Recetas fáciles">
+        <h2>Recetas Fáciles</h2>
+    </a>
 
-    <!-- Artículo 30 -->
-    <section class="articulo">
-      <img src="../../imagenes/cocina/tostadas-francesas-dulce.jpg" alt="Tostadas francesas dulces">
-      <h2>Tostadas Francesas Dulces</h2>
-      <p>Un desayuno clásico con un toque dulce y delicioso.</p>
-      <a class="boton3d" href="tostadas-francesas-dulce.html">Leer artículo</a>
-    </section>
+    <!-- 3 -->
+    <a href="cocina/recetas-rapidas.html" class="article-card">
+        <img src="../img/cocina/recetas-rapidas.jpg" alt="Recetas rápidas">
+        <h2>Recetas Rápidas</h2>
+    </a>
 
-    <a class="boton3d" href="../../index.html" style="margin-top: 2rem;">← Volver al inicio</a>
+    <!-- 4 -->
+    <a href="cocina/postres.html" class="article-card">
+        <img src="../img/cocina/postres.jpg" alt="Postres">
+        <h2>Postres</h2>
+    </a>
+
+    <!-- 5 -->
+    <a href="cocina/recetas-light.html" class="article-card">
+        <img src="../img/cocina/recetas-light.jpg" alt="Recetas light">
+        <h2>Recetas Light</h2>
+    </a>
+
+    <!-- 6 -->
+    <a href="cocina/recetas-para-ninos.html" class="article-card">
+        <img src="../img/cocina/recetas-para-ninos.jpg" alt="Recetas para niños">
+        <h2>Recetas para Niños</h2>
+    </a>
+
+    <!-- 7 -->
+    <a href="cocina/recetas-vegetarianas.html" class="article-card">
+        <img src="../img/cocina/recetas-vegetarianas.jpg" alt="Recetas vegetarianas">
+        <h2>Recetas Vegetarianas</h2>
+    </a>
+
+    <!-- 8 -->
+    <a href="cocina/recetas-veganas.html" class="article-card">
+        <img src="../img/cocina/recetas-veganas.jpg" alt="Recetas veganas">
+        <h2>Recetas Veganas</h2>
+    </a>
+
+    <!-- 9 -->
+    <a href="cocina/consejos-de-cocina.html" class="article-card">
+        <img src="../img/cocina/consejos-de-cocina.jpg" alt="Consejos de cocina">
+        <h2>Consejos de Cocina</h2>
+    </a>
+
+    <!-- 10 -->
+    <a href="cocina/recetas-internacionales.html" class="article-card">
+        <img src="../img/cocina/recetas-internacionales.jpg" alt="Recetas internacionales">
+        <h2>Recetas Internacionales</h2>
+    </a>
+
+    <!-- 11 -->
+    <a href="cocina/cenas-rapidas.html" class="article-card">
+        <img src="../img/cocina/cenas-rapidas.jpg" alt="Cenas rápidas">
+        <h2>Cenas Rápidas</h2>
+    </a>
+
+    <!-- 12 -->
+    <a href="cocina/batch-cooking.html" class="article-card">
+        <img src="../img/cocina/batch-cooking.jpg" alt="Batch cooking">
+        <h2>Batch Cooking</h2>
+    </a>
+
+    <!-- 13 -->
+    <a href="cocina/recetas-saludables.html" class="article-card">
+        <img src="../img/cocina/recetas-saludables.jpg" alt="Recetas saludables">
+        <h2>Recetas Saludables</h2>
+    </a>
+
+    <!-- 14 -->
+    <a href="cocina/aperitivos.html" class="article-card">
+        <img src="../img/cocina/aperitivos.jpg" alt="Aperitivos">
+        <h2>Aperitivos</h2>
+    </a>
+
+    <!-- 15 -->
+    <a href="cocina/bebidas.html" class="article-card">
+        <img src="../img/cocina/bebidas.jpg" alt="Bebidas">
+        <h2>Bebidas</h2>
+    </a>
+
+    <!-- 16 -->
+    <a href="cocina/salsas.html" class="article-card">
+        <img src="../img/cocina/salsas.jpg" alt="Salsas">
+        <h2>Salsas</h2>
+    </a>
+
+    <!-- 17 -->
+    <a href="cocina/trucos-de-ahorro.html" class="article-card">
+        <img src="../img/cocina/trucos-de-ahorro.jpg" alt="Trucos de ahorro">
+        <h2>Trucos de Ahorro en la Cocina</h2>
+    </a>
+
+    <!-- 18 -->
+    <a href="cocina/menús-semanales.html" class="article-card">
+        <img src="../img/cocina/menus-semanales.jpg" alt="Menús semanales">
+        <h2>Menús Semanales</h2>
+    </a>
+
+    <!-- 19 -->
+    <a href="cocina/recetas-detox.html" class="article-card">
+        <img src="../img/cocina/recetas-detox.jpg" alt="Recetas detox">
+        <h2>Recetas Detox</h2>
+    </a>
+
+    <!-- 20 -->
+    <a href="cocina/recetas-con-airfryer.html" class="article-card">
+        <img src="../img/cocina/airfryer.jpg" alt="Airfryer">
+        <h2>Recetas con Airfryer</h2>
+    </a>
+
+    <!-- 21 -->
+    <a href="cocina/recetas-para-eventos.html" class="article-card">
+        <img src="../img/cocina/recetas-para-eventos.jpg" alt="Recetas para eventos">
+        <h2>Recetas para Eventos</h2>
+    </a>
+
+<!-- 22 -->
+    <a href="cocina/platos-de-cuchara.html" class="article-card">
+        <img src="../img/cocina/platos-de-cuchara.jpg" alt="Platos de cuchara">
+        <h2>Platos de Cuchara</h2>
+    </a>
+
+    <!-- 23 -->
+    <a href="cocina/ensaladas.html" class="article-card">
+        <img src="../img/cocina/ensaladas.jpg" alt="Ensaladas">
+        <h2>Ensaladas</h2>
+    </a>
+
+    <!-- 24 -->
+    <a href="cocina/cocina-mediterranea.html" class="article-card">
+        <img src="../img/cocina/cocina-mediterranea.jpg" alt="Cocina mediterránea">
+        <h2>Cocina Mediterránea</h2>
+    </a>
+
+    <!-- 25 -->
+    <a href="cocina/cocina-latinoamericana.html" class="article-card">
+        <img src="../img/cocina/cocina-latinoamericana.jpg" alt="Cocina latinoamericana">
+        <h2>Cocina Latinoamericana</h2>
+    </a>
+
+    <!-- 26 -->
+    <a href="cocina/cocina-asiatica.html" class="article-card">
+        <img src="../img/cocina/cocina-asiatica.jpg" alt="Cocina asiática">
+        <h2>Cocina Asiática</h2>
+    </a>
+
+    <!-- 27 -->
+    <a href="cocina/recetas-con-carne.html" class="article-card">
+        <img src="../img/cocina/recetas-con-carne.jpg" alt="Recetas con carne">
+        <h2>Recetas con Carne</h2>
+    </a>
+
+    <!-- 28 -->
+    <a href="cocina/recetas-con-pescado.html" class="article-card">
+        <img src="../img/cocina/recetas-con-pescado.jpg" alt="Recetas con pescado">
+        <h2>Recetas con Pescado</h2>
+    </a>
+
+    <!-- 29 -->
+    <a href="cocina/recetas-con-pasta.html" class="article-card">
+        <img src="../img/cocina/recetas-con-pasta.jpg" alt="Recetas con pasta">
+        <h2>Recetas con Pasta</h2>
+    </a>
+
+    <!-- 30 -->
+    <a href="cocina/recetas-con-arroz.html" class="article-card">
+        <img src="../img/cocina/recetas-con-arroz.jpg" alt="Recetas con arroz">
+        <h2>Recetas con Arroz</h2>
+    </a>
+
+    <!-- 31 -->
+    <a href="cocina/recetas-para-navidad.html" class="article-card">
+        <img src="../img/cocina/recetas-para-navidad.jpg" alt="Recetas para navidad">
+        <h2>Recetas para Navidad</h2>
+    </a>
+
+    <!-- 32 -->
+    <a href="cocina/recetas-para-verano.html" class="article-card">
+        <img src="../img/cocina/recetas-para-verano.jpg" alt="Recetas para verano">
+        <h2>Recetas para Verano</h2>
+    </a>
+
   </main>
+
+<footer>
+    <p>&copy; 2024 Mi Vida, Mi Ritmo. Todos los derechos reservados.</p>
+</footer>
+
 </body>
 </html>
