@@ -9,18 +9,9 @@
   <link rel="stylesheet" href="../../styles.css" />
 
   <style>
-    body {
-      background: #fafafa;
-      font-family: Arial, sans-serif;
-    }
+    body { background: #fafafa; font-family: Arial, sans-serif; }
+    main { max-width: 1000px; margin: auto; padding: 1rem; }
 
-    main {
-      max-width: 1000px;
-      margin: auto;
-      padding: 1rem;
-    }
-
-    /* --- LISTÓN PRINCIPAL --- */
     .titulo-bloque {
       background: linear-gradient(145deg, #ff85c1, #ff4f9f);
       color: white;
@@ -31,53 +22,25 @@
       max-width: 400px;
       box-shadow: 0 6px 10px rgba(0,0,0,0.2);
     }
+    .titulo-bloque h1 { margin: 0; font-size: 1.8rem; }
 
-    .titulo-bloque h1 {
-      margin: 0;
-      font-size: 1.8rem;
-    }
-
-    /* ==== TARJETA 3D ==== */
     .tarjeta-3d {
       background: #fff;
       border-radius: 25px;
       padding: 20px;
       margin: 25px auto;
       max-width: 500px;
-      box-shadow:
-        10px 10px 20px rgba(0,0,0,0.25),
-        -10px -10px 20px rgba(255,255,255,0.8);
+      box-shadow: 10px 10px 20px rgba(0,0,0,0.25), -10px -10px 20px rgba(255,255,255,0.8);
       transition: transform .25s ease;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
+    .tarjeta-3d:hover { transform: translateY(-6px); }
+    .tarjeta-3d img { width: 100%; border-radius: 18px; margin-bottom: 1rem; }
+    .tarjeta-3d h2 { text-align:center; color:#333; font-size:1.5rem; margin:.4rem 0 .8rem 0; }
+    .tarjeta-3d p { text-align:center; color:#555; line-height:1.5; margin-bottom:1rem; }
 
-    .tarjeta-3d:hover {
-      transform: translateY(-6px);
-    }
-
-    .tarjeta-3d img {
-      width: 100%;
-      border-radius: 18px;
-      margin-bottom: 1rem;
-    }
-
-    .tarjeta-3d h2 {
-      text-align: center;
-      color: #333;
-      font-size: 1.5rem;
-      margin: .4rem 0 .8rem 0;
-    }
-
-    .tarjeta-3d p {
-      text-align: center;
-      color: #555;
-      line-height: 1.5;
-      margin-bottom: 1rem;
-    }
-
-    /* BOTÓN 3D */
     .boton3d {
       background: linear-gradient(145deg, #ff85c1, #ff4f9f);
       color: white;
@@ -92,10 +55,7 @@
       box-shadow: 0 4px 6px rgba(0,0,0,0.3);
       transition: transform .2s ease-in-out;
     }
-
-    .boton3d:hover {
-      transform: scale(1.05);
-    }
+    .boton3d:hover { transform: scale(1.05); }
   </style>
 </head>
 
@@ -104,21 +64,11 @@
 <div id="cookie-banner" style="display:none;position:fixed;bottom:0;width:100%;background:#222;color:#fff;padding:10px;text-align:center;z-index:9999;">
   Usamos cookies para mejorar tu experiencia.
   <a href="../../politica-privacidad.html" style="color:#ffd700;">Más información</a>
-
   <button id="accept-cookies" style="
-    margin-left:10px;
-    padding:8px 15px;
-    background:linear-gradient(145deg, #ffcc00, #ffaa00);
-    border:none;
-    border-radius:8px;
-    color:#000;
-    font-weight:bold;
-    box-shadow:4px 4px 6px #111, -4px -4px 6px #333;
-    cursor:pointer;
-    transition:all 0.2s ease;
-  "
-  onmouseover="this.style.transform='scale(1.05)';"
-  onmouseout="this.style.transform='scale(1)';">
+    margin-left:10px;padding:8px 15px;background:linear-gradient(145deg,#ffcc00,#ffaa00);
+    border:none;border-radius:8px;color:#000;font-weight:bold;box-shadow:4px 4px 6px #111,-4px -4px 6px #333;
+    cursor:pointer;transition:all 0.2s ease;"
+    onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
     Aceptar
   </button>
 </div>
@@ -129,212 +79,207 @@
       document.getElementById("cookie-banner").style.display = "block";
     }
     document.getElementById("accept-cookies").addEventListener("click", function() {
-      localStorage.setItem("cookiesAccepted", "true");
+      localStorage.setItem("cookiesAccepted","true");
       document.getElementById("cookie-banner").style.display = "none";
     });
   });
 </script>
 
 <!-- LISTÓN PRINCIPAL -->
-<div class="titulo-bloque">
-  <h1>Bienestar</h1>
-</div>
+<div class="titulo-bloque"><h1>Bienestar</h1></div>
 
 <main>
 
-<!-- ===================================================================== -->
-<!-- ===========================   TARJETAS   ============================= -->
-<!-- ===================================================================== -->
+  <!-- Usé únicamente nombres que aparecen en tus capturas -->
+  <section class="tarjeta-3d">
+    <img src="../../imagenes/bienestar/fitness.jpg" alt="fitness">
+    <h2>5 hábitos para empezar bien el día</h2>
+    <p>Pequeños cambios hacen grandes diferencias.</p>
+    <a href="motivacion-fitness.html" class="boton3d">Leer artículo</a>
+    <a href="../../index.html" class="boton3d">Volver al inicio</a>
+  </section>
 
-<section class="tarjeta-3d">
-  <img src="../../imagenes/bienestar/fitness.jpg">
-  <h2>5 hábitos para empezar bien el día</h2>
-  <p>Pequeños cambios hacen grandes diferencias.</p>
-  <a href="5-habitos-para-empezar-bien-el-dia.html" class="boton3d">Leer artículo</a>
-  <a href="../../index.html" class="boton3d">Volver al inicio</a>
-</section>
+  <section class="tarjeta-3d">
+    <img src="../../imagenes/bienestar/bienestar1.jpg" alt="bienestar1">
+    <h2>Hábitos que te hacen sentir mejor</h2>
+    <p>Ideal para comenzar el día con mucha paz.</p>
+    <a href="bienestar1.html" class="boton3d">Leer artículo</a>
+    <a href="../../index.html" class="boton3d">Volver al inicio</a>
+  </section>
 
-<section class="tarjeta-3d">
-  <img src="../../imagenes/bienestar/bienestar1.jpg">
-  <h2>Hábitos que te hacen sentir mejor</h2>
-  <p>Ideal para comenzar el día con mucha paz.</p>
-  <a href="habitos-que-te-hacen-sentir-mejor.html" class="boton3d">Leer artículo</a>
-  <a href="../../index.html" class="boton3d">Volver al inicio</a>
-</section>
+  <section class="tarjeta-3d">
+    <img src="../../imagenes/bienestar/bienestar2.jpg" alt="bienestar2">
+    <h2>Un día libre de estrés</h2>
+    <p>Ideal para liberar tensiones.</p>
+    <a href="bienestar2.html" class="boton3d">Leer artículo</a>
+    <a href="../../index.html" class="boton3d">Volver al inicio</a>
+  </section>
 
-<section class="tarjeta-3d">
-  <img src="../../imagenes/bienestar/bienestar2.jpg">
-  <h2>Un día libre de estrés</h2>
-  <p>Ideal para liberar tensiones.</p>
-  <a href="un-dia-libre-de-estres.html" class="boton3d">Leer artículo</a>
-  <a href="../../index.html" class="boton3d">Volver al inicio</a>
-</section>
+  <section class="tarjeta-3d">
+    <img src="../../imagenes/bienestar/alimentos-reducir-estres.jpg" alt="alimentos-reducir-estres">
+    <h2>Alimentos para reducir el estrés</h2>
+    <p>Descubre qué alimentos te ayudan a calmar la mente.</p>
+    <a href="alimentos-reducir-estres.html" class="boton3d">Leer artículo</a>
+    <a href="../../index.html" class="boton3d">Volver al inicio</a>
+  </section>
 
-<section class="tarjeta-3d">
-  <img src="../../imagenes/bienestar/alimentos-reducir-estres.jpg">
-  <h2>Alimentos para reducir el estrés</h2>
-  <p>Descubre qué alimentos te ayudan a calmar la mente.</p>
-  <a href="alimentos-para-reducir-estres.html" class="boton3d">Leer artículo</a>
-  <a href="../../index.html" class="boton3d">Volver al inicio</a>
-</section>
+  <section class="tarjeta-3d">
+    <img src="../../imagenes/bienestar/beneficios-medicacion-mental.jpg" alt="beneficios-medicacion-mental">
+    <h2>Beneficios de la medicación (informativo)</h2>
+    <p>Información sobre medicación y salud mental.</p>
+    <a href="beneficios-medicacion-mental.html" class="boton3d">Leer artículo</a>
+    <a href="../../index.html" class="boton3d">Volver al inicio</a>
+  </section>
 
-<section class="tarjeta-3d">
-  <img src="../../imagenes/bienestar/alimentacion.jpg">
-  <h2>Importancia de una buena alimentación</h2>
-  <p>Mejora tu energía y bienestar general.</p>
-  <a href="la-importancia-de-una-buena-alimentacion.html" class="boton3d">Leer artículo</a>
-  <a href="../../index.html" class="boton3d">Volver al inicio</a>
-</section>
+  <section class="tarjeta-3d">
+    <img src="../../imagenes/bienestar/combater-ansiedad.jpg" alt="combater-ansiedad">
+    <h2>Combate la ansiedad</h2>
+    <p>Estrategias útiles para manejar episodios ansiosos.</p>
+    <a href="combatir-ansiedad.html" class="boton3d">Leer artículo</a>
+    <a href="../../index.html" class="boton3d">Volver al inicio</a>
+  </section>
 
-<section class="tarjeta-3d">
-  <img src="../../imagenes/bienestar/respiracion-profunda-ansiedad.jpg">
-  <h2>Técnicas de respiración para reducir la ansiedad</h2>
-  <p>Ejercicios de respiración profunda.</p>
-  <a href="tecnicas-respiracion-para-ansiedad.html" class="boton3d">Leer artículo</a>
-  <a href="../../index.html" class="boton3d">Volver al inicio</a>
-</section>
+  <section class="tarjeta-3d">
+    <img src="../../imagenes/bienestar/dejar-pensar-tanto.jpg" alt="dejar-pensar-tanto">
+    <h2>Dejar de pensar tanto</h2>
+    <p>Técnicas para calmar la mente repetitiva.</p>
+    <a href="dejar-pensar-tanto.html" class="boton3d">Leer artículo</a>
+    <a href="../../index.html" class="boton3d">Volver al inicio</a>
+  </section>
 
-<section class="tarjeta-3d">
-  <img src="../../imagenes/bienestar/descanso.jpg">
-  <h2>La importancia del descanso</h2>
-  <p>Dormir bien es fundamental.</p>
-  <a href="la-importancia-del-descanso.html" class="boton3d">Leer artículo</a>
-  <a href="../../index.html" class="boton3d">Volver al inicio</a>
-</section>
+  <section class="tarjeta-3d">
+    <img src="../../imagenes/bienestar/en-casa-tranquilidad.jpg" alt="en-casa-tranquilidad">
+    <h2>Tranquilidad en casa</h2>
+    <p>Ideas para crear un espacio calmado en tu hogar.</p>
+    <a href="en-casa-tranquilidad.html" class="boton3d">Leer artículo</a>
+    <a href="../../index.html" class="boton3d">Volver al inicio</a>
+  </section>
 
-<section class="tarjeta-3d">
-  <img src="../../imagenes/bienestar/hidratacion.jpg">
-  <h2>La hidratación en tu rutina diaria</h2>
-  <p>Mejora tu concentración y tu piel.</p>
-  <a href="hidratacion-en-tu-rutina.html" class="boton3d">Leer artículo</a>
-  <a href="../../index.html" class="boton3d">Volver al inicio</a>
-</section>
+  <section class="tarjeta-3d">
+    <img src="../../imagenes/bienestar/estres-afecta-cuerpo.jpg" alt="estres-afecta-cuerpo">
+    <h2>Cómo el estrés afecta el cuerpo</h2>
+    <p>Señales físicas que indican exceso de estrés.</p>
+    <a href="estres-afecta-cuerpo.html" class="boton3d">Leer artículo</a>
+    <a href="../../index.html" class="boton3d">Volver al inicio</a>
+  </section>
 
-<section class="tarjeta-3d">
-  <img src="../../imagenes/bienestar/mente-sana.jpg">
-  <h2>Cómo mantener una mente sana</h2>
-  <p>Hábitos para claridad mental.</p>
-  <a href="como-mantener-una-mente-sana.html" class="boton3d">Leer artículo</a>
-  <a href="../../index.html" class="boton3d">Volver al inicio</a>
-</section>
+  <section class="tarjeta-3d">
+    <img src="../../imagenes/bienestar/estres-caida-cabello.jpg" alt="estres-caida-cabello">
+    <h2>Estrés y caída del cabello</h2>
+    <p>Qué relación existe y qué hacer al respecto.</p>
+    <a href="estres-caida-cabello.html" class="boton3d">Leer artículo</a>
+    <a href="../../index.html" class="boton3d">Volver al inicio</a>
+  </section>
 
-<section class="tarjeta-3d">
-  <img src="../../imagenes/bienestar/autoestima.jpg">
-  <h2>Cómo mejorar tu autoestima</h2>
-  <p>Guía práctica para fortalecer tu confianza.</p>
-  <a href="como-mejorar-tu-autoestima.html" class="boton3d">Leer artículo</a>
-  <a href="../../index.html" class="boton3d">Volver al inicio</a>
-</section>
+  <section class="tarjeta-3d">
+    <img src="../../imagenes/bienestar/estres-en-digestion.jpg" alt="estres-en-digestion">
+    <h2>Estrés y digestión</h2>
+    <p>Cómo el estrés influye en el sistema digestivo.</p>
+    <a href="estres-en-digestion.html" class="boton3d">Leer artículo</a>
+    <a href="../../index.html" class="boton3d">Volver al inicio</a>
+  </section>
 
-<section class="tarjeta-3d">
-  <img src="../../imagenes/bienestar/meditacion.jpg">
-  <h2>Guía básica de meditación</h2>
-  <p>Aprende a meditar desde cero.</p>
-  <a href="guia-basica-meditacion.html" class="boton3d">Leer artículo</a>
-  <a href="../../index.html" class="boton3d">Volver al inicio</a>
-</section>
+  <section class="tarjeta-3d">
+    <img src="../../imagenes/bienestar/evitar-agotamiento-mental.jpg" alt="evitar-agotamiento-mental">
+    <h2>Evitar el agotamiento mental</h2>
+    <p>Prevención y señales tempranas de burnout.</p>
+    <a href="evitar-agotamiento-mental.html" class="boton3d">Leer artículo</a>
+    <a href="../../index.html" class="boton3d">Volver al inicio</a>
+  </section>
 
-<section class="tarjeta-3d">
-  <img src="../../imagenes/bienestar/yoga.jpg">
-  <h2>Cómo iniciarte en el yoga</h2>
-  <p>Mejora fuerza y flexibilidad.</p>
-  <a href="como-iniciarte-en-el-yoga.html" class="boton3d">Leer artículo</a>
-  <a href="../../index.html" class="boton3d">Volver al inicio</a>
-</section>
+  <section class="tarjeta-3d">
+    <img src="../../imagenes/bienestar/infusiones-ansiedad-insomnio.jpg" alt="infusiones-ansiedad-insomnio">
+    <h2>Infusiones para ansiedad e insomnio</h2>
+    <p>Plantas que ayudan a relajar y dormir mejor.</p>
+    <a href="infusiones-ansiedad-insomnio.html" class="boton3d">Leer artículo</a>
+    <a href="../../index.html" class="boton3d">Volver al inicio</a>
+  </section>
 
-<section class="tarjeta-3d">
-  <img src="../../imagenes/bienestar/salud-mental.jpg">
-  <h2>Claves para cuidar tu salud mental</h2>
-  <p>Consejos esenciales.</p>
-  <a href="claves-para-cuidar-salud-mental.html" class="boton3d">Leer artículo</a>
-  <a href="../../index.html" class="boton3d">Volver al inicio</a>
-</section>
+  <section class="tarjeta-3d">
+    <img src="../../imagenes/bienestar/limites-para-salud-mental.jpg" alt="limites-para-salud-mental">
+    <h2>Límites para la salud mental</h2>
+    <p>Cómo poner límites saludables en relaciones y trabajo.</p>
+    <a href="limites-para-salud-mental.html" class="boton3d">Leer artículo</a>
+    <a href="../../index.html" class="boton3d">Volver al inicio</a>
+  </section>
 
-<section class="tarjeta-3d">
-  <img src="../../imagenes/bienestar/organizacion.jpg">
-  <h2>Organiza tu vida de forma simple</h2>
-  <p>Métodos sencillos.</p>
-  <a href="organiza-tu-vida-simple.html" class="boton3d">Leer artículo</a>
-  <a href="../../index.html" class="boton3d">Volver al inicio</a>
-</section>
+  <section class="tarjeta-3d">
+    <img src="../../imagenes/bienestar/mantener-calma.jpg" alt="mantener-calma">
+    <h2>Mantener la calma</h2>
+    <p>Técnicas breves para recuperar el equilibrio en momentos difíciles.</p>
+    <a href="mantener-calma.html" class="boton3d">Leer artículo</a>
+    <a href="../../index.html" class="boton3d">Volver al inicio</a>
+  </section>
 
-<section class="tarjeta-3d">
-  <img src="../../imagenes/bienestar/mindfulness.jpg">
-  <h2>Mindfulness para principiantes</h2>
-  <p>Vive el presente.</p>
-  <a href="mindfulness-para-principiantes.html" class="boton3d">Leer artículo</a>
-  <a href="../../index.html" class="boton3d">Volver al inicio</a>
-</section>
+  <section class="tarjeta-3d">
+    <img src="../../imagenes/bienestar/motivacion-dia-con-energia.jpg" alt="motivacion-dia-con-energia">
+    <h2>Motivación: día con energía</h2>
+    <p>Consejos para comenzar el día con actitud.</p>
+    <a href="motivacion-dia-con-energia.html" class="boton3d">Leer artículo</a>
+    <a href="../../index.html" class="boton3d">Volver al inicio</a>
+  </section>
 
-<section class="tarjeta-3d">
-  <img src="../../imagenes/bienestar/caminar.jpg">
-  <h2>Beneficios de caminar 30 minutos al día</h2>
-  <p>Mejora tu salud física y mental.</p>
-  <a href="beneficios-caminar-30-minutos.html" class="boton3d">Leer artículo</a>
-  <a href="../../index.html" class="boton3d">Volver al inicio</a>
-</section>
+  <section class="tarjeta-3d">
+    <img src="../../imagenes/bienestar/fitness.jpg" alt="motivacion-fitness">
+    <h2>Motivación fitness</h2>
+    <p>Cómo mantener la constancia en el ejercicio.</p>
+    <a href="motivacion-fitness.html" class="boton3d">Leer artículo</a>
+    <a href="../../index.html" class="boton3d">Volver al inicio</a>
+  </section>
 
-<section class="tarjeta-3d">
-  <img src="../../imagenes/bienestar/habitos-nocturnos.jpg">
-  <h2>Hábitos nocturnos para descansar mejor</h2>
-  <p>Rutinas para mejorar el sueño.</p>
-  <a href="habitos-nocturnos-descanso.html" class="boton3d">Leer artículo</a>
-  <a href="../../index.html" class="boton3d">Volver al inicio</a>
-</section>
+  <section class="tarjeta-3d">
+    <img src="../../imagenes/bienestar/musica-para-estres.jpg" alt="musica-para-estres">
+    <h2>Música para el estrés</h2>
+    <p>Selección de pistas para calmarte y concentrarte.</p>
+    <a href="musica-para-estres.html" class="boton3d">Leer artículo</a>
+    <a href="../../index.html" class="boton3d">Volver al inicio</a>
+  </section>
 
-<section class="tarjeta-3d">
-  <img src="../../imagenes/bienestar/auto-cuidado.jpg">
-  <h2>Autocuidado emocional</h2>
-  <p>Cuidarte con cariño y respeto.</p>
-  <a href="autocuidado-emocional.html" class="boton3d">Leer artículo</a>
-  <a href="../../index.html" class="boton3d">Volver al inicio</a>
-</section>
+  <section class="tarjeta-3d">
+    <img src="../../imagenes/bienestar/prevencion-estres-cronico.jpg" alt="prevencion-estres-cronico">
+    <h2>Prevención del estrés crónico</h2>
+    <p>Medidas prácticas para evitar que el estrés se vuelva crónico.</p>
+    <a href="prevencion-estres-cronico.html" class="boton3d">Leer artículo</a>
+    <a href="../../index.html" class="boton3d">Volver al inicio</a>
+  </section>
 
-<section class="tarjeta-3d">
-  <img src="../../imagenes/bienestar/estiramientos.jpg">
-  <h2>Estiramientos para aliviar tensiones</h2>
-  <p>Libera rigidez muscular.</p>
-  <a href="estiramientos-para-aliviar-tensiones.html" class="boton3d">Leer artículo</a>
-  <a href="../../index.html" class="boton3d">Volver al inicio</a>
-</section>
+  <section class="tarjeta-3d">
+    <img src="../../imagenes/bienestar/respiracion-profunda.jpg" alt="respiracion-profunda">
+    <h2>Respiración profunda</h2>
+    <p>Ejercicios para reducir ansiedad y estrés.</p>
+    <a href="respiracion-profunda-ansiedad.html" class="boton3d">Leer artículo</a>
+    <a href="../../index.html" class="boton3d">Volver al inicio</a>
+  </section>
 
-<section class="tarjeta-3d">
-  <img src="../../imagenes/bienestar/positividad.jpg">
-  <h2>Cómo mantener una mentalidad positiva</h2>
-  <p>Pensamientos que impulsen tu bienestar.</p>
-  <a href="como-mantener-mentalidad-positiva.html" class="boton3d">Leer artículo</a>
-  <a href="../../index.html" class="boton3d">Volver al inicio</a>
-</section>
+  <section class="tarjeta-3d">
+    <img src="../../imagenes/bienestar/risa-ansiedad.jpg" alt="risa-ansiedad">
+    <h2>La risa contra la ansiedad</h2>
+    <p>Beneficios de la risa en el manejo del estrés.</p>
+    <a href="risa-ansiedad.html" class="boton3d">Leer artículo</a>
+    <a href="../../index.html" class="boton3d">Volver al inicio</a>
+  </section>
 
-<section class="tarjeta-3d">
-  <img src="../../imagenes/bienestar/alimentacion-saludable.jpg">
-  <h2>Pequeños cambios para una alimentación saludable</h2>
-  <p>Ajustes fáciles para mejorar tu energía.</p>
-  <a href="alimentacion-mas-saludable.html" class="boton3d">Leer artículo</a>
-  <a href="../../index.html" class="boton3d">Volver al inicio</a>
-</section>
+  <section class="tarjeta-3d">
+    <img src="../../imagenes/bienestar/rutina-domir-quitar-ansiedad.jpg" alt="rutina-domir-quitar-ansiedad">
+    <h2>Rutina para dormir y quitar ansiedad</h2>
+    <p>Pasos para conciliar el sueño y reducir la ansiedad nocturna.</p>
+    <a href="rutina-domir-quitar-ansiedad.html" class="boton3d">Leer artículo</a>
+    <a href="../../index.html" class="boton3d">Volver al inicio</a>
+  </section>
 
-<section class="tarjeta-3d">
-  <img src="../../imagenes/bienestar/relajacion-progresiva.jpg">
-  <h2>Relajación muscular progresiva</h2>
-  <p>Reduce ansiedad y mejora el sueño.</p>
-  <a href="relajacion-muscular-progresiva.html" class="boton3d">Leer artículo</a>
-  <a href="../../index.html" class="boton3d">Volver al inicio</a>
-</section>
-
-<section class="tarjeta-3d">
-  <img src="../../imagenes/bienestar/equilibrio-emocional.jpg">
-  <h2>Cómo lograr equilibrio emocional</h2>
-  <p>Gestiona tus emociones con mayor calma.</p>
-  <a href="como-lograr-equilibrio-emocional.html" class="boton3d">Leer artículo</a>
-  <a href="../../index.html" class="boton3d">Volver al inicio</a>
-</section>
+  <section class="tarjeta-3d">
+    <img src="../../imagenes/bienestar/yoga-principiantes.jpg" alt="yoga-principiantes">
+    <h2>Yoga para principiantes</h2>
+    <p>Posturas y consejos para empezar con seguridad.</p>
+    <a href="yoga-principiantes.html" class="boton3d">Leer artículo</a>
+    <a href="../../index.html" class="boton3d">Volver al inicio</a>
+  </section>
 
 </main>
 
-<footer style="text-align:center; padding: 20px; margin-top: 30px; color:#555;">
+<footer style="text-align:center; padding:20px; margin-top:30px; color:#555;">
   © 2025 - Tu página de bienestar
 </footer>
 
 </body>
-  </html>
+      </html>
