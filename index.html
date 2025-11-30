@@ -32,7 +32,7 @@
         }
 
         nav a {
-            margin: 10px 15px; /* Separación horizontal y vertical aumentada */
+            margin: 10px 15px;
             padding: 10px 20px;
             background: #ff4fa3;
             color: white;
@@ -108,6 +108,34 @@
             text-decoration: underline;
         }
 
+        /* ───────────────────────────── */
+        /*     BANNER DE COOKIES        */
+        /* ───────────────────────────── */
+        #cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #ff7bbb;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 -3px 6px rgba(0,0,0,0.2);
+            font-size: 16px;
+            display: none;
+        }
+
+        #cookie-banner button {
+            margin-left: 15px;
+            padding: 8px 15px;
+            background: white;
+            color: #ff4fa3;
+            border: none;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 2px 2px 0 #d33b82;
+        }
     </style>
 </head>
 
@@ -162,6 +190,25 @@
         <a href="politica-privacidad.html">Política de Privacidad</a> |
         <a href="aviso-legal">Aviso Legal</a>
     </footer>
+
+    <!-- BANNER DE COOKIES -->
+    <div id="cookie-banner">
+        Este sitio utiliza cookies para mejorar tu experiencia.  
+        <button id="aceptar-cookies">Aceptar</button>
+    </div>
+
+    <script>
+        // Mostrar el banner solo si no ha sido aceptado antes
+        if (!localStorage.getItem("cookiesAceptadas")) {
+            document.getElementById("cookie-banner").style.display = "block";
+        }
+
+        // Botón para aceptar cookies
+        document.getElementById("aceptar-cookies").addEventListener("click", function() {
+            localStorage.setItem("cookiesAceptadas", "true");
+            document.getElementById("cookie-banner").style.display = "none";
+        });
+    </script>
 
 </body>
 </html>
