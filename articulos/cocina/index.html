@@ -1,279 +1,389 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cocina</title>
-    <link rel="stylesheet" href="../../css/articulos-secciones.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cocina</title>
+  <link rel="stylesheet" href="../../styles.css" />
+
+  <style>
+    /* Layout y look general (mantener coherencia con Belleza) */
+    body { background: #fafafa; font-family: Arial, sans-serif; color:#222; margin:0; }
+    main { max-width:1000px; margin:30px auto; padding:0 16px 60px; }
+    .section-title {
+      display:inline-block;
+      background: linear-gradient(180deg,#ffb2c9,#ff84b4);
+      color:#fff;
+      padding:14px 22px;
+      border-radius:18px;
+      font-size:2.4rem;
+      font-weight:700;
+      margin-bottom:22px;
+    }
+
+    .grid {
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:26px;
+    }
+    @media(min-width:900px){ .grid{ grid-template-columns: repeat(2,1fr); } }
+
+    .tarjeta {
+      background:#fff;
+      border-radius:18px;
+      padding:16px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+      overflow:hidden;
+    }
+
+    .imagen-wrap{
+      width:100%;
+      overflow:hidden;
+      border-radius:14px;
+    }
+    .imagen-wrap img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:12px;
+      object-fit:cover;
+    }
+
+    .titulo-badge{
+      display:inline-block;
+      background: linear-gradient(180deg,#ffd1df,#ff9fc0);
+      color: #6b0b6b;
+      font-weight:700;
+      font-size:1.35rem;
+      padding:12px 16px;
+      margin:12px 0;
+      border-radius:12px;
+    }
+
+    .descripcion{
+      color:#444;
+      line-height:1.6;
+      margin:10px 0 16px;
+      font-size:1rem;
+    }
+
+    /* Botones ROSA sin sombra (ambos) */
+    .btn-rosa {
+      display:inline-block;
+      padding:12px 18px;
+      background: linear-gradient(180deg,#ff6fa4,#ff3b8a);
+      color:#fff;
+      text-decoration:none;
+      border-radius:12px;
+      font-weight:700;
+      box-shadow:none !important;
+      border:0;
+      margin-right:10px;
+    }
+    .btn-rosa:active{ transform: translateY(2px); }
+
+    footer { text-align:center; color:#777; margin-top:28px; }
+  </style>
 </head>
-
 <body>
+  <main>
+    <div class="section-title">Cocina</div>
 
-    <!-- Franja rosada -->
-    <div class="section-title">
-        <h1>Cocina</h1>
+    <div class="grid">
+
+      <!-- 1 -->
+      <article class="tarjeta">
+        <div class="imagen-wrap"><img src="../../imagenes/cocina/arepas-rellenas.jpg" alt="Arepas rellenas"></div>
+        <div class="titulo-badge">Arepas Rellenas</div>
+        <p class="descripcion">Una receta tradicional con un toque moderno.</p>
+        <a class="btn-rosa" href="arepas-rellenas.html">Leer artículo</a>
+        <a class="btn-rosa" href="../../index.html">Volver a inicio</a>
+      </article>
+
+      <!-- 2 -->
+      <article class="tarjeta">
+        <div class="imagen-wrap"><img src="../../imagenes/cocina/arroz-leche.jpg" alt="Arroz con leche"></div>
+        <div class="titulo-badge">Arroz con Leche</div>
+        <p class="descripcion">Postre clásico para disfrutar en familia.</p>
+        <a class="btn-rosa" href="arroz-leche.html">Leer artículo</a>
+        <a class="btn-rosa" href="../../index.html">Volver a inicio</a>
+      </article>
+
+      <!-- 3 -->
+      <article class="tarjeta">
+        <div class="imagen-wrap"><img src="../../imagenes/cocina/batido-espinaca-pina.jpg" alt="Batido espinaca y piña"></div>
+        <div class="titulo-badge">Batido Espinaca y Piña</div>
+        <p class="descripcion">Fresco y nutritivo para las mañanas.</p>
+        <a class="btn-rosa" href="batido-espinaca-pina.html">Leer artículo</a>
+        <a class="btn-rosa" href="../../index.html">Volver a inicio</a>
+      </article>
+
+      <!-- 4 -->
+      <article class="tarjeta">
+        <div class="imagen-wrap"><img src="../../imagenes/cocina/brownie-de-chocolate.jpg" alt="Brownie de chocolate"></div>
+        <div class="titulo-badge">Brownie de Chocolate</div>
+        <p class="descripcion">Delicioso y fácil de preparar.</p>
+        <a class="btn-rosa" href="brownie-de-chocolate.html">Leer artículo</a>
+        <a class="btn-rosa" href="../../index.html">Volver a inicio</a>
+      </article>
+
+      <!-- 5 -->
+      <article class="tarjeta">
+        <div class="imagen-wrap"><img src="../../imagenes/cocina/cazuela-marisco-latino.jpg" alt="Cazuela de mariscos"></div>
+        <div class="titulo-badge">Cazuela de Mariscos</div>
+        <p class="descripcion">Sabores latinos llenos de aroma.</p>
+        <a class="btn-rosa" href="cazuela-marisco-latino.html">Leer artículo</a>
+        <a class="btn-rosa" href="../../index.html">Volver a inicio</a>
+      </article>
+
+      <!-- 6 -->
+      <article class="tarjeta">
+        <div class="imagen-wrap"><img src="../../imagenes/cocina/ceviche-fresco-pescado.jpg" alt="Ceviche fresco"></div>
+        <div class="titulo-badge">Ceviche Fresco de Pescado</div>
+        <p class="descripcion">Un clásico refrescante y ligero.</p>
+        <a class="btn-rosa" href="ceviche-fresco-pescado.html">Leer artículo</a>
+        <a class="btn-rosa" href="../../index.html">Volver a inicio</a>
+      </article>
+
+      <!-- 7 -->
+      <article class="tarjeta">
+        <div class="imagen-wrap"><img src="../../imagenes/cocina/chicharrones-cerdo.jpg" alt="Chicharrones de cerdo"></div>
+        <div class="titulo-badge">Chicharrones de Cerdo</div>
+        <p class="descripcion">Crujientes y llenos de sabor.</p>
+        <a class="btn-rosa" href="chicharrones-cerdo.html">Leer artículo</a>
+        <a class="btn-rosa" href="../../index.html">Volver a inicio</a>
+      </article>
+
+      <!-- 8 -->
+      <article class="tarjeta">
+        <div class="imagen-wrap"><img src="../../imagenes/cocina/crema-calabaza.jpg" alt="Crema de calabaza"></div>
+        <div class="titulo-badge">Crema de Calabaza</div>
+        <p class="descripcion">Perfecta para noches frías.</p>
+        <a class="btn-rosa" href="crema-calabaza.html">Leer artículo</a>
+        <a class="btn-rosa" href="../../index.html">Volver a inicio</a>
+      </article>
+
+      <!-- 9 -->
+      <article class="tarjeta">
+        <div class="imagen-wrap"><img src="../../imagenes/cocina/croquetas-de-queso-papa.jpg" alt="Croquetas de queso y papa"></div>
+        <div class="titulo-badge">Croquetas de Queso y Papa</div>
+        <p class="descripcion">Un aperitivo crujiente y sabroso.</p>
+        <a class="btn-rosa" href="croquetas-de-queso-papa.html">Leer artículo</a>
+        <a class="btn-rosa" href="../../index.html">Volver a inicio</a>
+      </article>
+
+      <!-- 10 -->
+      <article class="tarjeta">
+        <div class="imagen-wrap"><img src="../../imagenes/cocina/empanadas.jpg" alt="Empanadas"></div>
+        <div class="titulo-badge">Empanadas</div>
+        <p class="descripcion">Rellenos variados para todos los gustos.</p>
+        <a class="btn-rosa" href="empanadas.html">Leer artículo</a>
+        <a class="btn-rosa" href="../../index.html">Volver a inicio</a>
+      </article>
+
+      <!-- 11 -->
+      <article class="tarjeta">
+        <div class="imagen-wrap"><img src="../../imagenes/cocina/ensalada-aguacate-quinoa.jpg" alt="Ensalada aguacate y quinoa"></div>
+        <div class="titulo-badge">Ensalada de Aguacate y Quinoa</div>
+        <p class="descripcion">Ligera y nutritiva para el almuerzo.</p>
+        <a class="btn-rosa" href="ensalada-aguacate-quinoa.html">Leer artículo</a>
+        <a class="btn-rosa" href="../../index.html">Volver a inicio</a>
+      </article>
+
+      <!-- 12 -->
+      <article class="tarjeta">
+        <div class="imagen-wrap"><img src="../../imagenes/cocina/ensalada-fria.jpg" alt="Ensalada fría"></div>
+        <div class="titulo-badge">Ensalada Fría</div>
+        <p class="descripcion">Fácil y rápida para días de calor.</p>
+        <a class="btn-rosa" href="ensalada-fria.html">Leer artículo</a>
+        <a class="btn-rosa" href="../../index.html">Volver a inicio</a>
+      </article>
+
+      <!-- 13 -->
+      <article class="tarjeta">
+        <div class="imagen-wrap"><img src="../../imagenes/cocina/ensalada-rapida.jpg" alt="Ensalada rápida"></div>
+        <div class="titulo-badge">Ensalada Rápida</div>
+        <p class="descripcion">Preparada en minutos para emergencias culinarias.</p>
+        <a class="btn-rosa" href="ensalada-rapida.html">Leer artículo</a>
+        <a class="btn-rosa" href="../../index.html">Volver a inicio</a>
+      </article>
+
+      <!-- 14 -->
+      <article class="tarjeta">
+        <div class="imagen-wrap"><img src="../../imagenes/cocina/galletas-avena-platano.jpg" alt="Galletas avena y plátano"></div>
+        <div class="titulo-badge">Galletas de Avena y Plátano</div>
+        <p class="descripcion">Fáciles, saludables y deliciosas para toda la familia.</p>
+        <a class="btn-rosa" href="galletas-avena-platano.html">Leer artículo</a>
+        <a class="btn-rosa" href="../../index.html">Volver a inicio</a>
+      </article>
+
+      <!-- 15 -->
+      <article class="tarjeta">
+        <div class="imagen-wrap"><img src="../../imagenes/cocina/hamburguesas-garbanzos.jpg" alt="Hamburguesas de garbanzos"></div>
+        <div class="titulo-badge">Hamburguesas de Garbanzos</div>
+        <p class="descripcion">Una opción vegetariana llena de proteína y sabor.</p>
+        <a class="btn-rosa" href="hamburguesas-garbanzos.html">Leer artículo</a>
+        <a class="btn-rosa" href="../../index.html">Volver a inicio</a>
+      </article>
+
+      <!-- 16 -->
+      <article class="tarjeta">
+        <div class="imagen-wrap"><img src="../../imagenes/cocina/helado-de-frutas.jpg" alt="Helado de frutas"></div>
+        <div class="titulo-badge">Helado de Frutas</div>
+        <p class="descripcion">Refrescante y natural, sin azúcares añadidos.</p>
+        <a class="btn-rosa" href="helado-de-frutas.html">Leer artículo</a>
+        <a class="btn-rosa" href="../../index.html">Volver a inicio</a>
+      </article>
+
+      <!-- 17 -->
+      <article class="tarjeta">
+        <div class="imagen-wrap"><img src="../../imagenes/cocina/lasaña-carne-verduras.jpg" alt="Lasaña carne y verduras"></div>
+        <div class="titulo-badge">Lasaña de Carne y Verduras</div>
+        <p class="descripcion">Una comida completa para compartir.</p>
+        <a class="btn-rosa" href="lasaña-carne-verduras.html">Leer artículo</a>
+        <a class="btn-rosa" href="../../index.html">Volver a inicio</a>
+      </article>
+
+      <!-- 18 -->
+      <article class="tarjeta">
+        <div class="imagen-wrap"><img src="../../imagenes/cocina/nuggets-pollo.jpg" alt="Nuggets de pollo"></div>
+        <div class="titulo-badge">Nuggets de Pollo</div>
+        <p class="descripcion">Fáciles, crujientes y perfectos para los niños.</p>
+        <a class="btn-rosa" href="nuggets-pollo.html">Leer artículo</a>
+        <a class="btn-rosa" href="../../index.html">Volver a inicio</a>
+      </article>
+
+      <!-- 19 -->
+      <article class="tarjeta">
+        <div class="imagen-wrap"><img src="../../imagenes/cocina/pan-esponjoso-sin-maquina.jpg" alt="Pan esponjoso sin máquina"></div>
+        <div class="titulo-badge">Pan Esponjoso sin Máquina</div>
+        <p class="descripcion">Aprende a hacer pan casero de manera sencilla.</p>
+        <a class="btn-rosa" href="pan-esponjoso-sin-maquina.html">Leer artículo</a>
+        <a class="btn-rosa" href="../../index.html">Volver a inicio</a>
+      </article>
+
+      <!-- 20 -->
+      <article class="tarjeta">
+        <div class="imagen-wrap"><img src="../../imagenes/cocina/panqueques-avena.jpg" alt="Panqueques de avena"></div>
+        <div class="titulo-badge">Panqueques de Avena</div>
+        <p class="descripcion">Opciones saludables para desayunos energéticos.</p>
+        <a class="btn-rosa" href="panqueques-avena.html">Leer artículo</a>
+        <a class="btn-rosa" href="../../index.html">Volver a inicio</a>
+      </article>
+
+      <!-- 21 -->
+      <article class="tarjeta">
+        <div class="imagen-wrap"><img src="../../imagenes/cocina/pasta-alfredo.jpg" alt="Pasta alfredo"></div>
+        <div class="titulo-badge">Pasta Alfredo</div>
+        <p class="descripcion">Una salsa cremosa que encanta a todos.</p>
+        <a class="btn-rosa" href="pasta-alfredo.html">Leer artículo</a>
+        <a class="btn-rosa" href="../../index.html">Volver a inicio</a>
+      </article>
+
+      <!-- 22 -->
+      <article class="tarjeta">
+        <div class="imagen-wrap"><img src="../../imagenes/cocina/pizza-casera-masa-integral.jpg" alt="Pizza massa integral"></div>
+        <div class="titulo-badge">Pizza Casera (Masa Integral)</div>
+        <p class="descripcion">Una versión más saludable de un clásico.</p>
+        <a class="btn-rosa" href="pizza-casera-masa-integral.html">Leer artículo</a>
+        <a class="btn-rosa" href="../../index.html">Volver a inicio</a>
+      </article>
+
+      <!-- 23 -->
+      <article class="tarjeta">
+        <div class="imagen-wrap"><img src="../../imagenes/cocina/pollo-horno-hierva-limon.jpg" alt="Pollo al horno"></div>
+        <div class="titulo-badge">Pollo al Horno (Hierba y Limón)</div>
+        <p class="descripcion">Sencillo y sabroso, ideal para cenas.</p>
+        <a class="btn-rosa" href="pollo-horno-hierva-limon.html">Leer artículo</a>
+        <a class="btn-rosa" href="../../index.html">Volver a inicio</a>
+      </article>
+
+      <!-- 24 -->
+      <article class="tarjeta">
+        <div class="imagen-wrap"><img src="../../imagenes/cocina/pollo-pina.jpg" alt="Pollo con piña"></div>
+        <div class="titulo-badge">Pollo con Piña</div>
+        <p class="descripcion">Fusión de sabores dulces y salados.</p>
+        <a class="btn-rosa" href="pollo-pina.html">Leer artículo</a>
+        <a class="btn-rosa" href="../../index.html">Volver a inicio</a>
+      </article>
+
+      <!-- 25 -->
+      <article class="tarjeta">
+        <div class="imagen-wrap"><img src="../../imagenes/cocina/salsa-tomate.jpg" alt="Salsa de tomate casera"></div>
+        <div class="titulo-badge">Salsa de Tomate Casera</div>
+        <p class="descripcion">Base perfecta para muchas recetas.</p>
+        <a class="btn-rosa" href="salsa-tomate.html">Leer artículo</a>
+        <a class="btn-rosa" href="../../index.html">Volver a inicio</a>
+      </article>
+
+      <!-- 26 -->
+      <article class="tarjeta">
+        <div class="imagen-wrap"><img src="../../imagenes/cocina/sopa-crema-brocoli.jpg" alt="Sopa crema de brócoli"></div>
+        <div class="titulo-badge">Sopa Crema de Brócoli</div>
+        <p class="descripcion">Una opción reconfortante y nutritiva.</p>
+        <a class="btn-rosa" href="sopa-crema-brocoli.html">Leer artículo</a>
+        <a class="btn-rosa" href="../../index.html">Volver a inicio</a>
+      </article>
+
+      <!-- 27 -->
+      <article class="tarjeta">
+        <div class="imagen-wrap"><img src="../../imagenes/cocina/sopa-de-lentejas.jpg" alt="Sopa de lentejas"></div>
+        <div class="titulo-badge">Sopa de Lentejas</div>
+        <p class="descripcion">Rica en proteínas y muy saciante.</p>
+        <a class="btn-rosa" href="sopa-de-lentejas.html">Leer artículo</a>
+        <a class="btn-rosa" href="../../index.html">Volver a inicio</a>
+      </article>
+
+      <!-- 28 -->
+      <article class="tarjeta">
+        <div class="imagen-wrap"><img src="../../imagenes/cocina/sopa-de-pollo-con-verduras.jpg" alt="Sopa de pollo con verduras"></div>
+        <div class="titulo-badge">Sopa de Pollo con Verduras</div>
+        <p class="descripcion">Caldo nutritivo para días fríos.</p>
+        <a class="btn-rosa" href="sopa-de-pollo-con-verduras.html">Leer artículo</a>
+        <a class="btn-rosa" href="../../index.html">Volver a inicio</a>
+      </article>
+
+      <!-- 29 -->
+      <article class="tarjeta">
+        <div class="imagen-wrap"><img src="../../imagenes/cocina/sopa-verduras.jpg" alt="Sopa de verduras"></div>
+        <div class="titulo-badge">Sopa de Verduras</div>
+        <p class="descripcion">Ligera y llena de vitaminas.</p>
+        <a class="btn-rosa" href="sopa-verduras.html">Leer artículo</a>
+        <a class="btn-rosa" href="../../index.html">Volver a inicio</a>
+      </article>
+
+      <!-- 30 -->
+      <article class="tarjeta">
+        <div class="imagen-wrap"><img src="../../imagenes/cocina/tacos-vegetales.jpg" alt="Tacos vegetales"></div>
+        <div class="titulo-badge">Tacos Vegetales</div>
+        <p class="descripcion">Fáciles de preparar y muy sabrosos.</p>
+        <a class="btn-rosa" href="tacos-vegetales.html">Leer artículo</a>
+        <a class="btn-rosa" href="../../index.html">Volver a inicio</a>
+      </article>
+
+      <!-- 31 -->
+      <article class="tarjeta">
+        <div class="imagen-wrap"><img src="../../imagenes/cocina/tostadas-francesas-dulce.jpg" alt="Tostadas francesas dulces"></div>
+        <div class="titulo-badge">Tostadas Francesas</div>
+        <p class="descripcion">Un desayuno dulce para disfrutar.</p>
+        <a class="btn-rosa" href="tostadas-francesas-dulce.html">Leer artículo</a>
+        <a class="btn-rosa" href="../../index.html">Volver a inicio</a>
+      </article>
+
+      <!-- 32 -->
+      <article class="tarjeta">
+        <div class="imagen-wrap"><img src="../../imagenes/cocina/panqueques-avena.jpg" alt="Panqueques de avena"></div>
+        <div class="titulo-badge">Panqueques de Avena</div>
+        <p class="descripcion">Perfectos para un desayuno energético.</p>
+        <a class="btn-rosa" href="panqueques-avena.html">Leer artículo</a>
+        <a class="btn-rosa" href="../../index.html">Volver a inicio</a>
+      </article>
+
     </div>
 
-    <div class="articles-container">
-
-        <!-- Artículo 1 -->
-        <div class="article-card">
-            <img src="img/alimentacion-saludable.jpg" alt="Alimentación saludable">
-            <h2>Alimentación Saludable</h2>
-            <a href="articulo1.html" class="btn-read">Leer artículo</a>
-            <a href="../../index.html" class="btn-back">Volver a inicio</a>
-        </div>
-
-        <!-- Artículo 2 -->
-        <div class="article-card">
-            <img src="img/recetas-faciles.jpg" alt="Recetas fáciles">
-            <h2>Recetas Fáciles</h2>
-            <a href="articulo2.html" class="btn-read">Leer artículo</a>
-            <a href="../../index.html" class="btn-back">Volver a inicio</a>
-        </div>
-
-        <!-- Artículo 3 -->
-        <div class="article-card">
-            <img src="img/recetas-rapidas.jpg" alt="Recetas rápidas">
-            <h2>Recetas Rápidas</h2>
-            <a href="articulo3.html" class="btn-read">Leer artículo</a>
-            <a href="../../index.html" class="btn-back">Volver a inicio</a>
-        </div>
-
-        <!-- Artículo 4 -->
-        <div class="article-card">
-            <img src="img/postres.jpg" alt="Postres">
-            <h2>Postres</h2>
-            <a href="articulo4.html" class="btn-read">Leer artículo</a>
-            <a href="../../index.html" class="btn-back">Volver a inicio</a>
-        </div>
-
-        <!-- Artículo 5 -->
-        <div class="article-card">
-            <img src="img/recetas-light.jpg" alt="Recetas light">
-            <h2>Recetas Light</h2>
-            <a href="articulo5.html" class="btn-read">Leer artículo</a>
-            <a href="../../index.html" class="btn-back">Volver a inicio</a>
-        </div>
-
-        <!-- Artículo 6 -->
-        <div class="article-card">
-            <img src="img/recetas-ninos.jpg" alt="Recetas para niños">
-            <h2>Recetas para Niños</h2>
-            <a href="articulo6.html" class="btn-read">Leer artículo</a>
-            <a href="../../index.html" class="btn-back">Volver a inicio</a>
-        </div>
-
-        <!-- Artículo 7 -->
-        <div class="article-card">
-            <img src="img/recetas-vegetarianas.jpg" alt="Recetas vegetarianas">
-            <h2>Recetas Vegetarianas</h2>
-            <a href="articulo7.html" class="btn-read">Leer artículo</a>
-            <a href="../../index.html" class="btn-back">Volver a inicio</a>
-        </div>
-
-        <!-- Artículo 8 -->
-        <div class="article-card">
-            <img src="img/recetas-veganas.jpg" alt="Recetas veganas">
-            <h2>Recetas Veganas</h2>
-            <a href="articulo8.html" class="btn-read">Leer artículo</a>
-            <a href="../../index.html" class="btn-back">Volver a inicio</a>
-        </div>
-
-        <!-- Artículo 9 -->
-        <div class="article-card">
-            <img src="img/cocina-internacional.jpg" alt="Cocina Internacional">
-            <h2>Cocina Internacional</h2>
-            <a href="articulo9.html" class="btn-read">Leer artículo</a>
-            <a href="../../index.html" class="btn-back">Volver a inicio</a>
-        </div>
-
-        <!-- Artículo 10 -->
-        <div class="article-card">
-            <img src="img/recetas-economicas.jpg" alt="Recetas Económicas">
-            <h2>Recetas Económicas</h2>
-            <a href="articulo10.html" class="btn-read">Leer artículo</a>
-            <a href="../../index.html" class="btn-back">Volver a inicio</a>
-        </div>
-
-        <!-- Artículo 11 -->
-        <div class="article-card">
-            <img src="img/cenas-rapidas.jpg" alt="Cenas Rápidas">
-            <h2>Cenas Rápidas</h2>
-            <a href="articulo11.html" class="btn-read">Leer artículo</a>
-            <a href="../../index.html" class="btn-back">Volver a inicio</a>
-        </div>
-
-        <!-- Artículo 12 -->
-        <div class="article-card">
-            <img src="img/desayunos-saludables.jpg" alt="Desayunos Saludables">
-            <h2>Desayunos Saludables</h2>
-            <a href="articulo12.html" class="btn-read">Leer artículo</a>
-            <a href="../../index.html" class="btn-back">Volver a inicio</a>
-        </div>
-
-        <!-- Artículo 13 -->
-        <div class="article-card">
-            <img src="img/snacks.jpg" alt="Snacks">
-            <h2>Snacks</h2>
-            <a href="articulo13.html" class="btn-read">Leer artículo</a>
-            <a href="../../index.html" class="btn-back">Volver a inicio</a>
-        </div>
-
-        <!-- Artículo 14 -->
-        <div class="article-card">
-            <img src="img/bebidas.jpg" alt="Bebidas">
-            <h2>Bebidas</h2>
-            <a href="articulo14.html" class="btn-read">Leer artículo</a>
-            <a href="../../index.html" class="btn-back">Volver a inicio</a>
-        </div>
-
-        <!-- Artículo 15 -->
-        <div class="article-card">
-            <img src="img/sopas.jpg" alt="Sopas">
-            <h2>Sopas</h2>
-            <a href="articulo15.html" class="btn-read">Leer artículo</a>
-            <a href="../../index.html" class="btn-back">Volver a inicio</a>
-        </div>
-
-        <!-- Artículo 16 -->
-        <div class="article-card">
-            <img src="img/ensaladas.jpg" alt="Ensaladas">
-            <h2>Ensaladas</h2>
-            <a href="articulo16.html" class="btn-read">Leer artículo</a>
-            <a href="../../index.html" class="btn-back">Volver a inicio</a>
-        </div>
-
-        <!-- Artículo 17 -->
-        <div class="article-card">
-            <img src="img/platos-principales.jpg" alt="Platos principales">
-            <h2>Platos Principales</h2>
-            <a href="articulo17.html" class="btn-read">Leer artículo</a>
-            <a href="../../index.html" class="btn-back">Volver a inicio</a>
-        </div>
-
-        <!-- Artículo 18 -->
-        <div class="article-card">
-            <img src="img/recetas-al-horno.jpg" alt="Recetas al Horno">
-            <h2>Recetas al Horno</h2>
-            <a href="articulo18.html" class="btn-read">Leer artículo</a>
-            <a href="../../index.html" class="btn-back">Volver a inicio</a>
-        </div>
-
-        <!-- Artículo 19 -->
-        <div class="article-card">
-            <img src="img/recetas-airfryer.jpg" alt="Air Fryer">
-            <h2>Recetas en Air Fryer</h2>
-            <a href="articulo19.html" class="btn-read">Leer artículo</a>
-            <a href="../../index.html" class="btn-back">Volver a inicio</a>
-        </div>
-
-        <!-- Artículo 20 -->
-        <div class="article-card">
-            <img src="img/comida-sin-gluten.jpg" alt="Sin gluten">
-            <h2>Recetas sin Gluten</h2>
-            <a href="articulo20.html" class="btn-read">Leer artículo</a>
-            <a href="../../index.html" class="btn-back">Volver a inicio</a>
-        </div>
-
-        <!-- Artículo 21 -->
-        <div class="article-card">
-            <img src="img/comida-sin-lactosa.jpg" alt="Sin lactosa">
-            <h2>Recetas sin Lactosa</h2>
-            <a href="articulo21.html" class="btn-read">Leer artículo</a>
-            <a href="../../index.html" class="btn-back">Volver a inicio</a>
-        </div>
-
-        <!-- Artículo 22 -->
-        <div class="article-card">
-            <img src="img/recetas-bajas-calorias.jpg" alt="Bajas calorías">
-            <h2>Bajas en Calorías</h2>
-            <a href="articulo22.html" class="btn-read">Leer artículo</a>
-            <a href="../../index.html" class="btn-back">Volver a inicio</a>
-        </div>
-
-        <!-- Artículo 23 -->
-        <div class="article-card">
-            <img src="img/antojitos.jpg" alt="Antojitos">
-            <h2>Antojitos</h2>
-            <a href="articulo23.html" class="btn-read">Leer artículo</a>
-            <a href="../../index.html" class="btn-back">Volver a inicio</a>
-        </div>
-
-        <!-- Artículo 24 -->
-        <div class="article-card">
-            <img src="img/mariscos.jpg" alt="Mariscos">
-            <h2>Mariscos</h2>
-            <a href="articulo24.html" class="btn-read">Leer artículo</a>
-            <a href="../../index.html" class="btn-back">Volver a inicio</a>
-        </div>
-
-        <!-- Artículo 25 -->
-        <div class="article-card">
-            <img src="img/carnes.jpg" alt="Carnes">
-            <h2>Carnes</h2>
-            <a href="articulo25.html" class="btn-read">Leer artículo</a>
-            <a href="../../index.html" class="btn-back">Volver a inicio</a>
-        </div>
-
-        <!-- Artículo 26 -->
-        <div class="article-card">
-            <img src="img/panaderia.jpg" alt="Panadería">
-            <h2>Panadería</h2>
-            <a href="articulo26.html" class="btn-read">Leer artículo</a>
-            <a href="../../index.html" class="btn-back">Volver a inicio</a>
-        </div>
-
-        <!-- Artículo 27 -->
-        <div class="article-card">
-            <img src="img/postres-frios.jpg" alt="Postres Fríos">
-            <h2>Postres Fríos</h2>
-            <a href="articulo27.html" class="btn-read">Leer artículo</a>
-            <a href="../../index.html" class="btn-back">Volver a inicio</a>
-        </div>
-
-        <!-- Artículo 28 -->
-        <div class="article-card">
-            <img src="img/salsas.jpg" alt="Salsas">
-            <h2>Salsas</h2>
-            <a href="articulo28.html" class="btn-read">Leer artículo</a>
-            <a href="../../index.html" class="btn-back">Volver a inicio</a>
-        </div>
-
-        <!-- Artículo 29 -->
-        <div class="article-card">
-            <img src="img/recetas-navidenas.jpg" alt="Recetas Navideñas">
-            <h2>Recetas Navideñas</h2>
-            <a href="articulo29.html" class="btn-read">Leer artículo</a>
-            <a href="../../index.html" class="btn-back">Volver a inicio</a>
-        </div>
-
-        <!-- Artículo 30 -->
-        <div class="article-card">
-            <img src="img/recetas-fiesta.jpg" alt="Fiestas">
-            <h2>Recetas para Fiestas</h2>
-            <a href="articulo30.html" class="btn-read">Leer artículo</a>
-            <a href="../../index.html" class="btn-back">Volver a inicio</a>
-        </div>
-
-        <!-- Artículo 31 -->
-        <div class="article-card">
-            <img src="img/tostadas-francesas.jpg" alt="Tostadas Francesas">
-            <h2>Tostadas Francesas</h2>
-            <a href="articulo31.html" class="btn-read">Leer artículo</a>
-            <a href="../../index.html" class="btn-back">Volver a inicio</a>
-        </div>
-
-        <!-- Artículo 32 -->
-        <div class="article-card">
-            <img src="img/panqueques-avena.jpg" alt="Panqueques de Avena">
-            <h2>Panqueques de Avena</h2>
-            <a href="articulo32.html" class="btn-read">Leer artículo</a>
-            <a href="../../index.html" class="btn-back">Volver a inicio</a>
-        </div>
-
-    </div>
-
+    <footer>
+      <p>&copy; 2024 Mi Vida, Mi Ritmo. Todos los derechos reservados.</p>
+    </footer>
+  </main>
 </body>
-  </html>
+            </html>
