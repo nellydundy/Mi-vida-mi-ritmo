@@ -37,63 +37,72 @@
       font-size: 1.8rem;
     }
 
-    /* --- TARJETAS 3D --- */
-    .articulo {
+    /* ==== TARJETA 3D IGUAL A BELLEZA ==== */
+    .tarjeta-3d {
+      background: #fff;
+      border-radius: 25px;
+      padding: 20px;
+      margin: 25px auto;
+      max-width: 500px;
+      box-shadow:
+        10px 10px 20px rgba(0,0,0,0.25),
+        -10px -10px 20px rgba(255,255,255,0.8);
+      transition: transform .25s ease;
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-bottom: 2rem;
-      background: #fff;
-      border-radius: 20px;
-      padding: 1rem;
-      box-shadow: 
-        6px 6px 12px rgba(0,0,0,0.2),
-        -6px -6px 12px rgba(255,255,255,0.6);
-      transition: transform 0.2s ease-in-out;
     }
 
-    .articulo:hover {
-      transform: translateY(-5px);
+    .tarjeta-3d:hover {
+      transform: translateY(-6px);
     }
 
-    .articulo img {
+    .tarjeta-3d img {
       width: 100%;
-      max-width: 300px;
-      border-radius: 15px;
+      border-radius: 18px;
       margin-bottom: 1rem;
     }
 
-    .articulo h2 {
-      margin: 0.5rem 0;
-      color: #333;
-      font-size: 1.4rem;
-      font-weight: bold;
+    .tarjeta-3d h2 {
       text-align: center;
+      color: #333;
+      font-size: 1.5rem;
+      margin: .4rem 0 .8rem 0;
+    }
+
+    .tarjeta-3d p {
+      text-align: center;
+      color: #555;
+      line-height: 1.5;
+      margin-bottom: 1rem;
     }
 
     /* BOTÓN 3D */
     .boton3d {
       background: linear-gradient(145deg, #ff85c1, #ff4f9f);
       color: white;
-      padding: 0.6rem 1rem;
-      border-radius: 12px;
+      padding: 0.7rem 1.2rem;
+      border-radius: 15px;
       text-decoration: none;
       font-weight: bold;
+      display: block;
+      width: 80%;
+      text-align: center;
+      margin: .4rem 0;
       box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-      transition: transform 0.2s ease-in-out;
-      margin-top: 0.5rem;
-      display: inline-block;
+      transition: transform .2s ease-in-out;
     }
 
     .boton3d:hover {
       transform: scale(1.05);
     }
+
   </style>
 </head>
 
 <body>
 
-<!-- COOKIES -->
+<!-- BANNER DE COOKIES -->
 <div id="cookie-banner" style="display:none;position:fixed;bottom:0;width:100%;background:#222;color:#fff;padding:10px;text-align:center;z-index:9999;">
   Usamos cookies para mejorar tu experiencia.
   <a href="../../politica-privacidad.html" style="color:#ffd700;">Más información</a>
@@ -133,11 +142,10 @@
   <h1>Bienestar</h1>
 </div>
 
-
 <main>
 
 <!-- ARTÍCULO 1 -->
-<section class="articulo">
+<section class="tarjeta-3d">
   <img src="../../imagenes/bienestar/fitness.jpg" alt="5 hábitos para empezar bien el día">
   <h2>5 hábitos para empezar bien el día</h2>
   <p>Pequeños cambios hacen grandes diferencias: despierta temprano, hidrátate, estírate, escribe una intención positiva y camina unos minutos al aire libre.</p>
@@ -147,7 +155,7 @@
 </section>
 
 <!-- ARTÍCULO 2 -->
-<section class="articulo">
+<section class="tarjeta-3d">
   <img src="../../imagenes/bienestar/bienestar1.jpg" alt="Hábitos que te hacen sentir mejor">
   <h2>Hábitos que te hacen sentir mejor</h2>
   <p>Ideal para comenzar el día con mucha paz y energía.</p>
@@ -157,7 +165,7 @@
 </section>
 
 <!-- ARTÍCULO 3 -->
-<section class="articulo">
+<section class="tarjeta-3d">
   <img src="../../imagenes/bienestar/bienestar2.jpg" alt="Un día libre de estrés">
   <h2>Un día libre de estrés</h2>
   <p>Ideal para liberar tensiones y empezar un día hermoso.</p>
@@ -166,34 +174,14 @@
   <a href="../../index.html" class="boton3d">Volver al inicio</a>
 </section>
 
-<!-- ARTÍCULO 4 -->
-<section class="articulo">
-  <img src="../../imagenes/bienestar/alimentos-reducir-estres.jpg" alt="Alimentos para reducir el estrés">
-  <h2>Alimentos para reducir el estrés</h2>
-  <p>Descubre qué alimentos te ayudan a calmar la mente y cuidar tu salud emocional.</p>
-
-  <a href="alimentos-reducir-estres.html" class="boton3d">Leer artículo</a>
-  <a href="../../index.html" class="boton3d">Volver al inicio</a>
-</section>
-
-  <!-- ARTÍCULO 5 -->
-<section class="articulo">
-  <img src="../../imagenes/bienestar/alimentacion.jpg" alt="Importancia de una buena alimentación">
-  <h2>Importancia de una buena alimentación</h2>
-  <p>Una alimentación equilibrada mejora tu energía, tu sistema inmunológico y tu bienestar general.</p>
-
-  <a href="alimentacion.html" class="boton3d">Leer artículo</a>
-  <a href="../../index.html" class="boton3d">Volver al inicio</a>
-</section>
-
-<!-- ARTÍCULO 6 -->
+  <!-- ARTÍCULO 6 -->
 <section class="articulo">
   <img src="../../imagenes/bienestar/respiracion.jpg" alt="Técnicas de respiración para reducir ansiedad">
   <h2>Técnicas de respiración para reducir la ansiedad</h2>
   <p>Aprende ejercicios de respiración profunda que ayudarán a calmar tu mente y tu cuerpo.</p>
 
   <a href="respiracion.html" class="boton3d">Leer artículo</a>
-  <a href="../../index.html" class="boton3d">Volver al inicio</a>
+  <a href="../../index.html" class="boton3d btn-inicio">Volver al inicio</a>
 </section>
 
 <!-- ARTÍCULO 7 -->
@@ -203,7 +191,7 @@
   <p>Dormir bien es fundamental para el equilibrio emocional y la recuperación física.</p>
 
   <a href="descanso.html" class="boton3d">Leer artículo</a>
-  <a href="../../index.html" class="boton3d">Volver al inicio</a>
+  <a href="../../index.html" class="boton3d btn-inicio">Volver al inicio</a>
 </section>
 
 <!-- ARTÍCULO 8 -->
@@ -213,7 +201,7 @@
   <p>Beber suficiente agua mejora tu concentración, tu piel y tu rendimiento físico.</p>
 
   <a href="hidratacion.html" class="boton3d">Leer artículo</a>
-  <a href="../../index.html" class="boton3d">Volver al inicio</a>
+  <a href="../../index.html" class="boton3d btn-inicio">Volver al inicio</a>
 </section>
 
 <!-- ARTÍCULO 9 -->
@@ -223,7 +211,7 @@
   <p>Ejercicios y hábitos que te ayudan a mantener claridad mental y bienestar emocional.</p>
 
   <a href="mente-sana.html" class="boton3d">Leer artículo</a>
-  <a href="../../index.html" class="boton3d">Volver al inicio</a>
+  <a href="../../index.html" class="boton3d btn-inicio">Volver al inicio</a>
 </section>
 
 <!-- ARTÍCULO 10 -->
@@ -233,7 +221,7 @@
   <p>Guía práctica para fortalecer tu confianza y tu amor propio día a día.</p>
 
   <a href="autoestima.html" class="boton3d">Leer artículo</a>
-  <a href="../../index.html" class="boton3d">Volver al inicio</a>
+  <a href="../../index.html" class="boton3d btn-inicio">Volver al inicio</a>
 </section>
 
 </main>
@@ -243,4 +231,4 @@
 </footer>
 
 </body>
-</html>
+                                                                                           </html>
