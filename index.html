@@ -32,7 +32,7 @@
         }
 
         nav a {
-            margin: 10px 15px; /* Separación horizontal y vertical aumentada */
+            margin: 10px 15px;
             padding: 10px 20px;
             background: #ff4fa3;
             color: white;
@@ -108,6 +108,33 @@
             text-decoration: underline;
         }
 
+        /* ---- COOKIES ---- */
+        #cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #ff7bbb;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 16px;
+            box-shadow: 0 -3px 10px rgba(0,0,0,0.2);
+            z-index: 9999;
+        }
+
+        #cookie-banner button {
+            margin-left: 15px;
+            padding: 10px 20px;
+            background: #ff4fa3;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 3px 3px 0px #d33b82;
+        }
+
     </style>
 </head>
 
@@ -162,6 +189,24 @@
         <a href="politica-privacidad.html">Política de Privacidad</a> |
         <a href="aviso-legal">Aviso Legal</a>
     </footer>
+
+    <!-- 5. BANNER DE COOKIES (AÑADIDO) -->
+    <div id="cookie-banner">
+        Este sitio utiliza cookies para mejorar tu experiencia. 
+        <a href="politica-privacidad.html" style="color:white; text-decoration: underline;">Leer más</a>
+        <button onclick="aceptarCookies()">Aceptar</button>
+    </div>
+
+    <script>
+        function aceptarCookies() {
+            document.getElementById("cookie-banner").style.display = "none";
+            localStorage.setItem("cookies-aceptadas", "true");
+        }
+
+        if (localStorage.getItem("cookies-aceptadas") === "true") {
+            document.getElementById("cookie-banner").style.display = "none";
+        }
+    </script>
 
 </body>
 </html>
